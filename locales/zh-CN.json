@@ -6,6 +6,74 @@
       "continue_shopping": "继续购物"
     }
   },
+  "product": {
+    "variants": {
+      "choose_option": "选择一个{{ option }}",
+      "chosen_option_html": "{{ option }}：<span>{{ value }}<\/span>",
+      "choose_variant": "选择一个变体"
+    },
+    "general": {
+      "by_vendor": "来自 {{ vendor }}",
+      "by_vendor_html": "来自 {{ vendor_link }}",
+      "sku_html": "<strong>库存量单位<\/strong> <span data-product-sku>{{ sku }}<\/span>",
+      "customer_reviews_title": "顾客评价",
+      "zoom": "点击或滚动来放大或缩小",
+      "zoomTap": "点击或开合手指来放大或缩小",
+      "zoomTapMobile": "点击放大或缩小",
+      "discounts": "折扣",
+      "select_variant": "请选择一个变体",
+      "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}"
+    },
+    "media": {
+      "view_in_your_space": "在您的空间中查看"
+    },
+    "buttons": {
+      "quick_shop": "快速购物",
+      "add_to_cart": "添加至购物车",
+      "choose_options": "选择选项",
+      "view_details": "查看完整细节",
+      "sold_out": "售罄",
+      "unavailable": "不可用",
+      "pre_order": "预购"
+    },
+    "status": {
+      "sold_out": "售罄",
+      "availability": "可用性",
+      "in_stock": "{{ inventory_quantity }}股票",
+      "in_stock_hidden": "有存货",
+      "in_stock_verbose": "{{ inventory_quantity }}库存，准备发货",
+      "in_stock_threshold": "{{ inventory_quantity }}+股票",
+      "in_stock_threshold_verbose": "{{ inventory_quantity }}+库存，准备发货",
+      "low_stock": "只{{ inventory_quantity }}左边！",
+      "low_stock_hidden": "低库存",
+      "no_stock": "缺货",
+      "incoming_stock": "还有更多！",
+      "pre_order": "敬请期待",
+      "continue_selling": "有存货"
+    },
+    "color_swatches": {
+      "swatches_count": {
+        "one": "{{ count }}种颜色可供选择",
+        "other": "提供{{ count }}种颜色"
+      }
+    },
+    "onboarding": {
+      "tab_title": "描述",
+      "tab_content": "添加产品描述以共享有关您产品的信息。"
+    },
+    "blocks": {
+      "request_quote": {
+        "email": "电子邮件",
+        "message": "信息",
+        "name": "姓名",
+        "request_message": "客户已要求{{ product_title }}  -  {{ product_url }}的报价",
+        "request_message_empty": "报价请求",
+        "success": "谢谢您联络我们。我们将尽快与您联系。",
+        "submit": "请求报价",
+        "quantity": "数量"
+      }
+    }
+  },
   "store_availability": {
     "general": {
       "in_stock": "有现货",
@@ -30,16 +98,33 @@
       "tags_html": "标记 \"{{ tags }}\""
     }
   },
-  "sections": {
-    "slideshow": {
-      "slideshow": "幻灯片放映",
-      "slide_index": "幻灯片{{ count }}",
-      "slide_counter": "第{{ total }}个幻灯片，{{ count }}个",
-      "next_slide": "下一张幻灯片",
-      "previous_slide": "上一张幻灯片"
+  "product_price": {
+    "price": {
+      "original": "原价",
+      "current": "现价",
+      "range_html": "<span class=\"price--label\">从<\/span> {{ price }}",
+      "price_per_unit_html": "{{total_quantity}} | {{unit_price}} \/ {{unit_measure}}",
+      "tax_line_html": " "
+    },
+    "badge": {
+      "sale_percentage_range_html": "节省高达<span data-price-percent-saved>{{ savings }}<\/span>%",
+      "sale_percentage_single_html": "节省<span data-price-percent-saved>{{ savings }}<\/span>%",
+      "sale_money_range_html": "节省高达<span class=\"money\" data-price-money-saved>{{ savings }}<\/span>",
+      "sale_money_single_html": "节省<span class=\"money\" data-price-money-saved>{{ savings }}<\/span>",
+      "sold_out": "售罄",
+      "sale": "特价",
+      "pre_order": "预购"
     }
   },
   "general": {
+    "language": {
+      "dropdown_label": "语言",
+      "submit_button_label": "更新语言"
+    },
+    "country": {
+      "dropdown_label": "国家",
+      "submit_button_label": "更新国家"
+    },
     "breadcrumbs": {
       "home": "首页",
       "collections": "产品集合"
@@ -57,7 +142,8 @@
     "title": {
       "tags": " — 已加标签 \"{{ tags }}\"",
       "page": " — 页 {{ page }}",
-      "shop": " — {{ shop }}"
+      "shop": " — {{ shop }}",
+      "product_compare": "产品对比"
     },
     "newsletter": {
       "subscribe": "注册",
@@ -91,7 +177,14 @@
       "share_on_facebook": "分享至 Facebook",
       "share_on_pinterest": "收藏至 Pinterest",
       "share_on_twitter": "发推文至 Twitter",
-      "share_on_linkedin": "分享至 LinkedIn"
+      "share_on_linkedin": "分享至 LinkedIn",
+      "no_matched_products": "{{ tag }}没有产品匹配项",
+      "total_reviews": "总评论数",
+      "star_review_text": "审查",
+      "star_reviews_text": "评论",
+      "star_reviews_info": "{{ rating_value }}\/{{ rating_max }} 星",
+      "increase_quantity": "增加数量{{ increment }}",
+      "decrease_quantity": "减少数量{{ increment }}"
     },
     "time": {
       "clear": "清除最近查看的内容",
@@ -103,6 +196,33 @@
       "hour": "小时",
       "hours": "小时",
       "ago": "前"
+    }
+  },
+  "sections": {
+    "slideshow": {
+      "slideshow": "幻灯片放映",
+      "slide_index": "幻灯片{{ count }}",
+      "slide_counter": "第{{ total }}个幻灯片，{{ count }}个",
+      "next_slide": "下一张幻灯片",
+      "previous_slide": "上一张幻灯片"
+    },
+    "shoppable-image": {
+      "onboarding": {
+        "product": "产品",
+        "tooltip_link": "查看商品"
+      }
+    },
+    "countdown-timer": {
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒"
+    },
+    "complementary_product_block": {
+      "from": "从",
+      "now": "现在",
+      "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}",
+      "view_details": "查看产品"
     }
   },
   "header": {
@@ -149,12 +269,16 @@
       "continue_shopping": "继续购物",
       "price": "价格",
       "quantity": "数量",
-      "checkout": "结账",
+      "checkout": "查看",
+      "update": "更新购物车",
       "subtotal": "小计",
       "enter_order_note": "在下面输入礼品留言或特殊送货说明：",
       "special_instructions": "特殊说明",
-      "shipping_at_checkout": "结账时计算运费和税金",
-      "taxes_at_checkout": "结账时计算税金",
+      "tax_and_shipping": "结账时计算的税金和运费",
+      "taxes_and_shipping_policy_at_checkout_html": "结账时计算的税金和<a href=\"{{ link }}\">运费<\/a>",
+      "taxes_included_but_shipping_at_checkout": "结账时计算的税金（包含）和运费",
+      "taxes_included_and_shipping_policy_html": "税金（包含）。结账时计算的<a href=\"{{ link }}\">运费<\/a>。",
+      "total_line_price": "总线价",
       "cart_empty": "您的购物车是空的"
     },
     "shipping": {
@@ -268,7 +392,14 @@
       "fulfilled_at": "已执行{{ date }}",
       "subtotal": "小计",
       "order_notes": "订单说明",
-      "additional_notes": "补充说明"
+      "additional_notes": "补充说明",
+      "back_to_account": "返回账户",
+      "select_all_items": "选择所有项目",
+      "selected": "选择",
+      "product_missing": "该产品已不存在",
+      "variant_missing": "此变体不再存在。",
+      "add_selected_items": "将所选项目添加到购物车",
+      "atc_success": "项目已成功添加到购物车！"
     },
     "recover_password": {
       "title": "重设您的密码",
@@ -332,7 +463,7 @@
         "other": "筛选条件 ({{ count }})"
       },
       "remove_filter": "移除筛选条件",
-      "remove_all": "移除所有的筛选条件"
+      "clear_all": "清除所有"
     },
     "sort_by": {
       "title": "排序方式"
@@ -346,53 +477,6 @@
     "no_results": {
       "empty": "此集合是空的",
       "tags_empty": "没有符合您搜索条件的产品"
-    }
-  },
-  "product": {
-    "general": {
-      "by_vendor": "来自 {{ vendor }}",
-      "by_vendor_html": "来自 {{ vendor_link }}",
-      "sku_html": "<strong>库存量单位<\/strong> <span data-product-sku>{{ sku }}",
-      "customer_reviews_title": "顾客评价",
-      "zoom": "点击或滚动来放大或缩小",
-      "zoomTap": "点击或开合手指来放大或缩小",
-      "zoomTapMobile": "点击放大或缩小",
-      "discounts": "折扣"
-    },
-    "media": {
-      "view_in_your_space": "在您的空间中查看"
-    },
-    "item": {
-      "badges": {
-        "sale_percentile_html": "节省 {{ saved }}%",
-        "sale_money_html": "节省 {{ saved }}",
-        "sale": "特价",
-        "sold_out": "售罄"
-      },
-      "price": {
-        "original": "原价",
-        "current": "现价",
-        "range_html": "<span class=\"price--label\">从<\/span> {{ price }}",
-        "total_line_price": "总线价",
-        "price_per_unit_html": "{{total_quantity}} | {{unit_price}} \/ {{unit_measure}}",
-        "tax_line_html": " "
-      }
-    },
-    "buttons": {
-      "quick_shop": "快速购物",
-      "add_to_cart": "添加至购物车",
-      "choose_options": "选择选项",
-      "view_details": "查看完整细节",
-      "sold_out": "售罄"
-    },
-    "status": {
-      "sold_out": "售罄"
-    },
-    "color_swatches": {
-      "swatches_count": {
-        "one": "{{ count }}种颜色可供选择",
-        "other": "提供{{ count }}种颜色"
-      }
     }
   },
   "add_to_cart_banner": {
@@ -411,11 +495,7 @@
       "filter_all": "所有类别"
     },
     "general": {
-      "breadcrumbs_count": {
-        "zero": "未找到“{{ terms }}”相关结果",
-        "one": "找到一条 “{{ terms }}”相关结果",
-        "other": "“{{ terms }}” ({{ count }})相关搜索结果"
-      },
+      "breadcrumbs_count": "{{ count }} {{ results }} 对于 \"{{ terms }}\"",
       "breadcrumbs_count_when_filtered": {
         "zero": "在{{ category }}中没有“{{ terms }}”的搜索结果 ",
         "one": "在{{ category }}有一个“{{ terms }}” 的搜索结果",
@@ -424,16 +504,25 @@
       "view_all_results": "查看所有结果",
       "view_all_products": "查看所有产品",
       "no_search_performed": "使用上面的搜索框进行搜索。",
-      "no_results_title": "未找到与“{{ terms }}”相关的结果",
-      "no_results_products_title": "未找到与“{{ terms }}”相关的产品",
+      "no_results_title": "{{ count }} {{ results }} 对于 \"{{ terms }}\". 检查拼写或使用其他单词或短语。",
+      "results": {
+        "one": "结果",
+        "other": "结果"
+      },
       "no_results_products_title_in_category": "在{{ category }}中没有“{{ terms }}”的更多产品",
       "no_more_results_products_title": "未找到与“{{ terms }}”相关的更多产品。",
       "no_more_results_products_title_in_category": "在{{ category }}中没有“{{ terms }}”的更多产品",
-      "no_results_products_message": "抱歉，我们未能找到任何匹配结果。",
-      "pages_and_posts_no_results": "没有相关结果。",
-      "pages_and_posts_title": "帖子和页面",
       "pages_title": "页面",
       "posts_title": "帖子"
+    },
+    "predictive_search": {
+      "suggestions": "建议",
+      "products_label": "产品",
+      "pages_title": "页面",
+      "posts_title": "帖子",
+      "pages_and_posts_title": "页面和帖子",
+      "view_all_results": "搜索 \"{{ terms }}\"",
+      "no_results": "找不到匹配结果。"
     }
   },
   "onboarding": {
@@ -466,5 +555,30 @@
     "page": {
       "title": "页面标题"
     }
+  },
+  "product_compare": {
+    "compare": "相比",
+    "clear_all": "清除所有产品",
+    "drawer_title": "比较产品",
+    "drawer_notification": {
+      "one": "选择 2 或 3 个项目进行比较",
+      "other": "已选择 {{ count }} 个项目，共 3 个项目"
+    },
+    "drawer_notification_placeholder": {
+      "first": "选择要比较的第一个项目",
+      "second": "选择要比较的第二个项目",
+      "third": "选择第三项进行比较"
+    },
+    "card_placeholder_text": "选择另一个项目进行比较",
+    "drawer_clear_all": "全部清除",
+    "no_products_selected": "未选择产品",
+    "vendor": "小贩",
+    "vendor_html": "{{ vendor_link }}",
+    "availability": "可用性",
+    "description": "描述",
+    "rating": "产品评论",
+    "breadcrumb": "返回{{ location }}",
+    "breadcrumb_generic": "后退",
+    "remove": "消除"
   }
 }

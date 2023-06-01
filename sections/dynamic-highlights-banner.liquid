@@ -41,16 +41,19 @@
 </script>
 
 <div class="
-  highlights-banner__{{- section.id }}
+  highlights-banner__{{ section.id }}
   highlights-banner__container
+  highlights-banner__mobile-layout--{{ section.settings.mobile_layout }}
   {{ section.settings.section_width }}
-  {% if section.settings.section_spacing %}section-spacing{% endif %}
-">
-  <div class="highlights-banner__content highlight-banner__count-{{ section.blocks.size }}" data-highlights-slider>
+  {% if section.settings.section_spacing %}section-spacing{% endif %}"
+>
+  <div class="highlights-banner__content highlight-banner__count-{{ section.blocks.size }}" 
+  {% if section.settings.mobile_layout == 'slider' %} data-highlights-slider {% endif %}
+  >
     {% for block in section.blocks %}
       {% if block.settings.text != blank or block.settings.title != blank %}
         <div
-          class="highlights-banner__block"
+          class="highlights-banner__block highlights-banner__align-{{ section.settings.icon_layout }}"
           {{ block.shopify_attributes }}
           data-highlights-block
         >
@@ -61,7 +64,8 @@
                   render 'rimg',
                   class: 'highlights-banner__custom-icon',
                   img: block.settings.image,
-                  size: '150x'
+                  size: '150x',
+                  focal_point: block.settings.image.presentation.focal_point,
                 %}
               {% else %}
                 {% render 'icon-library', id: block.settings.icon %}
@@ -96,166 +100,250 @@
 
 {% schema %}
 {
-  "name": "Highlights banner",
+  "name": "t:sections.highlights_banner.name",
   "class": "highlights-banner",
   "settings": [
     {
-      "id": "section_spacing",
       "type": "checkbox",
-      "label": "Show section spacing"
+      "id": "section_spacing",
+      "label": "t:sections.highlights_banner.section_spacing.label"
     },
     {
-      "id": "section_width",
       "type": "select",
-      "label": "Section width",
+      "id": "section_width",
+      "label": "t:sections.highlights_banner.section_width.label",
       "options": [
         {
           "value": "content-width",
-          "label": "Content width"
+          "label": "t:sections.highlights_banner.section_width.option_1"
         },
         {
           "value": "full-width",
-          "label": "Full width"
+          "label": "t:sections.highlights_banner.section_width.option_2"
         }
       ],
       "default": "full-width"
     },
     {
+      "type": "select",
+      "id": "icon_layout",
+      "label": "t:sections.highlights_banner.icon_layout.label",
+      "options": [
+        {
+          "value": "center",
+          "label": "t:sections.highlights_banner.icon_layout.option_1"
+        },
+        {
+          "value": "left",
+          "label": "t:sections.highlights_banner.icon_layout.option_2"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "color",
       "id": "color",
-      "type": "color",
-      "label": "Text color",
+      "label": "t:sections.highlights_banner.color.label",
       "default": "#4d4d4d"
     },
     {
+      "type": "color",
       "id": "icon_color",
-      "type": "color",
-      "label": "Icon color",
+      "label": "t:sections.highlights_banner.icon_color.label",
       "default": "#4d4d4d"
     },
     {
-      "id": "background_color",
       "type": "color",
-      "label": "Background color",
+      "id": "background_color",
+      "label": "t:sections.highlights_banner.background_color.label",
       "default": "#f8f8f8"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.highlights_banner.header_1.content"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "t:sections.highlights_banner.mobile_layout.label",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:sections.highlights_banner.mobile_layout.option_1"
+        },
+        {
+          "value": "slider",
+          "label": "t:sections.highlights_banner.mobile_layout.option_2"
+        }
+      ],
+      "default": "slider"
     }
   ],
   "blocks": [
     {
       "type": "highlight",
-      "name": "Highlight",
+      "name": "t:sections.highlights_banner.blocks.highlight.name",
       "settings": [
         {
-          "id": "icon",
           "type": "select",
-          "label": "Icon",
+          "id": "icon",
+          "label": "t:sections.highlights_banner.blocks.highlight.icon.label",
           "options": [
             {
               "value": "none",
-              "label": "No icon"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_1"
+            },
+            {
+              "value": "icon-award-trophy",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_2"
+            },
+            {
+              "value": "icon-car",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_3"
             },
             {
               "value": "icon-cell-phone",
-              "label": "Cell phone"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_4"
             },
             {
               "value": "icon-chat",
-              "label": "Chat"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_5"
             },
             {
               "value": "icon-chat-alternate",
-              "label": "Chat alternate"
-            },
-            {
-              "value": "icon-chat-solid",
-              "label": "Chat solid"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_6"
             },
             {
               "value": "icon-credit-card",
-              "label": "Credit card"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_7"
             },
             {
               "value": "icon-delivery",
-              "label": "Delivery"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_8"
+            },
+            {
+              "value": "icon-delivery-cart",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_9"
+            },
+            {
+              "value": "icon-delivery-door",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_10"
+            },
+            {
+              "value": "icon-delivery-handoff",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_11"
+            },
+            {
+              "value": "icon-delivery-package",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_12"
+            },
+            {
+              "value": "icon-discount",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_13"
             },
             {
               "value": "icon-email",
-              "label": "Email"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_14"
             },
             {
               "value": "icon-envelope",
-              "label": "Envelope"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_15"
             },
             {
               "value": "icon-gift-card",
-              "label": "Gift card"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_16"
             },
             {
               "value": "icon-heart",
-              "label": "Heart"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_17"
+            },
+            {
+              "value": "icon-information",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_18"
             },
             {
               "value": "icon-label-tag",
-              "label": "Label tag"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_19"
             },
             {
-              "value": "icon-lock-alternate",
-              "label": "Lock"
+              "value": "icon-lock",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_20"
+            },
+            {
+              "value": "icon-number-14",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_21"
+            },
+            {
+              "value": "icon-number-24",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_22"
+            },
+            {
+              "value": "icon-number-30",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_23"
             },
             {
               "value": "icon-people",
-              "label": "People"
-            },
-            {
-              "value": "icon-people-alternate",
-              "label": "People alternate"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_24"
             },
             {
               "value": "icon-pin",
-              "label": "Pin"
-            },
-            {
-              "value": "icon-pin-solid",
-              "label": "Pin solid"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_25"
             },
             {
               "value": "icon-question-mark",
-              "label": "Question mark"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_26"
+            },
+            {
+              "value": "icon-rating-five-star",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_27"
+            },
+            {
+              "value": "icon-rating-star",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_28"
             },
             {
               "value": "icon-smile",
-              "label": "Smile"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_29"
             },
             {
               "value": "icon-store",
-              "label": "Store"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_30"
+            },
+            {
+              "value": "icon-tape-measure",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_31"
+            },
+            {
+              "value": "icon-thumbs-up",
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_32"
             },
             {
               "value": "icon-transfer",
-              "label": "Transfer"
+              "label": "t:sections.highlights_banner.blocks.highlight.icon.option_33"
             }
           ],
           "default": "none"
         },
         {
-          "id": "image",
           "type": "image_picker",
-          "label": "Image",
-          "info": "50x50 recommended. Uploading an image will override any icon selected above."
+          "id": "image",
+          "label": "t:sections.highlights_banner.blocks.highlight.image.label",
+          "info": "t:sections.highlights_banner.blocks.highlight.image.info"
         },
         {
-          "id": "title",
           "type": "text",
-          "label": "Heading"
+          "id": "title",
+          "label": "t:sections.highlights_banner.blocks.highlight.title.label"
         },
         {
-          "id": "text",
           "type": "richtext",
-          "label": "Text"
+          "id": "text",
+          "label": "t:sections.highlights_banner.blocks.highlight.text.label"
         },
         {
-          "id": "link",
           "type": "url",
-          "label": "Link"
+          "id": "link",
+          "label": "t:sections.highlights_banner.blocks.highlight.link.label"
         }
       ],
       "limit": 4
@@ -263,8 +351,8 @@
   ],
   "presets": [
     {
-      "category": "Store information",
-      "name": "Highlights banner",
+      "category": "t:sections.highlights_banner.presets.highlights_banner.category",
+      "name": "t:sections.highlights_banner.presets.highlights_banner.name",
       "blocks": [
         {
           "type": "highlight",
@@ -300,7 +388,9 @@
         }
       ]
     }
-  ]
+  ],
+  "disabled_on": {
+    "groups": ["*"]
+  }
 }
-
 {% endschema %}

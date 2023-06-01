@@ -29,8 +29,13 @@
   # General
   @param section {Object}
     Section object
+
   @param section_classes {String}
     A string of space separated classes to apply to the section element
+
+  @param section_styles {String}
+    A string of inline styles to place on the section element. Useful for adding CSS variables.
+
   @param base_name {String} Default: 'image-with-text'
     A base name to use for all classes, and section type.
 
@@ -38,42 +43,62 @@
 
   @param section_heading {String} Optional
     Section heading above the image
+
   @param section_style {String} Optional
     ie. accent or contrast - used in Startup
+
   @param show_border (Boolean} Optional
     Show section border
+
   @param desktop_height {String} Optional
     Section/image height on desktop
+
   @param mobile_height {String} Optional
     Section/image height on mobile
+
+  @param treat_as_banner {Boolean} Optional
+    If this is set to true an attribute will be added to treat this as a banner. Usually important for the header if it is transparent.
 
   # Image Settings
 
   @param image {Image} Required
     Section image
+
   @param desktop_image_alignment {String} Optional
     Image position relative to the text content on desktop. Applied to a class on the section for CSS use.
+
   @param mobile_image_alignment {String} Optional
     Image position relative to the text content on mobile. Applied to a class on the section for CSS use.
-  @param crop {String} Optional
-    Image crop
+
+  @param focal_point {String} Optional
+    The focal point set by the merchant for the image in the Shopify admin. Accessed in the image drop via: image.presentation.focal_point. Applies object-fit:cover;object-position:[focal point] to the style property on the image element. Only works with no cropping.
+
   @param overlay_opacity {Number} Optional
     Overlay opacity for Image with Text Overlay. Used for inline style.
+
   @param overlay_color {String} Optional
     Overlay color. Used for inline style
 
   # Text Settings
 
+  @param preheading {String} Optional
+    Text above the heading
+
   @param heading {String} Optional
     Heading on the text side of the section
+
   @param subheading {String} Optional
     Subheading/text content for the text side of the section
+
   @param text_color {String} Optional
     Colour of text content and heading (does not apply to section heading)
+
   @param text_alignment {String} Optional
     Left, center or right alignment of text content
+
   @param text_shadow {Boolean} Optional
     Shadow effect on text content (existing setting in some themes)
+
   @param content_position {String} Optional
     Position of the text content in the container, usually for image with text overlay (ex. top-left, top-center, top-right)
 
@@ -81,14 +106,19 @@
 
   @param button_label {String} Optional
     Button label on text side of section
+
   @param button_link {String} Optional
     Button link
 
+  @param button_style {String} Optional
+    Button style
+
 {% endcomment %}
 
-{%- assign base_name = base_name | default: 'image-with-text' -%}
-
-
+{% liquid
+  assign base_name = base_name | default: 'image-with-text'
+  assign treat_as_banner = treat_as_banner | default: false
+%}
 
 {%- if overlay_opacity > 0 and overlay_color -%}
   {%- assign overlay_opacity = overlay_opacity | times: 0.01 -%}
@@ -132,7 +162,11 @@
       {{ section_classes }}
     {% endif %}
   "
+  {% if section_styles %}
+    style="{{ section_styles }}"
+  {% endif %}
   data-section-id="{{ section.id }}"
+  data-banner="{{ treat_as_banner }}"
 >
   {%- if section_heading != blank -%}
     <h2 class="{{ base_name }}__section-heading">{{ section_heading | escape }}</h2>
@@ -141,7 +175,6 @@
     <div class="{{ base_name }}__image-wrapper">
       {%- if image != blank -%}
         {% assign alt = image.alt | default: heading %}
-        {% assign crop = crop | default: 'center' %}
         {% capture image_classes %}{{ base_name }}__image{% endcapture %}
         {%
           render 'rimg'
@@ -149,12 +182,12 @@
           alt: alt,
           size: '1500x',
           lazy: true,
-          crop: crop,
           class: image_classes,
+          focal_point: image.presentation.focal_point,
         %}
       {%- else -%}
         {% capture placeholder_classes %}{{ base_name }}__image {{ base_name }}__placeholder{% endcapture %}
-        {{ 'collection-1' | placeholder_svg_tag: placeholder_classes }}
+        {{ 'lifestyle-1' | placeholder_svg_tag: placeholder_classes }}
       {%- endif -%}
     </div>
     <div
@@ -168,11 +201,15 @@
     >
       {%-
           if heading != blank
+          or preheading != blank
           or subheading != blank
           or button_label != blank
           or button_link != blank
        -%}
        <div class="{{ base_name }}__content-wrapper {{ text_classes }}">
+          {%- if preheading != blank -%}
+            <div class="{{ base_name }}__preheading">{{ preheading | escape }}</div>
+          {%- endif -%}
           {%- if heading != blank -%}
             <h2 class="{{ base_name }}__heading">{{ heading | escape }}</h2>
           {%- endif -%}
@@ -184,10 +221,15 @@
             and button_link != blank
           -%}
             <a
-              class="{{ base_name }}__button"
+              class="
+                {{ base_name }}__button
+                {% if button_style %}
+                  {{ base_name }}__button--style-{{ button_style }}
+                {% endif %}
+              "
               href="{{ button_link }}"
             >
-              {{ button_label }}
+              {{ button_label | escape }}
             </a>
           {%- endif -%}
         </div>
@@ -200,81 +242,52 @@
 
 {% schema %}
 {
-  "name": "Image with Text",
+  "name": "t:sections.image_with_text.name",
   "class": "image-with-text--section",
   "settings": [
     {
       "id": "section_heading",
       "type": "text",
-      "label": "Section Heading",
+      "label": "t:sections.image_with_text.section_heading.label",
       "default": "Image with text"
     },
     {
       "type": "header",
-      "content": "Image"
+      "content": "t:sections.image_with_text.header_1.content"
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
-    },
-    {
-      "type": "select",
-      "id": "crop",
-      "label": "Image focal point",
-      "options": [
-        {
-          "value": "top",
-          "label": "Top"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "bottom",
-          "label": "Bottom"
-        },
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
-      ],
-      "default": "center",
-      "info": "Used to keep the subject of your photo in view."
+      "label": "t:sections.image_with_text.image.label"
     },
     {
       "type": "select",
       "id": "desktop_height",
-      "label": "Desktop height",
+      "label": "t:sections.image_with_text.desktop_height.label",
       "options": [
         {
           "value": "natural",
-          "label": "Natural"
+          "label": "t:sections.image_with_text.desktop_height.option_1"
         },
         {
           "value": "400px",
-          "label": "400px"
+          "label": "t:sections.image_with_text.desktop_height.option_2"
         },
         {
           "value": "500px",
-          "label": "500px"
+          "label": "t:sections.image_with_text.desktop_height.option_3"
         },
         {
           "value": "600px",
-          "label": "600px"
+          "label": "t:sections.image_with_text.desktop_height.option_4"
         },
         {
           "value": "700px",
-          "label": "700px"
+          "label": "t:sections.image_with_text.desktop_height.option_5"
         },
         {
           "value": "800px",
-          "label": "800px"
+          "label": "t:sections.image_with_text.desktop_height.option_6"
         }
       ],
       "default": "natural"
@@ -282,23 +295,23 @@
     {
       "type": "select",
       "id": "mobile_height",
-      "label": "Mobile height",
+      "label": "t:sections.image_with_text.mobile_height.label",
       "options": [
         {
           "value": "natural",
-          "label": "Natural"
+          "label": "t:sections.image_with_text.mobile_height.option_1"
         },
         {
           "value": "300px",
-          "label": "300px"
+          "label": "t:sections.image_with_text.mobile_height.option_2"
         },
         {
           "value": "400px",
-          "label": "400px"
+          "label": "t:sections.image_with_text.mobile_height.option_3"
         },
         {
           "value": "500px",
-          "label": "500px"
+          "label": "t:sections.image_with_text.mobile_height.option_4"
         }
       ],
       "default": "natural"
@@ -309,15 +322,15 @@
       "options": [
         {
           "value": "left",
-          "label": "Left"
+          "label": "t:sections.image_with_text.desktop_image_alignment.option_1"
         },
         {
           "value": "right",
-          "label": "Right"
+          "label": "t:sections.image_with_text.desktop_image_alignment.option_2"
         }
       ],
       "default": "left",
-      "label": "Desktop image alignment"
+      "label": "t:sections.image_with_text.desktop_image_alignment.label"
     },
     {
       "id": "mobile_image_alignment",
@@ -325,30 +338,30 @@
       "options": [
         {
           "value": "top",
-          "label": "Top"
+          "label": "t:sections.image_with_text.mobile_image_alignment.option_1"
         },
         {
           "value": "bottom",
-          "label": "Bottom"
+          "label": "t:sections.image_with_text.mobile_image_alignment.option_2"
         }
       ],
       "default": "top",
-      "label": "Mobile image alignment"
+      "label": "t:sections.image_with_text.mobile_image_alignment.label"
     },
     {
       "type": "header",
-      "content": "Text"
+      "content": "t:sections.image_with_text.header_2.content"
     },
     {
       "id": "heading",
       "type": "text",
-      "label": "Heading",
+      "label": "t:sections.image_with_text.heading.label",
       "default": "Image with text"
     },
     {
       "id": "subheading",
       "type": "richtext",
-      "label": "Subheading",
+      "label": "t:sections.image_with_text.subheading.label",
       "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
     },
     {
@@ -357,39 +370,42 @@
       "options": [
         {
           "value": "left",
-          "label": "Left"
+          "label": "t:sections.image_with_text.text_alignment.option_1"
         },
         {
           "value": "center",
-          "label": "Center"
+          "label": "t:sections.image_with_text.text_alignment.option_2"
         },
         {
           "value": "right",
-          "label": "Right"
+          "label": "t:sections.image_with_text.text_alignment.option_3"
         }
       ],
       "default": "left",
-      "label": "Text alignment"
+      "label": "t:sections.image_with_text.text_alignment.label"
     },
     {
       "id": "button_label",
       "type": "text",
-      "label": "Button label",
+      "label": "t:sections.image_with_text.button_label.label",
       "default": "Button"
     },
     {
       "id": "button_link",
       "type": "url",
-      "label": "Button link"
+      "label": "t:sections.image_with_text.button_link.label"
     }
   ],
   "presets": [
     {
-      "category": "Image",
-      "name": "Image with text",
+      "category": "t:sections.image_with_text.presets.image_with_text.category",
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {}
     }
-  ]
+  ],
+  "disabled_on": {
+    "groups": ["*"]
+  }
 }
 
 {% endschema %}

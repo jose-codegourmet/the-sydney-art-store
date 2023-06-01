@@ -29,12 +29,12 @@
       {% for block in blocks %}
         {% if block.type == 'meganav_images' %}
           {% assign meganav_trigger = block.settings.meganav_trigger | handle | strip %}
-        {% endif %}
 
-        {% if menu_item.handle == meganav_trigger and menu_item.links.size > 0 %}
-          {% assign meganav_block = block %}
-        {% elsif menu_item.title == meganav_trigger %}
-          {% assign meganav_block = block %}
+          {% if menu_item.handle == meganav_trigger and menu_item.links.size > 0 %}
+            {% assign meganav_block = block %}
+          {% elsif menu_item.title == meganav_trigger %}
+            {% assign meganav_block = block %}
+          {% endif %}
         {% endif %}
       {% endfor %}
     {% endif %}

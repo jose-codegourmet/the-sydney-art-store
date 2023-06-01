@@ -65,9 +65,9 @@
                   render 'rimg',
                   img: image,
                   size: '180x180',
-                  crop: 'center',
                   lazy: true,
-                  canvas: true
+                  canvas: true,
+                  focal_point: image.presentation.focal_point,
                 %}
               {% else %}
                 {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
@@ -138,40 +138,40 @@
 
 {% schema %}
 {
-  "name": "Menu list",
+  "name": "t:sections.menu_list.name",
   "class": "menulist--section",
   "max_blocks": 6,
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "t:sections.menu_list.title.label",
       "default": "Menu list"
     }
   ],
   "blocks": [
     {
       "type": "menu",
-      "name": "Menu",
+      "name": "t:sections.menu_list.blocks.menu.name",
       "settings": [
         {
           "id": "menu",
           "type": "link_list",
-          "label": "Menu"
+          "label": "t:sections.menu_list.blocks.menu.menu.label"
         },
         {
           "id": "image",
           "type": "image_picker",
-          "label": "Image",
-          "info": "360 x 360px .jpg recommended"
+          "label": "t:sections.menu_list.blocks.menu.image.label",
+          "info": "t:sections.menu_list.blocks.menu.image.info"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Menu list",
-      "category": "Text",
+      "name": "t:sections.menu_list.presets.menu_list.name",
+      "category": "t:sections.menu_list.presets.menu_list.category",
       "blocks": [
         {
           "type": "menu"
@@ -193,7 +193,9 @@
         }
       ]
     }
-  ]
+  ],
+  "disabled_on": {
+    "groups": ["*"]
+  }
 }
-
 {% endschema %}

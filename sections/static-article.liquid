@@ -156,45 +156,43 @@
 
 {% schema %}
 {
-  "name": "Article pages",
+  "name": "t:sections.article_pages.name",
   "class": "article--section section--canonical",
   "settings": [
     {
       "id": "featured_image_width",
       "type": "select",
-      "label": "Featured image width",
+      "label": "t:sections.article_pages.featured_image_width.label",
       "options": [
         {
           "value": "content-width",
-          "label": "Content width"
+          "label": "t:sections.article_pages.featured_image_width.option_1"
         },
         {
           "value": "full-width",
-          "label": "Full width"
+          "label": "t:sections.article_pages.featured_image_width.option_2"
         }
       ],
       "default": "full-width"
     },
-
     {
       "type": "checkbox",
       "id": "show_date",
-      "label": "Show date published",
+      "label": "t:sections.article_pages.show_date.label",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_author",
-      "label": "Show post author",
+      "label": "t:sections.article_pages.show_author.label",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "use_share_buttons",
-      "label": "Use share buttons",
+      "label": "t:sections.article_pages.use_share_buttons.label",
       "default": true
     }
   ]
 }
-
 {% endschema %}

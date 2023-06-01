@@ -36,9 +36,9 @@
           render 'rimg',
           img: cover,
           size: '1800x1000',
-          crop: 'center',
           background: true,
-          lazy: true
+          lazy: true,
+          focal_point: cover.presentation.focal_point,
         %}
       {% endif %}
       data-video-cover
@@ -48,9 +48,9 @@
           render 'rimg',
           img: cover,
           size: '1800x1000',
-          crop: 'center',
           canvas: true,
-          lazy: true
+          lazy: true,
+          focal_point: cover.presentation.focal_point,
         %}
       {% endif %}
 

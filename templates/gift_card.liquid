@@ -40,9 +40,18 @@
         <a
           class="giftcard-header-logo"
           href="{{ routes.root_url }}">
-          <span class="giftcard-header-logo-text">
-            {{ shop.name }}
-          </span>
+          {% if settings.gift_card_logo != blank %}
+            {%
+              render 'rimg',
+              img: settings.gift_card_logo,
+              class: 'site-logo-image',
+              focal_point: settings.gift_card_logo.presentation.focal_point,
+            %}
+          {% else %}
+            <span class="giftcard-header-logo-text">
+              {{ shop.name }}
+            </span>
+          {% endif %}
         </a>
       </header>
 
@@ -153,7 +162,8 @@
     <script
       src="{{ 'empire.js' | asset_url }}"
       data-scripts
-      data-pxu-polyfills="{{ 'polyfills.js' | asset_url }}"
+      data-pxu-polyfills="{{ 'polyfills.min.js' | asset_url }}"
     >
+    </script>
   </body>
 </html>

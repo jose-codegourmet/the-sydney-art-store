@@ -11,7 +11,8 @@
   "settings": {
     "limit": {{ product_limit }}
   },
-    "productId": {{ product.id | json }}
+    "productId": {{ product.id | json }},
+    "sectionId": {{ section.id | json }}
 }
   </script>
 
@@ -44,23 +45,22 @@
 
 {% schema %}
 {
-  "name": "Product recommendations",
+  "name": "t:sections.product_recommendations.name",
   "class": "product-recommendations--section",
   "settings": [
     {
       "type": "checkbox",
       "id": "show_product_recommendations",
-      "label": "Show dynamic recommendations",
-      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
+      "label": "t:sections.product_recommendations.show_product_recommendations.label",
+      "info": "t:sections.product_recommendations.show_product_recommendations.info",
       "default": true
     },
     {
       "type": "text",
       "id": "product_recommendations_heading",
-      "label": "Heading",
+      "label": "t:sections.product_recommendations.product_recommendations_heading.label",
       "default": "You may also like"
     }
   ]
 }
-
 {% endschema %}

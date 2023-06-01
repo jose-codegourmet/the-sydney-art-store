@@ -7,15 +7,15 @@
 
 {%- capture classes -%}
   promo-block
-  promo-block--{{ block.id }}
+  {% if block.settings.image != blank %}promo-block--image{% else %}promo-block--placeholder{% endif %}
+  promo-block--{{ section.id }}--{{ block.id }}
   promo-block--index-{{ index }}
   {% if maintain_aspect_ratio %}promo-mosaic--maintain-aspect-ratio{% endif %}
   {{ additional_classes | strip_newlines }}
 {%- endcapture -%}
 
-
 <{% if block.settings.title != blank and block.settings.text != blank %}article{% else %}div{% endif %}
-  class="{{ classes | replace: '  ', ' ' | strip_newlines }}"
+  class="{{ classes | replace: '  ', ' ' | strip_newlines }} {% if block.settings.image == blank %}onboarding-image{% endif %}"
   {{ block.shopify_attributes }}
   {% if block.settings.image %}
     {%
@@ -23,7 +23,8 @@
       img: block.settings.image,
       background: true,
       lazy: true,
-      size: '1350x1350'
+      size: '1350x1350',
+      focal_point: block.settings.image.presentation.focal_point,
     %}
   {% endif %}
 >
@@ -34,7 +35,8 @@
       lazy: true,
       canvas: true,
       class: 'promo-block--background',
-      size: '1350x1350'
+      size: '1350x1350',
+      focal_point: block.settings.image.presentation.focal_point,
     %}
   {% endif %}
 
@@ -78,11 +80,11 @@
         {{ block.settings.button_text | escape }}
       </span>
     {% endif %}
-
   </div>
-    <span class="promo-block--expander">
-      {% render 'icon-chevron-down' %}
-    </span>
+
+  <span class="promo-block--expander">
+    {% render 'icon-chevron-down' %}
+  </span>
 
   {% if has_link %}
     </a>

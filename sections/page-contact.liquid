@@ -104,16 +104,27 @@
 
       <div class="form-field">
         {% assign value = '' %}
+
         {%- if form.body -%}
           {% assign value = form.body %}
         {%- endif -%}
-        <textarea
-          class="form-field-input form-field-textarea {% if form.errors contains 'body' %}form-field-error{% endif %}"
-          id="contact_message"
-          name="contact[message]">{{ value }}</textarea>
 
-        <label class="form-field-title" for="contact_body">
-          {{ 'contact.form.message' | t }}
+        <textarea
+          class="
+            form-field-input
+            form-field-textarea
+            {% if form.errors contains 'body' %}
+              form-field-error
+            {% endif %}
+          "
+          id="contact_message"
+          name="contact[message]"
+        >
+          {{- value -}}
+        </textarea>
+
+        <label class="form-field-title" for="contact_message">
+          {{- 'contact.form.message' | t -}}
         </label>
       </div>
 

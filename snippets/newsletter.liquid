@@ -1,15 +1,17 @@
-{% assign form_id = form_id | default: nil %}
-{% assign newsletter_tags = 'prospect' %}
+{% liquid
+  assign form_id = form_id | default: nil
+  assign newsletter_tags = 'prospect'
 
-{%- if template contains 'password' %}
-  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
-{%- else -%}
-  {% assign newsletter_tags = newsletter_tags | append: ', newsletter' %}
-{%- endif -%}
+  if template contains 'password'
+    assign newsletter_tags = newsletter_tags | append: ', password page'
+  else
+    assign newsletter_tags = newsletter_tags | append: ', newsletter'
+  endif
 
-{% unless input_id %}
-  {% assign input_id = 'newsletter_email' %}
-{% endunless %}
+  unless input_id
+    assign input_id = 'newsletter_email-' | append: section.id
+  endunless
+%}
 
 <div class="newsletter">
   {% form 'customer', id: form_id %}
@@ -27,10 +29,13 @@
       <div class="form-fields-inline pxs-newsletter-form-fields">
         <div class="form-field newsletter-input">
           <input
-            class="form-field-input form-field-text"
-            name="contact[email]"
-            id="{{ input_id }}"
+            class="
+              form-field-input
+              form-field-text
+            "
             type="email"
+            id="{{ input_id }}"
+            name="contact[email]"
             aria-label="{{ 'general.newsletter.placeholder' | t }}"
           >
 

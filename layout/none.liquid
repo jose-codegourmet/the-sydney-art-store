@@ -1,6 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="{{ shop.locale }}">
+<html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+  <script>
+    window.Store = window.Store || {};
+    window.Store.id = {{ shop.id }};
+  </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
 
@@ -17,6 +21,10 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="viewport" content="width=device-width">
 
+    {% if template.suffix == '_quickshop' %}
+      <meta name="format-detection" content="telephone=no">
+    {% endif %}
+
     {% assign twitter_handle = settings.social_twitter | split: 'twitter.com/' | last %}
     {%
       render 'social-meta-tags',
@@ -32,97 +40,33 @@
     </script>
 
     {{ 'theme.css' | asset_url | stylesheet_tag }}
-  
-<!-- GSSTART Slider code start. Do not change -->{% if product.id > 1 %}
-<script src="https://gravity-software.com//js/shopify/slider_prod{{ product.id }}.js?v=161127"  ></script><script type="text/javascript" src="https://gravity-software.com/js/shopify/slider_shop30344.js?v=d0360f2273169ec944185eded362c371"></script> 
- {% if product.variants.size > 1 %}<script>
-gsSliderDefaultV = "{{ product.selected_or_first_available_variant.id }}";
-var variantImagesByVarianName = {};
-var variantImagesByVarianNameMix = {};
- var variantImagesGS = {},
-    thumbnails,
-    variant,
-    variantImage,
-    optionValue,
-    cntImages;
-    productOptions = [];
-    cntImages = 0;
-    {% for variant in product.variants %}
-       variant = {{ variant | json }};
-       if ( typeof variant.featured_image !== 'undefined' && variant.featured_image !== null ) {
-         variantImage =  variant.featured_image.src.split('?')[0].replace(/http(s)?:/,'');
-         variantImagesGS[variant.id] = variantImage;
-         variantImagesByVarianName[variant.option1] = variantImage;
-var variantMixName = "";
-if(variant.option1 != null) {
-variantMixName = variant.option1;
-}
-	 if(variant.option2 != null) {
-		variantImagesByVarianName[variant.option2] = variantImage;
-		variantMixName = variantMixName + ";gs;" + variant.option2;
-	 }
-         if(variant.option3 != null) {
-                variantImagesByVarianName[variant.option3] = variantImage;
-		variantMixName = variantMixName + ";gs;" + variant.option3;
-         }
 
-if(variantMixName != "") {
-variantImagesByVarianNameMix[variantMixName] = variantImage;
-}
+    {% comment %}Inject theme-object begin{% endcomment %}
+    <script>
+      window.Theme = window.Theme || {};
+      window.Theme.version = '9.0.1';
+      window.Theme.name = 'Empire';
+      window.Theme.routes = {
+        "root_url": "{{ routes.root_url }}",
+        "account_url": "{{ routes.account_url }}",
+        "account_login_url": "{{ routes.account_login_url }}",
+        "account_logout_url": "{{ routes.account_logout_url }}",
+        "account_register_url": "{{ routes.account_register_url }}",
+        "account_addresses_url": "{{ routes.account_addresses_url }}",
+        "collections_url": "{{ routes.collections_url }}",
+        "all_products_collection_url": "{{ routes.all_products_collection_url }}",
+        "search_url": "{{ routes.search_url }}",
+        "predictive_search_url": "{{ routes.predictive_search_url }}",
+        "cart_url": "{{ routes.cart_url }}",
+        "cart_add_url": "{{ routes.cart_add_url }}",
+        "cart_change_url": "{{ routes.cart_change_url }}",
+        "cart_clear_url": "{{ routes.cart_clear_url }}",
+        "product_recommendations_url": "{{ routes.product_recommendations_url }}",
+      };
+    </script>
+    {% comment %}Inject theme-object end{% endcomment %}
 
-         cntImages++;
-       }
-    {% endfor %}
-                if(cntImages == 0) {
-          variantImagesGS = undefined;
-                }
-</script> {% endif %}
-<script>
-
-var imageDimensionsWidth = {};
-var imageDimensionsHeight = {};
-var imageSrcAttr = {};
-var altTag = {};  
-
-var mediaGS = [];  
-  var productImagesGS = [];
-var productImagesGSUrls = [];
-{% for image in product.images %}
-  var productImageUrl = "{{ image.src }}";
-  var dotPosition = productImageUrl.lastIndexOf(".");
-  productImageUrl = productImageUrl.substr(0, dotPosition);
-  productImagesGS.push(productImageUrl);
-  imageDimensionsWidth[{{ image.id }}] = "{{ image.width }}";
-  imageDimensionsHeight[{{ image.id }}] = "{{ image.height }}";
-  altTag[{{ image.id }}] = "{{ image.alt | replace: '\"', '"' | replace: '"', '\"' | strip | strip_newlines }}";
-  imageSrcAttr[{{ image.id }}] = "{{ image.src }}";
-  productImagesGSUrls.push("{{ image.src | img_url: '240x' }}");
-{% endfor %}
-
-{%- for media in product.media -%}
-    {% case media.media_type %}
-	{% when "image" %}                           
-                           var mediaObjectGS ={id: "{{ media.image.id  }}", mediaType:"{{ media.media_type }}", previewImgURL:"{{ media.image.src | img_url: "240x" }}", previewImg:"{{ media.image.src }}", tag:"{{ media.image.src | img_url: "240x" }}"};  
-            mediaGS.push(mediaObjectGS);
-    {% when "video" %}
-              var productImageUrl = "{{ media.preview_image }}";
-  var dotPosition = productImageUrl.lastIndexOf(".");
-  productImageUrl = productImageUrl.substr(0, dotPosition);                     
-  var mediaObjectGS ={id: "{{ media.id }}", mediaType:"{{ media.media_type }}", width: "{{ media.preview_image.width }}", height: "{{ media.preview_image.height }}", previewImgURL:"{{ media.preview_image | img_url: "500x" }}", previewImg:"" + productImageUrl +  "", tag:'{{ media | video_tag: controls: true }}'};                                  
-            mediaGS.push(mediaObjectGS);                                
-	{% when "external_video" %}                
-              var productImageUrl = "{{ media.preview_image }}";
-  var dotPosition = productImageUrl.lastIndexOf(".");
-  productImageUrl = productImageUrl.substr(0, dotPosition);                     
-            var mediaObjectGS ={id: "{{ media.id }}", mediaType:"{{ media.media_type }}", width: "{{ media.preview_image.width }}", height: "{{ media.preview_image.height }}", previewImgURL:"{{ media.preview_image | img_url: "500x" }}", previewImg:"" + productImageUrl +  "", tag:'{{ media | external_video_tag }}'};                                  
-            mediaGS.push(mediaObjectGS);
-    {% endcase %}
-{%- endfor -%}      
-                    
-
-</script>
-
-{% endif %}<!-- Slider code end. Do not change GSEND --></head>
+  </head>
 
   <body class="template-{{ template | split: '.' | first }}">
     <main class="site-main" aria-label="main content" tabindex="-1">
@@ -171,8 +115,8 @@ var productImagesGSUrls = [];
     <script
       src="{{ 'empire.js' | asset_url }}"
       data-scripts
-      data-pxu-polyfills="{{ 'polyfills.js' | asset_url }}"
+      data-pxu-polyfills="{{ 'polyfills.min.js' | asset_url }}"
     >
     </script>
-  <link rel="stylesheet" href="https://gravity-software.com/js/shopify/rondell/jquery.rondellf85.css?v=123"/></body>
+  </body>
 </html>

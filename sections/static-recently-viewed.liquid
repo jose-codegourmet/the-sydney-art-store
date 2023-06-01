@@ -4,7 +4,7 @@
     render 'product-recently-viewed',
     product: product
   -%}
-{%- endcapture %}
+{%- endcapture -%}
 
 <script
   type="application/json"
@@ -49,14 +49,14 @@
 
 {% schema %}
 {
-  "name": "Recently viewed products",
+  "name": "t:sections.recently_viewed_products.name",
   "class": "recently-viewed--section",
   "settings": [
     {
       "type": "checkbox",
       "id": "enable_recently_viewed_products",
-      "label": "Enable recently viewed products",
-      "info": "This affects both the collection and product pages."
+      "label": "t:sections.recently_viewed_products.enable_recently_viewed_products.label",
+      "info": "t:sections.recently_viewed_products.enable_recently_viewed_products.info"
     }
   ]
 }

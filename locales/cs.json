@@ -6,6 +6,74 @@
       "continue_shopping": "Pokračovat v nakupování"
     }
   },
+  "product": {
+    "variants": {
+      "choose_option": "Vyberte {{ option }}",
+      "chosen_option_html": "{{ option }}: <span> {{ value }} <\/span>",
+      "choose_variant": "Vyberte variantu"
+    },
+    "general": {
+      "by_vendor": "podle {{ vendor }}",
+      "by_vendor_html": "podle {{ vendor_link }}",
+      "sku_html": "<strong>skladová jednotka<\/strong> <span data-product-sku>{{ sku }}<\/span>",
+      "customer_reviews_title": "Recenze zákazníků",
+      "zoom": "Klikněte nebo otočte kolečkem pro přiblížení",
+      "zoomTap": "Klepněte nebo přibližte dva prsty pro přiblížení",
+      "zoomTapMobile": "Klepněte pro přiblížení",
+      "discounts": "Slevy",
+      "select_variant": "Vyberte prosím variantu",
+      "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}"
+    },
+    "media": {
+      "view_in_your_space": "Zobrazit ve svém prostoru"
+    },
+    "buttons": {
+      "quick_shop": "Rychlé nakupování",
+      "add_to_cart": "Přidat do košíku",
+      "choose_options": "Zvolit možnosti",
+      "view_details": "Zobrazit celý detail",
+      "sold_out": "Vyprodáno",
+      "unavailable": "Nedostupné",
+      "pre_order": "Předobjednávka"
+    },
+    "status": {
+      "sold_out": "Vyprodáno",
+      "availability": "Dostupnost",
+      "in_stock": "{{ inventory_quantity }} na skladě",
+      "in_stock_hidden": "Na skladě",
+      "in_stock_verbose": "{{ inventory_quantity }} na skladě, připraven k odeslání",
+      "in_stock_threshold": "{{ inventory_quantity }}+ na skladě",
+      "in_stock_threshold_verbose": "{{ inventory_quantity }}+ na skladě, připraven k odeslání",
+      "low_stock": "Pouze {{ inventory_quantity }} doleva!",
+      "low_stock_hidden": "Nízké zásoby",
+      "no_stock": "Vyprodáno",
+      "incoming_stock": "Více na cestě!",
+      "pre_order": "Již brzy",
+      "continue_selling": "Na skladě"
+    },
+    "color_swatches": {
+      "swatches_count": {
+        "one": "{{ count }} barva k dispozici",
+        "other": "{{ count }} dostupné barvy"
+      }
+    },
+    "onboarding": {
+      "tab_title": "Popis",
+      "tab_content": "Přidejte popis produktu pro sdílení informací o produktu."
+    },
+    "blocks": {
+      "request_quote": {
+        "email": "E-mailem",
+        "message": "Zpráva",
+        "name": "název",
+        "request_message": "Zákazník požádal o nabídku pro {{ product_title }} - {{ product_url }}",
+        "request_message_empty": "Žádost o citát",
+        "success": "Děkujeme, že jste nás kontaktovali.Co nejdříve se k vám vrátíme.",
+        "submit": "Žádost o nabídku",
+        "quantity": "Množství"
+      }
+    }
+  },
   "store_availability": {
     "general": {
       "in_stock": "Na skladě",
@@ -30,16 +98,33 @@
       "tags_html": "Označeno \"{{ tags }}\""
     }
   },
-  "sections": {
-    "slideshow": {
-      "slideshow": "Prezentace",
-      "slide_index": "Snímek {{ count }}",
-      "slide_counter": "Snímek {{ count }} z {{ total }}",
-      "next_slide": "Další snímek",
-      "previous_slide": "Předchozí snímek"
+  "product_price": {
+    "price": {
+      "original": "Původní cena",
+      "current": "Momentální cena",
+      "range_html": "<span class=\"price--label\">od<\/span> {{ price }}",
+      "price_per_unit_html": "{{total_quantity}} | {{unit_price}} \/ {{unit_measure}}",
+      "tax_line_html": " "
+    },
+    "badge": {
+      "sale_percentage_range_html": "Ušetřete až <span data-price-percent-saved>{{ savings }}<\/span>%",
+      "sale_percentage_single_html": "Ušetříte <span data-price-percent-saved>{{ savings }}<\/span>%",
+      "sale_money_range_html": "Ušetřete až <span class=\"money\" data-price-money-saved>{{ savings }}<\/span>",
+      "sale_money_single_html": "Ušetříte <span class=\"money\" data-price-money-saved>{{ savings }}<\/span>",
+      "sold_out": "Vyprodáno",
+      "sale": "Sleva",
+      "pre_order": "Předobjednávka"
     }
   },
   "general": {
+    "language": {
+      "dropdown_label": "Jazyk",
+      "submit_button_label": "Aktualizovat jazyk"
+    },
+    "country": {
+      "dropdown_label": "Země",
+      "submit_button_label": "Aktualizovat zemi"
+    },
     "breadcrumbs": {
       "home": "Domů",
       "collections": "Kolekce"
@@ -57,7 +142,8 @@
     "title": {
       "tags": " — Označeno \"{{ tags }}\"",
       "page": " — Strana {{ page }}",
-      "shop": " — {{ shop }}"
+      "shop": " — {{ shop }}",
+      "product_compare": "Porovnání produktu"
     },
     "newsletter": {
       "subscribe": "Zaregistrovat se",
@@ -91,7 +177,14 @@
       "share_on_facebook": "Sdílet na Facebooku",
       "share_on_pinterest": "Připnout na Pinterest",
       "share_on_twitter": "Tweetnout na Twitter",
-      "share_on_linkedin": "Sdílet na LinkedIn"
+      "share_on_linkedin": "Sdílet na LinkedIn",
+      "no_matched_products": "{{ tag }} nemá žádné shody produktů",
+      "total_reviews": "celkový počet recenzí",
+      "star_review_text": "Posouzení",
+      "star_reviews_text": "Recenze",
+      "star_reviews_info": "{{ rating_value }} z {{ rating_max }} hvězdiček",
+      "increase_quantity": "Zvyšte množství o {{ increment }}",
+      "decrease_quantity": "Snižte množství o {{ increment }}"
     },
     "time": {
       "clear": "Vymazat nedávná prohlížení",
@@ -103,6 +196,54 @@
       "hour": "hodina",
       "hours": "hodiny",
       "ago": "před"
+    }
+  },
+  "sections": {
+    "slideshow": {
+      "slideshow": "Prezentace",
+      "slide_index": "Snímek {{ count }}",
+      "slide_counter": "Snímek {{ count }} z {{ total }}",
+      "next_slide": "Další snímek",
+      "previous_slide": "Předchozí snímek"
+    },
+    "shoppable-image": {
+      "onboarding": {
+        "product": "Produkt",
+        "tooltip_link": "Zobrazit produkt"
+      }
+    },
+    "countdown-timer": {
+      "days": "Dny",
+      "hours": "hodiny",
+      "minutes": "Minut",
+      "seconds": "Sekundy"
+    },
+    "complementary_product_block": {
+      "from": "Z",
+      "now": "Nyní",
+      "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}",
+      "view_details": "Zobrazit produkt"
+    }
+  },
+  "age_gate": {
+    "form": {
+      "confirm": "Potvrďte věk a pokračujte do {{ shop }}",
+      "error": "Přístup obchodu je omezen na věk dospělých {{ age }} a starší.",
+      "day": "Den",
+      "month": "Měsíc",
+      "year": "Rok",
+      "january": "leden",
+      "february": "Únor",
+      "march": "březen",
+      "april": "duben",
+      "may": "Smět",
+      "june": "červen",
+      "july": "červenec",
+      "august": "srpen",
+      "september": "září",
+      "october": "říjen",
+      "november": "listopad",
+      "december": "prosinec"
     }
   },
   "header": {
@@ -149,12 +290,16 @@
       "continue_shopping": "Pokračovat v nakupování",
       "price": "Cena",
       "quantity": "Množství",
-      "checkout": "Zaplatit",
+      "checkout": "Vyzkoušet ",
+      "update": "Pokladna dvoukolák",
       "subtotal": "Celkově",
       "enter_order_note": "Zadejte poznámku k dárku nebo zvláštní instrukce pro doručení níže:",
       "special_instructions": "Zvláštní instrukce",
-      "shipping_at_checkout": "Doprava a daně jsou vypočteny při placení",
-      "taxes_at_checkout": "Daně jsou vypočteny při placení",
+      "tax_and_shipping": "Daně a poštovné se vypočítají v pokladně",
+      "taxes_and_shipping_policy_at_checkout_html": "Daně a <a href=\"{{ link }}\">poštovné<\/a> se vypočítá v pokladně",
+      "taxes_included_but_shipping_at_checkout": "Daně a poštovné se vypočítají v pokladně",
+      "taxes_included_and_shipping_policy_html": "Včetně daní. <a href=\"{{ link }}\">Poštovné<\/a> se vypočítá v pokladně.",
+      "total_line_price": "Celková cena řádku",
       "cart_empty": "Váš košík je prázdný"
     },
     "shipping": {
@@ -268,7 +413,14 @@
       "fulfilled_at": "Naplněno {{ date }}",
       "subtotal": "Celkově",
       "order_notes": "Poznámky k objednávce",
-      "additional_notes": "Další poznámky"
+      "additional_notes": "Další poznámky",
+      "back_to_account": "Zpět na Účet",
+      "select_all_items": "Vyberte všechny položky",
+      "selected": "Vybráno",
+      "product_missing": "Tento produkt již neexistuje.",
+      "variant_missing": "Tato varianta již neexistuje.",
+      "add_selected_items": "Přidejte vybrané zboží do košíku",
+      "atc_success": "Položky úspěšně přidány do košíku!"
     },
     "recover_password": {
       "title": "Resetovat heslo",
@@ -332,7 +484,7 @@
         "other": "Filtry ({{ count }})"
       },
       "remove_filter": "Odstranit filtr",
-      "remove_all": "Odstranit všechny filtry"
+      "clear_all": "Vymazat vše"
     },
     "sort_by": {
       "title": "Seřadit podle"
@@ -346,53 +498,6 @@
     "no_results": {
       "empty": "Tato kolekce je prázdná",
       "tags_empty": "Vašemu hledání neodpovídají žádné produkty"
-    }
-  },
-  "product": {
-    "general": {
-      "by_vendor": "podle {{ vendor }}",
-      "by_vendor_html": "podle {{ vendor_link }}",
-      "sku_html": "<strong>skladová jednotka<\/strong> <span data-product-sku>{{ sku }}",
-      "customer_reviews_title": "Recenze zákazníků",
-      "zoom": "Klikněte nebo otočte kolečkem pro přiblížení",
-      "zoomTap": "Klepněte nebo přibližte dva prsty pro přiblížení",
-      "zoomTapMobile": "Klepněte pro přiblížení",
-      "discounts": "Slevy"
-    },
-    "media": {
-      "view_in_your_space": "Zobrazit ve svém prostoru"
-    },
-    "item": {
-      "badges": {
-        "sale_percentile_html": "Uložit {{ saved }}%",
-        "sale_money_html": "Uložit {{ saved }}",
-        "sale": "Sleva",
-        "sold_out": "Vyprodáno"
-      },
-      "price": {
-        "original": "Původní cena",
-        "current": "Momentální cena",
-        "range_html": "<span class=\"price--label\">od<\/span> {{ price }}",
-        "total_line_price": "Celková cena řádku",
-        "price_per_unit_html": "{{total_quantity}} | {{unit_price}} \/ {{unit_measure}}",
-        "tax_line_html": " "
-      }
-    },
-    "buttons": {
-      "quick_shop": "Rychlé nakupování",
-      "add_to_cart": "Přidat do košíku",
-      "choose_options": "Zvolit možnosti",
-      "view_details": "Zobrazit celý detail",
-      "sold_out": "Vyprodáno"
-    },
-    "status": {
-      "sold_out": "Vyprodáno"
-    },
-    "color_swatches": {
-      "swatches_count": {
-        "one": "{{ count }} barva k dispozici",
-        "other": "{{ count }} dostupné barvy"
-      }
     }
   },
   "add_to_cart_banner": {
@@ -411,11 +516,7 @@
       "filter_all": "Všechny kategorie"
     },
     "general": {
-      "breadcrumbs_count": {
-        "zero": "Žádné výsledky pro „{{ terms }}”",
-        "one": "Jeden výsledek pro „{{ terms }}”",
-        "other": "Výsledky hledání pro „{{ terms }}” ({{ count }})"
-      },
+      "breadcrumbs_count": "{{ count }} {{ results }} pro „{{ terms }}”",
       "breadcrumbs_count_when_filtered": {
         "zero": "Žádné výsledky pro „{{ terms }}” v {{ category }}",
         "one": "Jeden výsledek pro „{{ terms }}” v {{ category }}”的一个结果",
@@ -424,16 +525,25 @@
       "view_all_results": "Zobrazit všechny výsledky",
       "view_all_products": "Zobrazit všechny produkty",
       "no_search_performed": "Pro hledání použijte vyhledávací pole výše. ",
-      "no_results_title": "Žádné výsledky pro „{{ terms }}”.",
-      "no_results_products_title": "Žádné produkty pro „{{ terms }}”.",
+      "no_results_title": "{{ count }} {{ results }} pro \"{{ terms }}\". Zkontrolujte pravopis nebo použijte jiné slovo nebo frázi.",
+      "results": {
+        "one": "výsledek",
+        "other": "výsledek"
+      },
       "no_results_products_title_in_category": "Žádné produkty pro „{{ terms }}” v {{ category }}.",
       "no_more_results_products_title": "Žádné další produkty pro „{{ terms }}”.",
       "no_more_results_products_title_in_category": "Žádné další produkty pro „{{ terms }}” v {{ category }}.",
-      "no_results_products_message": "Omlouváme se, nepodařilo se nám najít nic odpovídajícího. ",
-      "pages_and_posts_no_results": "Žádné výsledky.",
-      "pages_and_posts_title": "Příspěvky a stránky",
       "pages_title": "Stránky",
       "posts_title": "Příspěvky"
+    },
+    "predictive_search": {
+      "suggestions": "Návrhy",
+      "products_title": "Produkty",
+      "pages_title": "Stránky",
+      "posts_title": "Příspěvky",
+      "pages_and_posts_title": "Stránky a příspěvky",
+      "view_all_results": "Vyhledejte \"{{ terms }}\"",
+      "no_results": "Nebyly nalezeny žádné výsledky odpovídajících."
     }
   },
   "onboarding": {
@@ -466,5 +576,30 @@
     "page": {
       "title": "Název stránky"
     }
+  },
+  "product_compare": {
+    "compare": "Porovnejte",
+    "clear_all": "Vymazat všechny produkty",
+    "drawer_title": "Porovnejte produkty",
+    "drawer_notification": {
+      "one": "Vyberte 2 nebo 3 položky k porovnání",
+      "other": "{{ count }} ze 3 vybraných položek"
+    },
+    "drawer_notification_placeholder": {
+      "first": "Vyberte první položku k porovnání",
+      "second": "Vyberte druhou položku pro porovnání",
+      "third": "Vyberte třetí položku k porovnání"
+    },
+    "card_placeholder_text": "Vyberte jinou položku k porovnání",
+    "drawer_clear_all": "Vymazat vše",
+    "no_products_selected": "Nejsou vybrány žádné produkty",
+    "vendor": "Prodejce",
+    "vendor_html": "{{ vendor_link }}",
+    "availability": "Dostupnost",
+    "description": "Popis",
+    "rating": "Recenze produktu",
+    "breadcrumb": "Zpět na {{ location }}",
+    "breadcrumb_generic": "Zadní",
+    "remove": "Odstranit"
   }
 }

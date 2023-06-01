@@ -61,32 +61,32 @@
 
 {% schema %}
 {
-  "name": "Mosaic",
+  "name": "t:sections.mosaic.name",
   "class": "promo-mosaic--section",
   "max_blocks": 5,
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "t:sections.mosaic.title.label",
       "default": "Mosaic"
     },
     {
       "id": "section_height",
       "type": "select",
-      "label": "Section height",
+      "label": "t:sections.mosaic.section_height.label",
       "options": [
         {
           "value": "small",
-          "label": "Small"
+          "label": "t:sections.mosaic.section_height.option_1"
         },
         {
           "value": "medium",
-          "label": "Medium"
+          "label": "t:sections.mosaic.section_height.option_2"
         },
         {
           "value": "large",
-          "label": "Large"
+          "label": "t:sections.mosaic.section_height.option_3"
         }
       ],
       "default": "small"
@@ -94,43 +94,43 @@
     {
       "id": "text_alignment",
       "type": "select",
-      "label": "Text alignment",
+      "label": "t:sections.mosaic.text_alignment.label",
       "options": [
         {
           "value": "top-left",
-          "label": "Top left"
+          "label": "t:sections.mosaic.text_alignment.option_1"
         },
         {
           "value": "top-center",
-          "label": "Top center"
+          "label": "t:sections.mosaic.text_alignment.option_2"
         },
         {
           "value": "top-right",
-          "label": "Top right"
+          "label": "t:sections.mosaic.text_alignment.option_3"
         },
         {
           "value": "center-left",
-          "label": "Center left"
+          "label": "t:sections.mosaic.text_alignment.option_4"
         },
         {
           "value": "center-center",
-          "label": "Center center"
+          "label": "t:sections.mosaic.text_alignment.option_5"
         },
         {
           "value": "center-right",
-          "label": "Center right"
+          "label": "t:sections.mosaic.text_alignment.option_6"
         },
         {
           "value": "bottom-left",
-          "label": "Bottom left"
+          "label": "t:sections.mosaic.text_alignment.option_7"
         },
         {
           "value": "bottom-center",
-          "label": "Bottom center"
+          "label": "t:sections.mosaic.text_alignment.option_8"
         },
         {
           "value": "bottom-right",
-          "label": "Bottom right"
+          "label": "t:sections.mosaic.text_alignment.option_9"
         }
       ],
       "default": "top-left"
@@ -138,92 +138,92 @@
     {
       "id": "maintain_aspect_ratio",
       "type": "checkbox",
-      "label": "Maintain aspect ratio",
+      "label": "t:sections.mosaic.maintain_aspect_ratio.label",
       "default": false
     },
     {
       "type": "header",
-      "content": "Mobile"
+      "content": "t:sections.mosaic.header_1.content"
     },
     {
       "id": "compress_blocks",
       "type": "checkbox",
-      "label": "Compress blocks",
+      "label": "t:sections.mosaic.compress_blocks.label",
       "default": false
     }
   ],
   "blocks": [
     {
       "type": "promotion",
-      "name": "Promotional item",
+      "name": "t:sections.mosaic.blocks.promotional_item.name",
       "settings": [
         {
           "id": "image",
           "type": "image_picker",
-          "label": "Image"
+          "label": "t:sections.mosaic.blocks.promotional_item.image.label"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Heading",
+          "label": "t:sections.mosaic.blocks.promotional_item.title.label",
           "default": "Mosaic"
         },
         {
           "type": "textarea",
           "id": "text",
-          "label": "Text",
+          "label": "t:sections.mosaic.blocks.promotional_item.text.label",
           "default": "Use this section to welcome customers to your store, say a bit about your brand, or share news."
         },
         {
           "type": "color",
           "id": "color",
-          "label": "Text color",
+          "label": "t:sections.mosaic.blocks.promotional_item.color.label",
           "default": "#4d4d4d"
         },
         {
           "type": "url",
           "id": "block_link",
-          "label": "Link"
+          "label": "t:sections.mosaic.blocks.promotional_item.block_link.label"
         },
         {
           "type": "text",
           "id": "button_text",
-          "label": "Button text"
+          "label": "t:sections.mosaic.blocks.promotional_item.button_text.label"
         },
         {
           "id": "button_style",
           "type": "select",
-          "label": "Button style",
+          "label": "t:sections.mosaic.blocks.promotional_item.button_style.label",
           "options": [
             {
               "value": "primary",
-              "label": "Primary"
+              "label": "t:sections.mosaic.blocks.promotional_item.button_style.option_1"
             },
             {
               "value": "secondary",
-              "label": "Secondary"
+              "label": "t:sections.mosaic.blocks.promotional_item.button_style.option_2"
             }
           ],
           "default": "primary"
         },
         {
           "type": "header",
-          "content": "Overlay"
+          "content": "t:sections.mosaic.blocks.promotional_item.header_1.content"
         },
         {
           "id": "show_overlay",
           "type": "checkbox",
-          "label": "Show overlay"
+          "label": "t:sections.mosaic.blocks.promotional_item.show_overlay.label"
         },
         {
           "id": "background",
           "type": "color",
-          "label": "Color"
+          "label": "t:sections.mosaic.blocks.promotional_item.background.label"
         },
         {
           "id": "opacity",
           "type": "range",
-          "label": "Opacity",
+          "label": "t:sections.mosaic.blocks.promotional_item.opacity.label",
           "min": 1,
           "max": 100,
           "step": 1,
@@ -235,8 +235,8 @@
   ],
   "presets": [
     {
-      "name": "Mosaic",
-      "category": "Image",
+      "name": "t:sections.mosaic.presets.mosaic.name",
+      "category": "t:sections.mosaic.presets.mosaic.category",
       "blocks": [
         {
           "type": "promotion"
@@ -249,7 +249,9 @@
         }
       ]
     }
-  ]
+  ],
+  "disabled_on": {
+    "groups": ["*"]
+  }
 }
-
 {% endschema %}

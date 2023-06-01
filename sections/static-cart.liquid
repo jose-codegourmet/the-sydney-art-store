@@ -15,7 +15,7 @@
   {% assign has_items = true %}
 {% endif %}
 
-{% assign continue_url = "/collections/all" %}
+{% assign continue_url = routes.all_products_collection_url %}
 {% if settings.continue_shopping_url != blank %}
   {% assign continue_url = settings.continue_shopping_url %}
 {% endif %}
@@ -77,7 +77,7 @@
               {{ 'cart.general.subtotal' | t }}
 
               <span class="money" data-cart-total>
-                <span class="bcpo-cart-original-total">{{ cart.total_price | money }}</span>
+                {{ cart.total_price | money }}
               </span>
             </div>
           </div>
@@ -91,7 +91,7 @@
             {% if settings.enable_checkout_lock_icon %}
               {% render 'icon-checkout-lock' %}
             {% else %}
-              {% render 'icon-cart' %}
+              {% render 'icon-library', id: 'icon-cart' %}
             {% endif %}
             {{ 'cart.general.checkout' | t }}
           </button>
@@ -107,6 +107,7 @@
       {% if has_items %}
         {%
           render 'cart-item-list',
+          show_sku: section.settings.show_sku
           cart: cart
         %}
         <div class="cart-total">
@@ -122,6 +123,17 @@
           {% endif %}
 
           <div class="cart-final-total">
+
+            <noscript>
+              <button
+                class="cart-update"
+                type="submit"
+                aria-label="{{ 'cart.general.update' | t }}"
+              >
+                {{ 'cart.general.update' | t }}
+              </button>
+            </noscript>
+
             <ul class="discount-list" data-cart-discounts aria-label="{{ 'product.general.discounts' | t }}">
               {%
                 render 'cart-discounts',
@@ -131,16 +143,24 @@
 
             <div class="cart-subtotal">
               <span>{{ 'cart.general.subtotal' | t }}</span>
-              <span class="money" data-cart-total><span class="bcpo-cart-original-total">{{ cart.total_price | money }}</span></span>
+              <span class="money" data-cart-total>{{ cart.total_price | money }}</span>
             </div>
           </div>
 
           <div class="cart-shipping">
-            {% if cart.requires_shipping %}
-              {{ 'cart.general.shipping_at_checkout' | t }}
-            {% else %}
-              {{ 'cart.general.taxes_at_checkout' | t }}
-            {% endif %}
+            {%- capture taxes_shipping_checkout -%}
+              {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+              {%- elsif cart.taxes_included -%}
+                {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+              {%- elsif shop.shipping_policy.body != blank -%}
+                {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+              {%- else -%}
+                {{ 'cart.general.tax_and_shipping' | t }}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            <p class="cart-message meta">{{ taxes_shipping_checkout }}</p>
 
             {% comment %}
               snippets/cart-shipping.liquid has an internal check to see if shipping is required
@@ -160,7 +180,7 @@
               {% if settings.enable_checkout_lock_icon %}
                 {% render 'icon-checkout-lock' %}
               {% else %}
-                {% render 'icon-cart' %}
+                {% render 'icon-library', id: 'icon-cart' %}
               {% endif %}
               {{ 'cart.general.checkout' | t }}
             </button>
@@ -183,7 +203,7 @@
 
             {% if show_continue_link %}
               <a class="button-primary" href="{{ continue_url }}">
-                {% render 'icon-cart' %}
+                {% render 'icon-library', id: 'icon-cart' %}
                 {{ 'cart.general.continue_shopping' | t }}
               </a>
             {% endif %}
@@ -193,38 +213,41 @@
     </div>
 
     {% if has_sidebar %}
-      <div class="cart-sidebar">
+      <div class="cart-sidebar" data-cart-sidebar>
         {% for block in section.blocks %}
-          {% if block.type == 'image' %}
-            {% assign image = block.settings.image %}
+          <div class="cart-sidebar-block" {{ block.shopify_attributes }}>
+            {% if block.type == 'image' %}
+              {% assign image = block.settings.image %}
 
-            <article class="cart-sidebar-item">
-              {% if image %}
-                {%
-                  render 'rimg',
-                  img: image,
-                  class: 'cart-sidebar-item-image',
-                  size: '445x',
-                  lazy: true,
-                  canvas: true
-                %}
-              {% else %}
-                {{ 'image' | placeholder_svg_tag: 'placeholder--image cart-sidebar-item-image' }}
-              {% endif %}
-            </article>
-          {% endif %}
+              <article class="cart-sidebar-item">
+                {% if image %}
+                  {%
+                    render 'rimg',
+                    img: image,
+                    class: 'cart-sidebar-item-image',
+                    size: '445x',
+                    lazy: true,
+                    canvas: true,
+                    focal_point: image.presentation.focal_point,
+                  %}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder--image cart-sidebar-item-image' }}
+                {% endif %}
+              </article>
+            {% endif %}
 
-          {% if block.type == 'richtext' %}
-            <article class="cart-sidebar-item cart-sidebar-item--text rte">
-              {{ block.settings.richtext }}
-            </article>
-          {% endif %}
+            {% if block.type == 'richtext' %}
+              <article class="cart-sidebar-item cart-sidebar-item--text rte">
+                {{ block.settings.richtext }}
+              </article>
+            {% endif %}
 
-          {% if block.type == 'page' %}
-            <article class="cart-sidebar-item cart-sidebar-item--text rte">
-              {{ pages[block.settings.page].content }}
-            </article>
-          {% endif %}
+            {% if block.type == 'page' %}
+              <article class="cart-sidebar-item cart-sidebar-item--text rte">
+                {{ pages[block.settings.page].content }}
+              </article>
+            {% endif %}
+          </div>
         {% endfor %}
       </div>
     {% endif %}
@@ -233,73 +256,77 @@
 
 {% schema %}
 {
-  "name": "Cart page",
+  "name": "t:sections.cart_page.name",
   "class": "cart--section section--canonical",
   "max_blocks": 2,
   "settings": [
     {
       "type": "checkbox",
+      "id": "show_sku",
+      "label": "t:sections.cart_page.show_sku.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "id": "enable_order_notes",
-      "label": "Enable order notes text box",
+      "label": "t:sections.cart_page.enable_order_notes.label",
       "default": false
     },
     {
       "type": "header",
-      "content": "Shipping estimator"
+      "content": "t:sections.cart_page.header_1.content"
     },
     {
       "type": "checkbox",
       "id": "enable_shipping_calc",
-      "label": "Enable shipping estimator",
+      "label": "t:sections.cart_page.enable_shipping_calc.label",
       "default": true
     },
     {
       "type": "text",
       "id": "shipping_calc_default_country",
-      "label": "Default country",
+      "label": "t:sections.cart_page.shipping_calc_default_country.label",
       "default": "United States"
     }
   ],
   "blocks": [
     {
       "type": "richtext",
-      "name": "Rich text",
+      "name": "t:sections.cart_page.blocks.rich_text.name",
       "limit": 1,
       "settings": [
         {
           "id": "richtext",
           "type": "richtext",
-          "label": "Rich text",
+          "label": "t:sections.cart_page.blocks.rich_text.richtext.label",
           "default": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.</p>"
         }
       ]
     },
     {
       "type": "image",
-      "name": "Image",
+      "name": "t:sections.cart_page.blocks.image.name",
       "limit": 1,
       "settings": [
         {
           "id": "image",
           "type": "image_picker",
-          "label": "Image"
+          "label": "t:sections.cart_page.blocks.image.image.label"
         }
       ]
     },
     {
       "type": "page",
-      "name": "Page",
+      "name": "t:sections.cart_page.blocks.page.name",
       "limit": 1,
       "settings": [
         {
           "id": "page",
           "type": "page",
-          "label": "Choose page"
+          "label": "t:sections.cart_page.blocks.page.page.label"
         }
       ]
     }
   ]
 }
-
 {% endschema %}
-<!-- bcpo done -->

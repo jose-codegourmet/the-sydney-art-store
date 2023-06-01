@@ -55,6 +55,12 @@
     @param disable_noscript (optional)
       Eliminates noscript tags, saving data in the cases when they aren't required.
       Defaults to false.
+
+    @param focal_point (optional)
+      Applies `background-size:cover;background-position:{{ focal_point }};` to the style property
+      of the container if the image is a background-image and `object-fit:cover;object-position:[focal point]`
+      otherwise on the image element.
+      Defaults to blank.
   {% endcomment %}
 
   {% comment %}
@@ -74,7 +80,7 @@
   {% assign attr = attr | default: blank %}
   {% assign canvas = canvas | default: false %}
   {% assign disable_noscript = disable_noscript | default: false %}
-
+  {% assign focal_point = focal_point | default: blank %}
   {% comment %}
     Parse size parameter and force to numbers.
   {% endcomment %}
@@ -82,6 +88,25 @@
   {% assign rimg_w = rimg_s[0] %}
   {% assign rimg_h = rimg_s[1] %}
   {% assign rimg_size_aspect_ratio = rimg_w | times: 1.0 | divided_by: rimg_h %}
+
+  {% comment %}
+    Include focal point in style parameter if it exists
+  {% endcomment %}
+  {% if focal_point != blank %}
+    {%- capture focal_point_style -%}
+      {% if background %}
+        background-size:cover;background-position:{{ focal_point }};
+      {% else %}
+        object-fit:cover;object-position:{{ focal_point }};
+      {% endif %}
+    {%- endcapture -%}
+
+    {% if style != blank %}
+      {% assign style = style | append: focal_point_style %}
+    {% else %}
+      {% assign style = focal_point_style %}
+    {% endif %}
+  {% endif %}
 
   {% comment %}
     Calculate width and height based on the size parameter.
@@ -349,6 +374,7 @@
   {% assign attr = nil %}
   {% assign canvas = nil %}
   {% assign disable_noscript = nil %}
+  {% assign focal_point = nil %}
   {% comment %}
     Unset all local variables so they don't pollute the global scope.
   {% endcomment %}

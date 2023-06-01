@@ -60,42 +60,42 @@
 
 {% schema %}
 {
-  "name": "Blog pages",
+  "name": "t:sections.blog_pages.name",
   "class": "blog--section section--canonical",
   "settings": [
     {
       "type": "checkbox",
       "id": "show_rss_link",
-      "label": "Show RSS link",
+      "label": "t:sections.blog_pages.show_rss_link.label",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_date",
-      "label": "Show date published",
+      "label": "t:sections.blog_pages.show_date.label",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_author",
-      "label": "Show post author",
+      "label": "t:sections.blog_pages.show_author.label",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "show_excerpt",
-      "label": "Show post excerpt",
+      "label": "t:sections.blog_pages.show_excerpt.label",
       "default": true
     },
     {
       "type": "article",
       "id": "featured_post",
-      "label": "Featured post"
+      "label": "t:sections.blog_pages.featured_post.label"
     },
     {
       "type": "range",
       "id": "posts_per_page_range",
-      "label": "Posts per page",
+      "label": "t:sections.blog_pages.posts_per_page_range.label",
       "min": 6,
       "max": 12,
       "step": 3,
@@ -103,5 +103,4 @@
     }
   ]
 }
-
 {% endschema %}

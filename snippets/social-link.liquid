@@ -19,5 +19,9 @@
     render 'social-icon',
     id: id
   -%}
-  <span class="visually-hidden">{{ 'general.accessibility.social_media_icon' | t: platform: title | escape }}</span>
+  {% if title == 'Email' %}
+    <span class="visually-hidden">{{ 'general.general.email' | t }} {{ shop.name }}</span>
+  {% else %}
+    <span class="visually-hidden">{{ 'general.accessibility.social_media_icon' | t: platform: title | escape }}</span>
+  {% endif %}
 </a>

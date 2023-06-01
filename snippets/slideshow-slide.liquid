@@ -1,12 +1,12 @@
 {% liquid
   assign block_slide_image = block.settings.background_image
+  assign block_slide_image_mobile = block.settings.mobile_background_image
   assign block_slide_title = block.settings.title | escape
   assign block_subheading = block.settings.text | escape
   assign block_button_label = block.settings.button_one_label | escape
   assign block_button_link = block.settings.button_one_link
   assign block_button_label_2 = block.settings.button_two_label | escape
   assign block_button_link_2 = block.settings.button_two_link
-  assign block_image_position = block.settings.image_position
   assign block_text_alignment = block.settings.text_alignment
   assign block_text_color = block.settings.color
   assign block_background_link = block.settings.link
@@ -29,42 +29,64 @@
 {%- comment -%}
   @param block_index {Number}
     The 0-based index of the current block
+
   @param block_slide_image {Image}
     The image for the background of the slide
-  @param block_slide_title {String}
-    This is the title of the slide and will be inside <h2> tags.
-  @param block_subheading	{String}
-    This is the content of the slide, shown below the title.
-  @param block_button_label	{String}
-    The label of the <a> tag that will be below the subheading.
-  @param block_button_link {String}
-    The link that will be used as the href on the <a> tag of the first link.
-  @param block_button_label_2 {String}
-    The label on the second link in the slide.
-  @param block_button_link_2	{String}
-    The link used for the href of the second link in the slide.
+
+  @param block_slide_image_mobile {Image}
+    The mobile image for the background of the slide
+
   @param block_preheading	{String}
     This will appear above the heading in a <p> tag.
+
+  @param block_slide_title {String}
+    This is the title of the slide and will be inside <h2> tags.
+
+  @param block_subheading	{String}
+    This is the content of the slide, shown below the title.
+
+  @param block_text {String}
+    Text content of the slide, shown below the subheading
+
+  @param block_button_label	{String}
+    The label of the <a> tag that will be below the subheading.
+
+  @param block_button_link {String}
+    The link that will be used as the href on the <a> tag of the first link.
+
+  @param block_button_label_2 {String}
+    The label on the second link in the slide.
+
+  @param block_button_link_2	{String}
+    The link used for the href of the second link in the slide.
+
   @param block_image_position	{String}
     Adds a position class to the slide's image in the format of slideshow-slide__image-wrapper--position-{ image_position }. Options should be center, top, bottom, left, or right.
+
   @param block_text_alignment	{String}
     The value of this property will be appended a class on the slide's content in the format slideshow-slide__content--text-{ text_alignment }.
+
   @param block_text_color
     This will add a text color style to the slide as well as a CSS variable called --slide-text-color on the section that will change when the slide changes.
+
   @param block_background_link	{String}
     If this is provided, the entire slide will be wrapped in an <a> tag to allow the entire slide to be clickable.
+
   @param block_overlay_color {Color}
     If this is not transparent (and the overlay_opacity is greater than 0) and overlay element will be present on the slide with a background-color and opacity style added to it.
+
   @param block_overlay_opacity {Number}
     This is the opacity of the overlay, which is applied as an inline style.
+
   @param block_overlay_style {String}
-    If this is provided and the overlay_opacity is greater than 0, a class will be added to the overlay element in the format slideshow__overlay--{ overlay_style }.
-  @param block_crop_images {Boolean}
-    The type of cropping to use of 'center', 'top', 'bottom', 'left', 'right', or false
+    If this is provided and the overlay_opacity is greater than 0, a class will be added to the overlay element in the format slideshow-slide__overlay--{ overlay_style }.
+
   @param block_class {String}
     Any extra classes to be added to the slide
+
   @param block_button_1_class
     Any classes to be added to the first button on the slide
+
   @param block_button_2_class
     Any classes to be added to the second button on the slide
 {%- endcomment -%}
@@ -78,7 +100,7 @@
 {%- endif -%}
 
 <div
-  class="slideshow-slide {{ block_class }}"
+  class="slideshow-slide {% if block_slide_image_mobile != blank %}slideshow-slide--mobile{% endif %} {{ block_class }}"
   aria-label="{{ 'sections.slideshow.slide_counter' | t: count: slide_number, total: section.blocks.size }}"
   {% if block_text_color != blank %}data-text-color="{{ block_text_color }}"{% endif %}
   tabindex="-1"
@@ -106,15 +128,28 @@
         {%
           render 'rimg',
           img: block_slide_image,
-          class: 'slideshow-slide__image',
-          size: '2000x2000',
-          crop: block_crop_images,
+          class: 'slideshow-slide__image slideshow-slide__image--desktop',
+          size: '2000x',
           lazy: true,
           canvas: true,
+          focal_point: block_slide_image.presentation.focal_point,
         %}
       {%- else -%}
         {{ placeholder |  placeholder_svg_tag: 'slideshow-slide__image slideshow-slide__placeholder' }}
       {%- endif -%}
+
+      {%- if block_slide_image_mobile != blank -%}
+        {%
+          render 'rimg',
+          img: block_slide_image_mobile,
+          class: 'slideshow-slide__image slideshow-slide__image--mobile',
+          size: '800x',
+          lazy: true,
+          canvas: true,
+          focal_point: block_slide_image_mobile.presentation.focal_point,
+        %}
+      {%- endif -%}
+
       {%- if block_overlay_opacity != 0 and block_overlay_color != 'rgba(0,0,0,0)' -%}
         <div
           class="
@@ -152,19 +187,25 @@
 
     {%- if block_preheading != blank -%}
       <p class="slideshow-slide__preheading">
-        {{ block_preheading }}
+        {{ block_preheading | escape }}
       </p>
     {%- endif -%}
 
     {%- if block_slide_title != blank -%}
       <h2 class="slideshow-slide__heading">
-        {{ block_slide_title }}
+        {{ block_slide_title | escape }}
       </h2>
     {%- endif -%}
 
     {%- if block_subheading != blank -%}
+      <div class="slideshow-slide__subheading">
+        {{ block_subheading | escape }}
+      </div>
+    {%- endif -%}
+
+    {%- if block_text != blank -%}
       <div class="slideshow-slide__text">
-        {{ block_subheading }}
+        {{ block_text }}
       </div>
     {%- endif -%}
 
@@ -183,7 +224,7 @@
           {{ block_button_1_class }}
         "
       >
-        {{ block_button_label }}
+      {{ block_button_label | escape }}
       {%- if block_button_link != blank -%}
         </a>
       {%- else -%}
@@ -202,7 +243,7 @@
           {{ block_button_2_class }}
         "
       >
-        {{ block_button_label_2 }}
+        {{ block_button_label_2 | escape }}
       {%- if block_button_link_2 != blank -%}
         </a>
       {%- else -%}

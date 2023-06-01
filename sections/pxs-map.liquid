@@ -25,22 +25,16 @@
 
 <script type="application/pxs-animation-mapping+json">
   {
-    "blocks": [".pxs-map-card-wrapper"],
+    "blocks": [
+      ".pxs-map"
+    ],
     "elements": [
-      ".pxs-map-card-heading",
-      ".pxs-map-card-content"
+      ".pxs-map-wrapper"
     ]
   }
 </script>
 
 {% assign layout = section.settings.layout | split: '-' %}
-
-{% assign crop = 'center' %}
-{% if section.settings.image_position contains 'top' %}
-  {% assign crop = 'top' %}
-{% elsif section.settings.image_position contains 'bottom' %}
-  {% assign crop = 'bottom' %}
-{% endif %}
 
 <div
   class="
@@ -57,31 +51,26 @@
       pxs-map-wrapper-height-{{ section.settings.section_height }}
     "
     {% if section.settings.image %}
-      {% capture background_style %}
-        background-position: {{ section.settings.image_position }};
-      {% endcapture %}
-
       {%
-        include 'rimg',
+        render 'rimg',
         img: section.settings.image,
         size: '1400x',
-        crop: crop,
-        style: background_style,
         lazy: true,
-        background: true
+        background: true,
+        focal_point: section.settings.image.presentation.focal_point,
       %}
     {% endif %}
     data-map
   >
     {% if section.settings.image %}
       {%
-        include 'rimg',
+        render 'rimg',
         img: section.settings.image,
         size: '1400x',
         class: 'pxs-map-image',
-        crop: 'center',
         lazy: true,
-        canvas: true
+        canvas: true,
+        focal_point: section.settings.image.presentation.focal_point,
       %}
     {% endif %}
 
@@ -124,61 +113,61 @@
 
 {% schema %}
 {
-  "name": "Map",
+  "name": "t:sections.map.name",
   "class": "pxs-map-section",
   "settings": [
     {
       "type": "select",
       "id": "section_height",
-      "label": "Section height",
+      "label": "t:sections.map.section_height.label",
       "options": [
         {
           "value": "small",
-          "label": "Small"
+          "label": "t:sections.map.section_height.option_1"
         },
         {
           "value": "medium",
-          "label": "Medium"
+          "label": "t:sections.map.section_height.option_2"
         },
         {
           "value": "large",
-          "label": "Large"
+          "label": "t:sections.map.section_height.option_3"
         }
       ],
       "default": "medium"
     },
     {
       "type": "header",
-      "content": "Text"
+      "content": "t:sections.map.header_1.content"
     },
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "t:sections.map.title.label",
       "default": "Location"
     },
     {
       "type": "richtext",
       "id": "content",
-      "label": "Address and hours",
+      "label": "t:sections.map.content.label",
       "default": "<p>1221 Broad St<br>Victoria, BC</p>"
     },
     {
       "type": "select",
       "id": "text_alignment",
-      "label": "Text alignment",
+      "label": "t:sections.map.text_alignment.label",
       "options": [
         {
           "value": "left",
-          "label": "Left"
+          "label": "t:sections.map.text_alignment.option_1"
         },
         {
           "value": "center",
-          "label": "Center"
+          "label": "t:sections.map.text_alignment.option_2"
         },
         {
           "value": "right",
-          "label": "Right"
+          "label": "t:sections.map.text_alignment.option_3"
         }
       ],
       "default": "center"
@@ -186,82 +175,82 @@
     {
       "type": "select",
       "id": "layout",
-      "label": "Desktop layout",
+      "label": "t:sections.map.layout.label",
       "options": [
         {
-          "group": "Outside",
+          "group": "t:sections.map.layout.group_1",
           "value": "outside-top-left",
-          "label": "Left top"
+          "label": "t:sections.map.layout.option_1"
         },
         {
-          "group": "Outside",
+          "group": "t:sections.map.layout.group_1",
           "value": "outside-center-left",
-          "label": "Left center"
+          "label": "t:sections.map.layout.option_2"
         },
         {
-          "group": "Outside",
+          "group": "t:sections.map.layout.group_1",
           "value": "outside-bottom-left",
-          "label": "Left bottom"
+          "label": "t:sections.map.layout.option_3"
         },
         {
-          "group": "Outside",
+          "group": "t:sections.map.layout.group_1",
           "value": "outside-top-right",
-          "label": "Right top"
+          "label": "t:sections.map.layout.option_4"
         },
         {
-          "group": "Outside",
+          "group": "t:sections.map.layout.group_1",
           "value": "outside-center-right",
-          "label": "Right center"
+          "label": "t:sections.map.layout.option_5"
         },
         {
-          "group": "Outside",
+          "group": "t:sections.map.layout.group_1",
           "value": "outside-bottom-right",
-          "label": "Right bottom"
+          "label": "t:sections.map.layout.option_6"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-top-left",
-          "label": "Top left"
+          "label": "t:sections.map.layout.option_7"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-top-center",
-          "label": "Top center"
+          "label": "t:sections.map.layout.option_8"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-top-right",
-          "label": "Top right"
+          "label": "t:sections.map.layout.option_9"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-center-left",
-          "label": "Center left"
+          "label": "t:sections.map.layout.option_10"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-center-center",
-          "label": "Center"
+          "label": "t:sections.map.layout.option_11"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-center-right",
-          "label": "Center right"
+          "label": "t:sections.map.layout.option_12"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-bottom-left",
-          "label": "Bottom left"
+          "label": "t:sections.map.layout.option_13"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-bottom-center",
-          "label": "Bottom center"
+          "label": "t:sections.map.layout.option_14"
         },
         {
-          "group": "Overlay",
+          "group": "t:sections.map.layout.group_2",
           "value": "overlay-bottom-right",
-          "label": "Bottom right"
+          "label": "t:sections.map.layout.option_15"
         }
       ],
       "default": "overlay-center-center"
@@ -269,56 +258,56 @@
     {
       "type": "select",
       "id": "layout_mobile",
-      "label": "Mobile layout",
+      "label": "t:sections.map.layout_mobile.label",
       "options": [
         {
           "value": "above",
-          "label": "Above map"
+          "label": "t:sections.map.layout_mobile.option_1"
         },
         {
           "value": "below",
-          "label": "Below map"
+          "label": "t:sections.map.layout_mobile.option_2"
         }
       ],
       "default": "below"
     },
     {
       "type": "header",
-      "content": "Map"
+      "content": "t:sections.map.header_2.content"
     },
     {
       "type": "text",
       "id": "address",
-      "label": "Map address",
+      "label": "t:sections.map.address.label",
       "default": "1221 Broad St, Victoria, BC"
     },
     {
       "type": "text",
       "id": "api_key",
-      "label": "Google Maps API key",
-      "info": "You’ll need to enable both [Google Maps](https://help.shopify.com/manual/using-themes/troubleshooting/map-section-api-key) and [Geocoding](https://developers.google.com/maps/documentation/geocoding/get-api-key) API keys to display the map."
+      "label": "t:sections.map.api_key.label",
+      "info": "t:sections.map.api_key.info"
     },
     {
       "type": "checkbox",
       "id": "enable_custom_colors",
-      "label": "Use custom map colors"
+      "label": "t:sections.map.enable_custom_colors.label"
     },
     {
       "type": "color",
       "id": "foreground_color",
-      "label": "Map foreground color",
+      "label": "t:sections.map.foreground_color.label",
       "default": "#292929"
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "Map background color",
+      "label": "t:sections.map.background_color.label",
       "default": "#ffffff"
     },
     {
       "type": "range",
       "id": "zoom",
-      "label": "Map zoom level",
+      "label": "t:sections.map.zoom.label",
       "min": 1,
       "max": 6,
       "step": 1,
@@ -328,67 +317,23 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image",
-      "info": "This image is displayed when the map is not used or cannot be loaded"
-    },
-    {
-      "type": "select",
-      "id": "image_position",
-      "label": "Image position",
-      "options": [
-        {
-          "label": "Top left",
-          "value": "top left"
-        },
-        {
-          "label": "Top center",
-          "value": "top center"
-        },
-        {
-          "label": "Top right",
-          "value": "top right"
-        },
-        {
-          "label": "Center left",
-          "value": "center left"
-        },
-        {
-          "label": "Center",
-          "value": "center center"
-        },
-        {
-          "label": "Center right",
-          "value": "center right"
-        },
-        {
-          "label": "Bottom left",
-          "value": "bottom left"
-        },
-        {
-          "label": "Bottom center",
-          "value": "bottom center"
-        },
-        {
-          "label": "Bottom right",
-          "value": "bottom right"
-        }
-      ],
-      "default": "center center"
+      "label": "t:sections.map.image.label",
+      "info": "t:sections.map.image.info"
     },
     {
       "type": "header",
-      "content": "Overlay"
+      "content": "t:sections.map.header_3.content"
     },
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Color",
+      "label": "t:sections.map.overlay_color.label",
       "default": "#000000"
     },
     {
       "type": "range",
       "id": "opacity",
-      "label": "Opacity",
+      "label": "t:sections.map.opacity.label",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -398,10 +343,15 @@
   ],
   "presets": [
     {
-      "name": "Map",
-      "category": "Store information"
+      "name": "t:sections.map.presets.name",
+      "category": "t:sections.map.presets.category"
     }
-  ]
+  ],
+  "disabled_on": {
+    "groups": [
+      "*"
+    ]
+  }
 }
 
 {% endschema %}

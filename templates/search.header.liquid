@@ -1,7 +1,10 @@
+{% layout none %}
+
 {% comment %}
   Use 'search-sanitizer' to remove added `*` added by HeaderSearch
     - Adding `*` after a word helps Shopify increase amount of results
 {% endcomment %}
+
 {% capture sanitized_terms %}
   {%
     render 'search-sanitizer',
@@ -70,6 +73,20 @@
             {{ 'image' | placeholder_svg_tag: 'placeholder--image' }}
           {% endif %}
         {%- endcapture -%}
+
+        {%- assign stock_level = nil -%}
+
+        {% if settings.inventory_status %}
+          {%- capture stock_level -%}
+            {%
+              render 'product-stock-level',
+              inventory_display: settings.inventory_display,
+              inventory_transfer: settings.inventory_transfer_notice,
+              variant: item.selected_or_first_available_variant,
+              verbose: false,
+            %}
+          {%- endcapture -%}
+        {% endif %}
         ,
         {
           "title": {{ item.title | highlight: sanitized_terms | json }},
@@ -88,6 +105,7 @@
           },
           "image": {{ product_image | strip_newlines | json }},
           "url": {{ item.url | json }},
+          "stock_level": {{ stock_level | json }},
           "swatch_count": {{ swatch_count | json }}
         }
         {% assign product_count = product_count | plus: 1 %}
@@ -107,7 +125,6 @@
     {%- endfor -%}
   {%- endcapture -%}
 {%- endpaginate -%}
-{% layout none %}
 {
   "content": [{{ content_results | strip_newlines | remove_first: ',' }}],
   "products": [{{ product_results | strip_newlines | remove_first: ',' }}],
