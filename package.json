@@ -1,0 +1,55 @@
+
+{
+  "name": "the-sydney-art-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier",
+    "store:login": "shopify login --store the-sydney-art-store.myshopify.com SHOPIFY_CLI_STACKTRACE=1.",
+    "devstore:login": "shopify login --store intimate-rose-dev-store.myshopify.com SHOPIFY_CLI_STACKTRACE=1.",
+    "open:live": "shopify theme open --live",
+    "pull:live": "shopify theme pull --live --store=the-sydney-art-store.myshopify.com",
+    "push:live": "shopify theme push --live --store=the-sydney-art-store.myshopify.com --verbose",
+    "open:dev": "shopify theme open --theme=120405721158",
+    "push:dev": "shopify theme push --development --store=the-sydney-art-store.myshopify.com",
+    "pull:dev": "shopify theme pull --theme=120405721158 --store=the-sydney-art-store.myshopify.com",
+    "open:staging": "shopify theme open --theme=150990061843",
+    "pull:staging": "shopify theme pull --theme=150990061843 --store=the-sydney-art-store.myshopify.com",
+    "push:staging": "shopify theme push --theme=150990061843 --store=the-sydney-art-store.myshopify.com",
+    "serve": "shopify theme dev --store=the-sydney-art-store.myshopify.com --poll --live-reload=hot-reload --theme-editor-sync",
+    "push:allenvs": "theme deploy --allenvs --allow-live",
+    "shop:logout": "shopify auth logout"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.1.6",
+    "@babel/preset-env": "7.1.6",
+    "@shopify/prettier-plugin-liquid": "^1.0.6",
+    "autoprefixer": "7.2.1",
+    "concurrently": "^3.5.1",
+    "cssnano": "3.10.0",
+    "gulp": "3.9.1",
+    "gulp-babel": "8.0.0",
+    "gulp-clean-css": "4.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-minify": "3.1.0",
+    "gulp-order": "1.1.1",
+    "gulp-postcss": "7.0.0",
+    "gulp-sass": "3.1.0",
+    "gulp-uglify": "3.0.1",
+    "gulp-uglify-es": "1.0.4",
+    "gulp-util": "3.0.8",
+    "postcss-cli": "4.1.0",
+    "postcss-cssnext": "3.0.2",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.3.2",
+    "uglify-es": "3.3.9"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "intl-tel-input": "^17.0.13"
+  }
+}
+

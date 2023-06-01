@@ -1,0 +1,23 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript][html][json]": {
+    "editor.tabSize": 2
+  },
+  "[sass]": {
+    "editor.tabSize": 4
+  },
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[liquid]": {
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.theme-check-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  },
+  "liquid.format.enable": true
+}
