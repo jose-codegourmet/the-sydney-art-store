@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="artist-brushes-store no-js no-touch" lang="{{ request.locale.iso_code }}">
+<html class="no-js no-touch artist-brushes-store" lang="{{ request.locale.iso_code }}">
   <head>
   <script>
     window.Store = window.Store || {};
@@ -71,11 +71,11 @@
 
     <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
     <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
-    {{ 'artist-brushes.css' | asset_url | stylesheet_tag }}
 
     {{ content_for_header }}
 
     {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {{ 'artist-brushes.css' | asset_url | stylesheet_tag }}
 
     {% comment %}Inject theme-object begin{% endcomment %}
     <script>
