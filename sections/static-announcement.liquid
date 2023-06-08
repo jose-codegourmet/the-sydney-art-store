@@ -37,7 +37,9 @@
       style="
         color: {{ section.settings.announcement_color }};
         background: {{ section.settings.announcement_background }};
-      ">
+      "
+      data-announcement-bar
+    >
       {% if section.settings.announcement_link != blank %}
         <a
           class="announcement-bar-link"
@@ -64,51 +66,53 @@
 
 {% schema %}
 {
-  "name": "Announcement bar",
+  "name": "t:sections.announcement_bar.name",
   "class": "site-announcement",
   "settings": [
     {
       "type": "header",
-      "content": "Announcement Bar"
+      "content": "t:sections.announcement_bar.header_1.content"
     },
     {
       "type": "checkbox",
       "id": "show_announcement",
-      "label": "Show announcement"
+      "label": "t:sections.announcement_bar.show_announcement.label",
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "homepage_announcement",
-      "label": "Show on home page only"
+      "label": "t:sections.announcement_bar.homepage_announcement.label",
+      "default": false
     },
     {
       "id": "announcement_text",
       "type": "textarea",
-      "label": "Text",
+      "label": "t:sections.announcement_bar.announcement_text.label",
       "default": "Announce something here"
     },
     {
       "id": "announcement_text_mobile",
       "type": "textarea",
-      "label": "Text (mobile)",
-      "info": "Use this option if you want to display alternate text in mobile. Recommended for shortening announcement text to make suitable for mobile."
+      "label": "t:sections.announcement_bar.announcement_text_mobile.label",
+      "info": "t:sections.announcement_bar.announcement_text_mobile.info"
     },
     {
       "id": "announcement_link",
       "type": "url",
-      "label": "Link"
+      "label": "t:sections.announcement_bar.announcement_link.label"
     },
     {
       "id": "announcement_color",
       "type": "color",
-      "label": "Text color",
+      "label": "t:sections.announcement_bar.announcement_color.label",
       "default": "#000000"
     },
     {
       "id": "announcement_background",
       "type": "color",
-      "label": "Background color",
-      "default": "#ffffff"
+      "label": "t:sections.announcement_bar.announcement_background.label",
+      "default": "#f5f3ed"
     }
   ]
 }

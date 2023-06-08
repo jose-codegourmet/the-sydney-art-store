@@ -2,6 +2,9 @@
   @param product {Product}
     The product object in question or false. Onboards if false or blank.
 
+  @param select_first_available_variant {Boolean}
+    Whether to auto-select first available variant
+
   @param aspect_ratio {string}
     This is the gallery aspect ratio, can be one of 'natural', 'short', 'square', 'long'
 
@@ -11,10 +14,10 @@
   @param image_crop {boolean}
     Whether to crop images
 
-  @param hover_zoom {String}
+  @param gallery_hover_zoom {String}
     This is the hover zoom setting, which is either 'disabled', 'separate', or 'replace'
 
-  @param click_to_zoom {String}
+  @param gallery_click_to_zoom {String}
     This is the click to zoom setting, which is either 'disabled', 'mobile', 'desktop', or 'always'
 {% endcomment %}
 
@@ -24,38 +27,41 @@
 {% endif %}
 
 {% assign selected_variant = product.selected_or_first_available_variant %}
-{% assign selected_media = selected_variant.featured_media | default: product.featured_media %}
+
+{% if select_first_available_variant %}
+  {% assign selected_media = selected_variant.featured_media | default: product.featured_media %}
+{% else %}
+  {% assign selected_media = product.featured_media %}
+{% endif %}
 
 <div
   class="
     product-gallery
-    {% if hover_zoom != 'disabled' %}hover-zoom-enabled{% endif %}
-    {% if click_to_zoom != 'disabled' and click_to_zoom != 'mobile' %}click-to-zoom-enabled{% endif %}
+    {% if gallery_hover_zoom != 'disabled' %}hover-zoom-enabled{% endif %}
+    {% if gallery_click_to_zoom != 'disabled' and gallery_click_to_zoom != 'mobile' %}click-to-zoom-enabled{% endif %}
   "
   data-product-gallery
   {% if image_crop %}data-product-gallery-image-crop{% endif %}
   data-product-gallery-aspect-ratio="{{ aspect_ratio }}"
   data-product-gallery-thumbnails="{{ thumbnail_position }}"
 >
-  {% if thumbnail_position == 'left' %}
-    {%
-      render 'product-gallery-navigation'
-      product: product,
-      selected_media: selected_media,
-      aspect_ratio: aspect_ratio,
-      image_crop: image_crop
-    %}
-  {% endif %}
-
   {%
     render 'product-gallery-viewer'
     product: product,
     selected_media: selected_media,
     aspect_ratio: aspect_ratio,
     image_crop: image_crop,
-    hover_zoom: hover_zoom,
+    gallery_hover_zoom: gallery_hover_zoom,
     onboarding: onboarding,
-    click_to_zoom: click_to_zoom,
+    gallery_click_to_zoom: gallery_click_to_zoom,
+  %}
+
+  {%
+    render 'product-gallery-navigation'
+    product: product,
+    selected_media: selected_media,
+    aspect_ratio: aspect_ratio,
+    image_crop: image_crop
   %}
 
   {% assign first_model = product.media | where: "media_type", "model" | first %}
@@ -81,15 +87,5 @@
       {% render 'icon-library', id: 'icon-3D' %}
       {{ 'product.media.view_in_your_space' | t }}
     </button>
-  {% endif %}
-
-  {% if thumbnail_position != 'left' %}
-    {%
-      render 'product-gallery-navigation'
-      product: product,
-      selected_media: selected_media,
-      aspect_ratio: aspect_ratio,
-      image_crop: image_crop,
-    %}
   {% endif %}
 </div>

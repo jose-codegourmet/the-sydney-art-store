@@ -47,13 +47,9 @@
       %}
     {% endif %}
   {% elsif block.type == 'social_accounts' %}
-    <h2 class="site-footer-block-title">
-      {{ 'footer.general.follow_us' | t }}
-    </h2>
-
-    <div class="site-footer-block-content">
-      {% render 'social-list' %}
-    </div>
+    {%
+      render 'social-list',
+      context: 'footer',
+    %}
   {% endif %}
-
 </div>

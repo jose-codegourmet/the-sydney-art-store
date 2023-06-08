@@ -1,28 +1,10 @@
 <!doctype html>
-<html class="artist-brushes-store no-js no-touch" lang="{{ shop.locale }}">
+<html class="no-js no-touch artist-brushes-store" lang="{{ request.locale.iso_code }}">
   <head>
-  <link rel="stylesheet" href="https://obscure-escarpment-2240.herokuapp.com/stylesheets/bcpo-front.css">
-  <script>var bcpo_product={{ product | json }}; {% if product.metafields.bcpo.bcpo_data %}var bcpo_data={{ product.metafields.bcpo.bcpo_data }};{% endif %} {% if shop.metafields.bcpo.bcpo_settings %}var bcpo_settings={{ shop.metafields.bcpo.bcpo_settings }};{% endif %}var inventory_quantity = [];{% for v in product.variants %}inventory_quantity.push({{v.inventory_quantity}});{% endfor %}if(bcpo_product) { for (var i = 0; i < bcpo_product.variants.length; i += 1) { bcpo_product.variants[i].inventory_quantity = inventory_quantity[i]; }}window.bcpo = window.bcpo || {}; bcpo.cart = {{cart | json}}; bcpo.ogFormData = FormData;</script>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5RN5J2V');</script>
-<!-- End Google Tag Manager -->
-{% include "starapps-core" %}
-<!-- Hotjar Tracking Code for https://www.artsuppliesonline.com.au -->
-<script>
-(function(h,o,t,j,a,r){
-h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-h._hjSettings={hjid:3154430,hjsv:6};
-a=o.getElementsByTagName('head')[0];
-r=o.createElement('script');r.async=1;
-r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-a.appendChild(r);
-})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
+  <script>
+    window.Store = window.Store || {};
+    window.Store.id = {{ shop.id }};
+  </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
 
@@ -90,14 +72,7 @@ a.appendChild(r);
     <link rel="preload" href="{{ settings.type_menu | font_url }}" as="font" crossorigin="anonymous">
     <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
 
-    <!-- starapps_scripts_start -->
-<!-- This code is automatically managed by StarApps Studio -->
-<!-- Please contact support@starapps.studio for any help -->{% render "starapps-product-json", product: product, starapps_app: "VIA", starapps_attribute: "sa-product-json" %}
-<script type="text/javascript" src="https://bcdn.starapps.studio/apps/via/artist-brushes/script-1642472662.js?shop={{shop.permanent_domain}}" async></script>
-<!-- starapps_scripts_end -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-{{ content_for_header }}
-  <script id="vopo-head">(function () { if (((document.documentElement.innerHTML.includes('asyncLoad') && !document.documentElement.innerHTML.includes('\\/obscure' + '-escarpment-2240')) || (window.bcpo && bcpo.disabled)) && !window.location.href.match(/[&?]yesbcpo/)) return; var script = document.createElement('script'); script.src = "https://obscure-escarpment-2240.herokuapp.com/js/best_custom_product_options.js?shop={{shop.permanent_domain}}"; var vopoHead = document.getElementById('vopo-head'); vopoHead.parentNode.insertBefore(script, vopoHead); })();</script>
+    {{ content_for_header }}
 
     {{ 'theme.css' | asset_url | stylesheet_tag }}
     {{ 'artist-brushes.css' | asset_url | stylesheet_tag }}
@@ -105,6 +80,8 @@ a.appendChild(r);
     {% comment %}Inject theme-object begin{% endcomment %}
     <script>
       window.Theme = window.Theme || {};
+      window.Theme.version = '9.0.1';
+      window.Theme.name = 'Empire';
       window.Theme.routes = {
         "root_url": "{{ routes.root_url }}",
         "account_url": "{{ routes.account_url }}",
@@ -115,6 +92,7 @@ a.appendChild(r);
         "collections_url": "{{ routes.collections_url }}",
         "all_products_collection_url": "{{ routes.all_products_collection_url }}",
         "search_url": "{{ routes.search_url }}",
+        "predictive_search_url": "{{ routes.predictive_search_url }}",
         "cart_url": "{{ routes.cart_url }}",
         "cart_add_url": "{{ routes.cart_add_url }}",
         "cart_change_url": "{{ routes.cart_change_url }}",
@@ -124,138 +102,54 @@ a.appendChild(r);
     </script>
     {% comment %}Inject theme-object end{% endcomment %}
 
-
-<!-- Product hider app Code Start -->
-{% include 'product_hider_nofollow_noindex_meta_tag_sco_manager' %}
-<!-- Product hider app app Code End -->
-  <script src="https://cdn.younet.network/main.js"></script>
-{% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
-
- {% render 'gift-card-pro' %}
-<!-- GSSTART Slider code start. Do not change -->{% if product.id > 1 %}
-<script src="https://gravity-software.com//js/shopify/slider_prod{{ product.id }}.js?v=161127"  ></script><script type="text/javascript" src="https://gravity-software.com/js/shopify/slider_shop30344.js?v=d0360f2273169ec944185eded362c371"></script>
- {% if product.variants.size > 1 %}<script>
-gsSliderDefaultV = "{{ product.selected_or_first_available_variant.id }}";
-var variantImagesByVarianName = {};
-var variantImagesByVarianNameMix = {};
- var variantImagesGS = {},
-    thumbnails,
-    variant,
-    variantImage,
-    optionValue,
-    cntImages;
-    productOptions = [];
-    cntImages = 0;
-    {% for variant in product.variants %}
-       variant = {{ variant | json }};
-       if ( typeof variant.featured_image !== 'undefined' && variant.featured_image !== null ) {
-         variantImage =  variant.featured_image.src.split('?')[0].replace(/http(s)?:/,'');
-         variantImagesGS[variant.id] = variantImage;
-         variantImagesByVarianName[variant.option1] = variantImage;
-var variantMixName = "";
-if(variant.option1 != null) {
-variantMixName = variant.option1;
-}
-	 if(variant.option2 != null) {
-		variantImagesByVarianName[variant.option2] = variantImage;
-		variantMixName = variantMixName + ";gs;" + variant.option2;
-	 }
-         if(variant.option3 != null) {
-                variantImagesByVarianName[variant.option3] = variantImage;
-		variantMixName = variantMixName + ";gs;" + variant.option3;
-         }
-
-if(variantMixName != "") {
-variantImagesByVarianNameMix[variantMixName] = variantImage;
-}
-
-         cntImages++;
-       }
-    {% endfor %}
-                if(cntImages == 0) {
-          variantImagesGS = undefined;
-                }
-</script> {% endif %}
-<script>
-
-var imageDimensionsWidth = {};
-var imageDimensionsHeight = {};
-var imageSrcAttr = {};
-var altTag = {};
-
-var mediaGS = [];
-  var productImagesGS = [];
-var productImagesGSUrls = [];
-{% for image in product.images %}
-  var productImageUrl = "{{ image.src }}";
-  var dotPosition = productImageUrl.lastIndexOf(".");
-  productImageUrl = productImageUrl.substr(0, dotPosition);
-  productImagesGS.push(productImageUrl);
-  imageDimensionsWidth[{{ image.id }}] = "{{ image.width }}";
-  imageDimensionsHeight[{{ image.id }}] = "{{ image.height }}";
-  altTag[{{ image.id }}] = "{{ image.alt | replace: '\"', '"' | replace: '"', '\"' | strip | strip_newlines }}";
-  imageSrcAttr[{{ image.id }}] = "{{ image.src }}";
-  productImagesGSUrls.push("{{ image.src | img_url: '240x' }}");
-{% endfor %}
-
-{%- for media in product.media -%}
-    {% case media.media_type %}
-	{% when "image" %}
-                           var mediaObjectGS ={id: "{{ media.image.id  }}", mediaType:"{{ media.media_type }}", previewImgURL:"{{ media.image.src | img_url: "240x" }}", previewImg:"{{ media.image.src }}", tag:"{{ media.image.src | img_url: "240x" }}"};
-            mediaGS.push(mediaObjectGS);
-    {% when "video" %}
-              var productImageUrl = "{{ media.preview_image }}";
-  var dotPosition = productImageUrl.lastIndexOf(".");
-  productImageUrl = productImageUrl.substr(0, dotPosition);
-  var mediaObjectGS ={id: "{{ media.id }}", mediaType:"{{ media.media_type }}", width: "{{ media.preview_image.width }}", height: "{{ media.preview_image.height }}", previewImgURL:"{{ media.preview_image | img_url: "500x" }}", previewImg:"" + productImageUrl +  "", tag:'{{ media | video_tag: controls: true }}'};
-            mediaGS.push(mediaObjectGS);
-	{% when "external_video" %}
-              var productImageUrl = "{{ media.preview_image }}";
-  var dotPosition = productImageUrl.lastIndexOf(".");
-  productImageUrl = productImageUrl.substr(0, dotPosition);
-            var mediaObjectGS ={id: "{{ media.id }}", mediaType:"{{ media.media_type }}", width: "{{ media.preview_image.width }}", height: "{{ media.preview_image.height }}", previewImgURL:"{{ media.preview_image | img_url: "500x" }}", previewImg:"" + productImageUrl +  "", tag:'{{ media | external_video_tag }}'};
-            mediaGS.push(mediaObjectGS);
-    {% endcase %}
-{%- endfor -%}
-
-
-</script>
-
-{% endif %}<!-- Slider code end. Do not change GSEND -->
-  {% render 'qikify-apps' %}
+  {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
 </head>
 
   <body class="template-{{ template.name }}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RN5J2V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <script>
       document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js');
       if(window.Shopify&&window.Shopify.designMode)document.documentElement.className+=' in-theme-editor';
       if(('ontouchstart' in window)||window.DocumentTouch&&document instanceof DocumentTouch)document.documentElement.className=document.documentElement.className.replace(/\bno-touch\b/,'has-touch');
     </script>
-    <a class="skip-to-main" href="#site-main">{{ 'general.accessibility.skip_to_content' | t }}</a>
-    {% section 'static-announcement' %}
-    <header
-      class="site-header site-header-nav--open"
-      role="banner"
-      data-site-header
+
+    {% comment %}Inject icon-star-symbol begin{% endcomment %}
+    <svg
+      class="icon-star-reference"
+      aria-hidden="true"
+      focusable="false"
+      role="presentation"
+      xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="3 3 17 17" fill="none"
     >
-  <link rel="stylesheet" href="https://obscure-escarpment-2240.herokuapp.com/stylesheets/bcpo-front.css">
-  <script>var bcpo_product={{ product | json }}; {% if product.metafields.bcpo.bcpo_data %}var bcpo_data={{ product.metafields.bcpo.bcpo_data }};{% endif %} {% if shop.metafields.bcpo.bcpo_settings %}var bcpo_settings={{ shop.metafields.bcpo.bcpo_settings }};{% endif %}var inventory_quantity = [];{% for v in product.variants %}inventory_quantity.push({{v.inventory_quantity}});{% endfor %}if(bcpo_product) { for (var i = 0; i < bcpo_product.variants.length; i += 1) { bcpo_product.variants[i].inventory_quantity = inventory_quantity[i]; }}window.bcpo = window.bcpo || {}; bcpo.cart = {{cart | json}}; bcpo.ogFormData = FormData;</script>
-{% include "starapps-core" %}
+      <symbol id="icon-star">
+        <rect class="icon-star-background" width="20" height="20" fill="currentColor"/>
+        <path d="M10 3L12.163 7.60778L17 8.35121L13.5 11.9359L14.326 17L10 14.6078L5.674 17L6.5 11.9359L3 8.35121L7.837 7.60778L10 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </symbol>
+      <clipPath id="icon-star-clip">
+        <path d="M10 3L12.163 7.60778L17 8.35121L13.5 11.9359L14.326 17L10 14.6078L5.674 17L6.5 11.9359L3 8.35121L7.837 7.60778L10 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </clipPath>
+    </svg>
+    {% comment %}Inject icon-star-symbol end{% endcomment %}
 
 
-      {% section 'static-header' %}
-    </header>
+    <a class="skip-to-main" href="#site-main">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    {% sections 'header-group' %}
+
+    <div style="--background-color: {{ settings.color_background }}">
+      {%
+        render 'age-gate',
+        id: 'page',
+        sections: content_for_layout,
+      %}
+    </div>
+
     <div class="intersection-target" data-header-intersection-target></div>
     <div class="site-main-dimmer" data-site-main-dimmer></div>
     <main id="site-main" class="site-main" aria-label="Main content" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
-    {% section 'static-footer' %}
+    {% sections 'footer-group' %}
 
     {% comment %}
       Below are various templates used in JavaScript
@@ -289,7 +183,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="atc-banner--product">
               <h2 class="atc-banner--product-title">
                 <span class="atc-banner--product-title--icon">
-                  {%- render 'icon-checkmark' -%}
+                  {%
+                    render 'icon-library',
+                    id: 'icon-checkmark',
+                  %}
                 </span>
                 {{ 'add_to_cart_banner.general.product_added' | t }}
               </h2>
@@ -306,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="atc--product-details--price-value money" data-atc-banner-product-price-value></span>
                     <span class="atc--product-details--price-discounted money" data-atc-banner-product-price-discounted></span>
                     <span class="atc--product-details--unit-price hidden" data-atc-banner-unit-price>
-                      {{ 'product.item.price.price_per_unit_html' | t: total_quantity: '** total_quantity **', unit_price: '** unit_price **', unit_measure: '** unit_measure **' }}
+                      {{ 'product.general.price_per_unit_html' | t: total_quantity: '** total_quantity **', unit_price: '** unit_price **', unit_measure: '** unit_measure **' }}
                     </span>
                   </span>
                   <ul class="discount-list" data-atc-banner-product-discounts>
@@ -316,6 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       (-<span class="money discount-amount"></span>)
                     </li>
                   </ul>
+                  <span class="atc--line-item-subscriptions" data-atc-banner-product-subscription-title></span>
                 </div>
               </div>
             </div>
@@ -485,6 +383,133 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {% comment %}Inject product-gallery-zoom end{% endcomment %}
 
 
+    {% comment %}
+      Product compare drawer, shown when products are compared
+    {% endcomment %}
+    {% comment %}Inject template-allows-compare begin{% endcomment %}
+    {% assign template_allows_compare = settings.enable_product_compare %}
+    {% if template.name == 'cart' %}
+      {% assign template_allows_compare = false %}
+    {% elsif template.name == 'product' and template.suffix contains 'compare' %}
+      {% assign template_allows_compare = false %}
+    {% endif %}
+    {% comment %}Inject template-allows-compare end{% endcomment %}
+
+    {% if template_allows_compare %}
+      {% comment %}Inject product-compare-drawer begin{% endcomment %}
+      <div class="product-compare-drawer" data-product-compare-drawer>
+        <div class="product-compare-drawer__header" data-product-compare-drawer-header>
+          <h2 class="product-compare-drawer__title" data-product-compare-drawer-title>
+            {{ 'product_compare.drawer_title' | t }}
+          </h2>
+
+          <p
+            class="product-compare-drawer__notification"
+            data-product-count-one="{{ 'product_compare.drawer_notification.one' | t }}"
+            data-product-count-other="{{ 'product_compare.drawer_notification.other' | t: count: '** count **' }}"
+            data-product-compare-drawer-notification
+          >
+            {{ 'product_compare.drawer_notification' | t: count }}
+          </p>
+
+          <span class="product-compare-drawer__trigger">
+            {% render 'icon-chevron-down' %}
+          </span>
+        </div>
+
+        <div class="product-compare-drawer__container">
+          <div class="product-compare-drawer__items" data-compare-drawer-items-container>
+            <template data-product-compare-drawer-item-template>
+              <div
+                class="
+                  product-compare-drawer__item
+                  imagestyle--{% if settings.product_grid_image_crop and settings.product_grid_image_style != 'natural' %}cropped-{% endif %}{{ settings.product_grid_image_style }}
+                "
+              >
+                <div class="product-compare-drawer__image">
+                  <figure class="productitem--image" data-product-compare-drawer-image></figure>
+                </div>
+                <a class="product-compare-drawer__item-title" data-product-compare-drawer-title></a>
+                <button class="product-compare-drawer__remove" data-product-compare-drawer-remove>
+                  {%
+                    render 'icon-library',
+                    id: 'icon-remove',
+                    icon_class: 'product-compare-drawer__remove-icon',
+                  %}
+                </button>
+              </div>
+            </template>
+
+            {% for i in (1..3) %}
+              <div class="product-compare-drawer__item-placeholder" data-product-compare-drawer-item-placeholder>
+                <p class="product-compare-drawer__item-placeholder-text">
+                  {% if forloop.index == 1 %}
+                    {{ 'product_compare.drawer_notification_placeholder.first' | t }}
+                  {% elsif forloop.index == 2 %}
+                    {{ 'product_compare.drawer_notification_placeholder.second' | t }}
+                  {% elsif forloop.index == 3 %}
+                    {{ 'product_compare.drawer_notification_placeholder.third' | t }}
+                  {% endif %}
+                </p>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="product-compare-drawer__actions">
+            <a
+              class="
+                product-compare-drawer__link
+                button-primary
+                disabled
+              "
+              href="{{ routes.root_url }}"
+              data-product-compare-drawer-link
+              data-product-compare-drawer-link-text="{{ 'product_compare.compare' | t }}"
+            >
+              {{ 'product_compare.compare' | t }}
+            </a>
+
+            <button class="product-compare-drawer__clear-all" data-product-compare-clear-all>
+              {{ 'product_compare.drawer_clear_all' | t }}
+            </button>
+          </div>
+        </div>
+      </div>
+      {% comment %}Inject product-compare-drawer end{% endcomment %}
+
+    {% endif %}
+
+    {% if settings.enable_product_compare %}
+      {% comment %}Inject product-compare-breadcrumb-data begin{% endcomment %}
+      {% assign compare_breadcrumb_title = nil %}
+
+      {% case request.page_type %}
+        {% when 'product' %}
+          {% assign compare_breadcrumb_title = product.title %}
+        {% when 'collection' %}
+          {% assign compare_breadcrumb_title = collection.title %}
+        {% when 'index' %}
+          {% assign compare_breadcrumb_title = 'general.breadcrumbs.home' | t %}
+        {% when 'search' %}
+          {% assign compare_breadcrumb_title = 'general.accessibility.search' | t %}
+      {% endcase %}
+
+      {% assign compare_breadcrumb_update = true %}
+
+      {% if template.name == 'product' and template.suffix contains 'compare' %}
+        {% assign compare_breadcrumb_update = false %}
+      {% endif %}
+
+      <script type="application/json" data-product-compare-breadcrumb-data>
+        {
+          "title": {{ compare_breadcrumb_title | json }},
+          "update": {{ compare_breadcrumb_update }}
+        }
+      </script>
+      {% comment %}Inject product-compare-breadcrumb-data end{% endcomment %}
+
+    {% endif %}
+
     {%- if template contains 'customer' -%}
       {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
       {{ 'customer_area.js' | shopify_asset_url | script_tag }}
@@ -532,7 +557,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       data-shopify-countries="/services/javascripts/countries.js"
       data-shopify-common="{{ 'shopify_common.js' | shopify_asset_url }}"
       data-shopify-cart="{{ 'jquery.cart.js' | asset_url }}"
-      data-pxu-polyfills="{{ 'polyfills.js' | asset_url }}"
+      data-pxu-polyfills="{{ 'polyfills.min.js' | asset_url }}"
     >
     </script>
 
@@ -560,11 +585,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       defer
     >
     </script>
-  {% if content_for_header contains 'bulk-discount-production.herokuapp.com' %}
-          {% render 'sbdn-now' %}
-          {% render 'sbdn-shop' %}
-          {% render 'sbdn-products' %}
-          {% render 'sbdn-badge' %}
-          {% render 'sbdn-sale-clock' %}
-          {% endif %} <link rel="stylesheet" href="https://gravity-software.com/js/shopify/rondell/jquery.rondellf85.css?v=123"/></body>
+  </body>
 </html>

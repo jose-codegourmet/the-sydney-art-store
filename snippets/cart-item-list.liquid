@@ -2,7 +2,9 @@
   {% for item in cart.items %}
     {%
       render 'cart-item',
-      item: item
+      item: item,
+      show_sku: show_sku,
+      item_index: forloop.index,
     %}
   {% endfor %}
 </ul>

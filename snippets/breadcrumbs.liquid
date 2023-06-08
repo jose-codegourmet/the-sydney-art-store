@@ -39,7 +39,7 @@
 
       {{ delimiter }}
       {% if current_tags %}
-        {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+        {% capture url %}{{ routes.collections_url }}/{{ collection.handle }}{% endcapture %}
         {{ collection.title | link_to: url }}
         {{ delimiter }}
 
@@ -106,7 +106,7 @@
           }}
         </span>
       {% else %}
-        <span>{{ 'search.general.breadcrumbs_count' | t: terms: sanitized_terms, count: search.results_count }}</span>
+        <span>{{ 'search.general.breadcrumbs_count' | t: terms: sanitized_terms, count: search.results_count, results: results }}</span>
       {% endif %}
 
     {% else %}

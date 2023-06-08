@@ -51,7 +51,7 @@
   valid named HTML color and displayed as such, or will be ignored by the browser. {% endcomment %}
   {%- if swatch_bg_color == blank -%}
     {% capture swatch_bg_color %}
-      background-color: {{ color_name | handleize }};
+      background-color: {{ color_name | remove: ' ' | handleize }};
     {% endcapture %}
   {%- endif -%}
 

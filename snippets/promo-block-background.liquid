@@ -5,7 +5,7 @@
 
 <style>
   {% for block in blocks %}
-    .promo-block--{{ block.id }} {
+    .promo-block--{{ section.id}}--{{ block.id }} {
       {% if block.settings.color != blank %}
         color: {{ block.settings.color }};
       {% endif %}
@@ -16,7 +16,7 @@
           {%-
             render 'placeholder_svg_uri'
             placeholder: 'image'
-           -%}
+          -%}
         {%- endcapture -%}
         background-color: {{ settings.color_text | color_mix: settings.color_background, 10 }};
         background-image: url('{{ bg_image | strip_newlines }}');
@@ -27,7 +27,7 @@
       {% assign opacity = block.settings.opacity | times: 0.01 %}
       {% assign overlay = block.settings.background | color_modify: 'alpha', opacity %}
 
-      .promo-block--{{ block.id }} .promo-block--content {
+      .promo-block--{{ section.id }}--{{ block.id }} .promo-block--content {
         background-color: {{ overlay }};
       }
     {% endif %}

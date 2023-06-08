@@ -1,11 +1,9 @@
-<template data-options>
-  {
-    "totalPrice": {{ cart.total_price | money | json }}
-  }
-</template>
-
 <template data-html="list">
   {% render 'cart-item-list' %}
+</template>
+
+<template data-html="cart_total">
+  {{- cart.total_price | money -}}
 </template>
 
 <template data-html="discounts">

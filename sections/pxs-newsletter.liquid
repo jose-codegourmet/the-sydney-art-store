@@ -1,25 +1,10 @@
-{% assign pxs_newsletter_form_success = 'form.success' | t %}
-{% assign pxs_newsletter_form_placeholder = 'form.placeholder' | t %}
-{% assign pxs_newsletter_form_submit = 'form.submit' | t %}
-{% assign pxs_newsletter_form_id = 'pxs-newsletter-' | append: section.id %}
-
-<script
-  type="application/json"
-  data-section-type="pxs-newsletter"
-  data-section-id="{{ section.id }}"
->
-</script>
-
-<script type="application/pxs-animation-mapping+json">
-  {
-    "blocks": [".pxs-newsletter-content"],
-    "elements": [
-      ".pxs-newsletter-header",
-      ".pxs-newsletter-text",
-      ".pxs-newsletter-form-fields"
-    ]
-  }
-</script>
+{% liquid
+  assign pxs_newsletter_form_success = 'form.success' | t
+  assign pxs_newsletter_form_placeholder = 'form.placeholder' | t
+  assign pxs_newsletter_form_submit = 'form.submit' | t
+  assign pxs_newsletter_form_id = 'pxs-newsletter-' | append: section.id
+  assign pxs_newsletter_email_id = 'pxs-newsletter-email-' | append: section.id
+%}
 
 <section
   class="
@@ -32,20 +17,22 @@
     <figure
       class="pxs-newsletter-figure"
       {%
-        include 'rimg',
+        render 'rimg',
         img: section.settings.image,
         size: '500x',
         background: true,
-        lazy: true
+        lazy: true,
+        focal_point: section.settings.image.presentation.focal_point,
       %}
     >
       {%
-        include 'rimg',
+        render 'rimg',
         img: section.settings.image,
         class: 'pxs-newsletter-image',
         size: '500x',
         canvas: true,
-        lazy: true
+        lazy: true,
+        focal_point: section.settings.image.presentation.focal_point,
       %}
     </figure>
   {% endif %}
@@ -66,65 +53,83 @@
     </div>
 
     {%
-      include 'newsletter',
+      render 'newsletter',
       pxs_newsletter_image: pxs_newsletter_image,
       pxs_newsletter_form_success: pxs_newsletter_form_success,
       pxs_newsletter_form_placeholder: pxs_newsletter_form_placeholder,
       pxs_newsletter_form_submit: pxs_newsletter_form_submit,
-      pxs_newsletter_form_id: pxs_newsletter_form_id
+      pxs_newsletter_form_id: pxs_newsletter_form_id,
+      pxs_newsletter_email_id: pxs_newsletter_email_id,
     %}
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "Newsletter",
+  "name": "t:sections.newsletter.name",
   "class": "pxs-newsletter-section",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "t:sections.newsletter.title.label",
       "default": "Newsletter"
     },
     {
       "type": "richtext",
       "id": "text",
-      "label": "Text",
+      "label": "t:sections.newsletter.text.label",
       "default": "<p>Invite customers to join your mailing list.</p>"
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "t:sections.newsletter.image.label"
     },
     {
       "type": "select",
       "id": "desktop_alignment",
-      "label": "Desktop image alignment",
+      "label": "t:sections.newsletter.desktop_alignment.label",
       "options": [
-        { "label": "Left", "value": "left" },
-        { "label": "Right", "value": "right" }
+        {
+          "label": "t:sections.newsletter.desktop_alignment.option_1",
+          "value": "left"
+        },
+        {
+          "label": "t:sections.newsletter.desktop_alignment.option_2",
+          "value": "right"
+        }
       ],
       "default": "left"
     },
     {
       "type": "select",
       "id": "mobile_alignment",
-      "label": "Mobile image alignment",
+      "label": "t:sections.newsletter.mobile_alignment.label",
       "options": [
-        { "label": "Top", "value": "top" },
-        { "label": "Bottom", "value": "bottom" }
+        {
+          "label": "t:sections.newsletter.mobile_alignment.option_1",
+          "value": "top"
+        },
+        {
+          "label": "t:sections.newsletter.mobile_alignment.option_2",
+          "value": "bottom"
+        }
       ],
       "default": "top"
     }
   ],
   "presets": [
     {
-      "name": "Newsletter",
-      "category": "Promotional"
+      "name": "t:sections.newsletter.presets.name",
+      "category": "t:sections.newsletter.presets.category"
     }
   ],
+  "disabled_on": {
+    "groups": [
+      "*"
+    ]
+  },
   "locales": {
     "en": {
       "form": {

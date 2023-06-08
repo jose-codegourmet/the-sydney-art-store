@@ -22,12 +22,26 @@
 {% assign image = false %}
 {% assign image_alt = false %}
 
+{% assign link = link | default: false %}
+{% assign collection = collection | default: nil %}
+
 {% if collection == blank or collection.empty? %}
   {% assign onboard = true %}
 {% endif %}
 
-{% assign collection_title = collection.title %}
-{% assign collection_url = collection.url %}
+{% if link %}
+  {% assign current_collection = link.object %}
+{% else %}
+  {% assign current_collection = collection %}
+{% endif %}
+
+{% if block.settings.title != blank %}
+  {% assign collection_title = block.settings.title %}
+{% else %}
+  {% assign collection_title = current_collection.title %}
+{% endif %}
+
+{% assign collection_url = current_collection.url %}
 
 {% if onboard %}
   {% assign collection_title = 'onboarding.collection.title' | t  %}
@@ -36,18 +50,18 @@
 
 {% if collection_image and onboard == false %}
   {% assign image = collection_image %}
-  {% assign image_alt = collection_image_alt | default: collection.image.alt | escape | default: collection_title | escape %}
-{% elsif collection.image %}
-  {% assign image = collection.image %}
-  {% assign image_alt = collection.image.alt | escape %}
+  {% assign image_alt = collection_image_alt | default: current_collection.image.alt | escape | default: collection_title | escape %}
+{% elsif current_collection.image %}
+  {% assign image = current_collection.image %}
+  {% assign image_alt = current_collection.image.alt | escape %}
 {% else %}
-  {% assign image = collection.products.first.featured_media.preview_image %}
+  {% assign image = current_collection.products.first.featured_media.preview_image %}
   {% assign image_alt = collection_title | escape %}
 {% endif %}
 
-<li class="collection--item" {% if block %}{{ block.shopify_attributes }}{% endif %}>
+<li class="collection__item" {% if block %}{{ block.shopify_attributes }}{% endif %}>
   <a href="{{ collection_url }}">
-    <figure class="collection--item-image">
+    <figure class="collection__item-image">
         {% if image and image_alt %}
           {%
             render 'rimg',
@@ -55,7 +69,9 @@
             alt: image_alt,
             size: '1350x',
             lazy: true,
-            canvas: true
+            canvas: true,
+            attr: 'data-collection-image',
+            focal_point: image.presentation.focal_point,
           %}
         {% else %}
           {%- capture index -%}
@@ -65,7 +81,7 @@
         {% endif %}
     </figure>
 
-    <span class="collection--item-info collection--item-title">
+    <span class="collection__item-info collection__item-title">
         {{ collection_title }}
     </span>
   </a>

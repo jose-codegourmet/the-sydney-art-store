@@ -1,3 +1,4 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 {% assign collection_handle = product.metafields.special.related_collection %}
 {% assign collection = collections[collection_handle] %}
 
@@ -185,6 +186,14 @@
         let sizes = '';
         let series = '';
 
+        console.log('prod === ', prod)
+
+        const isNotPartOfVariants = prod.variants.length === 1 && prod.variants[0].price === '0.00';
+
+        if (isNotPartOfVariants) {
+          return;
+        }
+
         $.each(prod.tags, function(index, tag) {
           if (tag.indexOf("Colour_") !== -1) {
             colors += tag + ","
@@ -243,36 +252,38 @@
         product_grid += '          <tbody>';
         $.each(prod.variants, function(index, variant) {
           product_grid += '              <tr class="productExtra--row productExtra--size">';
-          product_grid += '                <td class="productExtra--cell productExtra--cell-1">';
-          product_grid += '                  <span class="productExtra--size">' + variant.title + '</span>';
+          product_grid += '                <td class="productExtra--cell productExtra--cell-1" data-cell-header="Size">';
+          product_grid += '                  <span class="productExtra--cell-content productExtra--size">' + variant.title + '</span>';
           product_grid += '                </td>';
-          product_grid += '                <td class="productExtra--cell productExtra--cell-2">';
-          product_grid += '                  <span class="productExtra--sku">';
+          product_grid += '                <td class="productExtra--cell productExtra--cell-2" data-cell-header="SKU">';
+          product_grid += '                  <span class="productExtra--cell-content productExtra--sku">';
           const sku = variant.sku != null
             ? variant.sku
             : '';
           product_grid += '                    <a href="' + prod.handle + '?variant=' + variant.id + '">' + sku + '</a>';
           product_grid += '                  </span>';
           product_grid += '                </td>';
-          product_grid += '                <td class="productExtra--cell productExtra--cell-3">';
+          product_grid += '                <td class="productExtra--cell productExtra--cell-3" data-cell-header="RRP">';
           const compare_at_price = variant.compare_at_price !=null ? '$' + variant.compare_at_price: '';
-          product_grid += '                  <span class="productExtra--rrp js--productRRP">' + compare_at_price + '</span>';
+          product_grid += '                  <span class="productExtra--cell-content productExtra--rrp js--productRRP">' + compare_at_price + '</span>';
           product_grid += '                </td>';
-          product_grid += '                <td class="productExtra--cell productExtra--cell-4">';
-          product_grid += '                  <span class="productExtra--price js--productPrice">$' + variant.price + '</span>';
+          product_grid += '                <td class="productExtra--cell productExtra--cell-4" data-cell-header="Price">';
+          product_grid += '                  <span class="productExtra--cell-content productExtra--price js--productPrice">$' + variant.price + '</span>';
           product_grid += '                </td>';
           const stock = variant.available
             ? 'In Stock'
             : 'Backorder';
-          product_grid += '                <td class="productExtra--cell productExtra--cell-5">';
-          product_grid += '                  <span class="productExtra--stock">' + stock + '</span>';
+          product_grid += '                <td class="productExtra--cell productExtra--cell-5" data-cell-header="Stock">';
+          product_grid += '                  <span class="productExtra--cell-content productExtra--stock">' + stock + '</span>';
           product_grid += '                </td>';
-          product_grid += '                <td class="productExtra--cell productExtra--cell-6 dflex">';
-          product_grid += '                  <input type="button" value="-" class="qty--modifier qtyminus" field="quantity">';
-          product_grid += '                  <input type="number" placeholder="1" variant-id="' + variant.id + '" class="input-text form-control--prod js--qty" min="1" value="1">';
-          product_grid += '                  <input type="button" value="+" class="qty--modifier qtyplus" field="quantity">';
-          product_grid += '                  <button type="button" title="Add to Basket" class="btn cart-button js--gtm-add-to-cart xigen--translate"';
-          product_grid += '                  data-translatekey="Add">Add</button>';
+          product_grid += '                <td class="productExtra--cell productExtra--cell-6 dflex" data-cell-header="Quantity">';
+          product_grid += '                  <div class="productExtra--cell-content">'
+          product_grid += '                   <input type="button" value="-" class="qty--modifier qtyminus" field="quantity">';
+          product_grid += '                   <input type="number" placeholder="1" variant-id="' + variant.id + '" class="input-text form-control--prod js--qty" min="1" value="1">';
+          product_grid += '                   <input type="button" value="+" class="qty--modifier qtyplus" field="quantity">';
+          product_grid += '                   <button type="button" title="Add to Basket" class="btn cart-button js--gtm-add-to-cart xigen--translate"';
+          product_grid += '                   data-translatekey="Add">Add</button>';
+          product_grid += '                  </div>'
           product_grid += '                </td>';
           product_grid += '              </tr>';
         });

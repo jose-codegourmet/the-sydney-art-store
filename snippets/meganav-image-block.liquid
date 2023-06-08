@@ -13,16 +13,16 @@
 {% if image != blank %}
   <div
     class="
-      navmenu-meganav--image-container
-      navmenu-meganav--image-{{ position }}
+      navmenu-meganav-standard__image-container
+      navmenu-meganav-standard__image-{{ position }}
     "
   >
     {% if url %}
-      <a class="navmenu-meganav--image-link" href="{{ url }}">
+      <a class="navmenu-meganav-standard__image-link" href="{{ url }}">
     {% endif %}
       {% capture image_classes %}
-        navmenu-meganav--image
-        navmenu-meganav--image-size-{{ size }}
+        navmenu-meganav-standard__image
+        navmenu-meganav-standard__image-size-{{ size }}
       {% endcapture %}
       {% if size == 'small' %}
         {% assign image_width = '280x' %}
@@ -31,21 +31,29 @@
       {% else %}
         {% assign image_width = '400x' %}
       {% endif %}
-      {%
-        render 'rimg',
-        img: image,
-        class: image_classes,
-        size: image_width,
-        alt: text
-      %}
+      <div class="navmenu-meganav-standard__image-wrapper">
+        {%
+          render 'rimg',
+          img: image,
+          class: image_classes,
+          size: image_width,
+          alt: text,
+          focal_point: image.presentation.focal_point,
+        %}
+      </div>
     {% if url %}
       </a>
     {% endif %}
 
     {% if text != blank %}
-      <p class="navmenu-meganav--image-text">
+      <p
+        class="
+          navmenu-meganav-standard__image-text
+          navmenu-meganav-standard__image-text--{{ size }}
+        "
+      >
         {% if url %}
-          <a class="navmenu-meganav--image-link" href="{{ url }}">
+          <a class="navmenu-meganav-standard__image-link" href="{{ url }}">
         {% endif %}
           {{ text | escape }}
         {% if url %}

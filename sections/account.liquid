@@ -26,8 +26,6 @@
                   <th>{{ 'customers.account.payment' | t }}</th>
                   <th>{{ 'customers.account.fulfillment' | t }}</th>
                   <th>{{ 'customers.account.total' | t }}</th>
-                  <th>Payment</th>
-                  <th>Invoice</th>
                 </tr>
               </thead>
 
@@ -49,19 +47,6 @@
                     </td>
                     <td class="account-order-list-total">
                       <span class="money">{{ order.total_price | money }}</span>
-                    </td>
-                    <td>
-                      {% if order.financial_status == 'pending' or order.financial_status == 'unpaid' or order.financial_status == 'partially_paid'%}
-                        {% assign statusPart = order.order_status_url | split: "/" %}
-                        {% assign secret = statusPart.last | split: "=" %}
-                        {% assign paymentUrl = 'https://' | append: statusPart[2] | append: '/' | append: statusPart[3] | append:'/order_payment/' | append: order.id | append: '?secret=' |  append: secret.last %}
-                        <a target="_blank" href="{{paymentUrl}}"> Pay Now </a>
-                      {% else %}
-                        -
-                      {% endif %}
-                    </td>
-                    <td>
-                      <a target="_blank" href="https://artist-brushes.myshopify.com/apps/download?hash=Y2pJa2gyOTM2MGw3ZjNi&ids={{ order.id }}&template_type=invoice">Download</a>
                     </td>
                   </tr>
                 {% endfor %}

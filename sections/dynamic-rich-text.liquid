@@ -45,25 +45,25 @@
 
 {% schema %}
 {
-  "name": "Rich Text",
+  "name": "t:sections.rich_text.name",
   "class": "rich-text--section",
   "settings": [
     {
       "id": "width",
       "type": "select",
-      "label": "Section width",
+      "label": "t:sections.rich_text.width.label",
       "options": [
         {
           "value": "regular",
-          "label": "Regular"
+          "label": "t:sections.rich_text.width.option_1"
         },
         {
           "value": "wide",
-          "label": "Wide"
+          "label": "t:sections.rich_text.width.option_2"
         },
         {
           "value": "full-width",
-          "label": "Full width"
+          "label": "t:sections.rich_text.width.option_3"
         }
       ],
       "default": "regular"
@@ -71,31 +71,31 @@
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "t:sections.rich_text.title.label",
       "default": "Rich text"
     },
     {
       "type": "richtext",
       "id": "text",
-      "label": "Text",
+      "label": "t:sections.rich_text.text.label",
       "default": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.</p>"
     },
     {
       "id": "heading_size",
       "type": "select",
-      "label": "Heading size",
+      "label": "t:sections.rich_text.heading_size.label",
       "options": [
         {
           "value": "small",
-          "label": "Small"
+          "label": "t:sections.rich_text.heading_size.option_1"
         },
         {
           "value": "medium",
-          "label": "Medium"
+          "label": "t:sections.rich_text.heading_size.option_2"
         },
         {
           "value": "large",
-          "label": "Large"
+          "label": "t:sections.rich_text.heading_size.option_3"
         }
       ],
       "default": "medium"
@@ -103,19 +103,19 @@
     {
       "id": "text_alignment",
       "type": "select",
-      "label": "Text alignment",
+      "label": "t:sections.rich_text.text_alignment.label",
       "options": [
         {
           "value": "left",
-          "label": "Left"
+          "label": "t:sections.rich_text.text_alignment.option_1"
         },
         {
           "value": "center",
-          "label": "Center"
+          "label": "t:sections.rich_text.text_alignment.option_2"
         },
         {
           "value": "right",
-          "label": "Right"
+          "label": "t:sections.rich_text.text_alignment.option_3"
         }
       ],
       "default": "left"
@@ -123,11 +123,13 @@
   ],
   "presets": [
     {
-      "name": "Rich text",
-      "category": "Text",
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "category": "t:sections.rich_text.presets.rich_text.category",
       "settings": {}
     }
-  ]
+  ],
+  "disabled_on": {
+    "groups": ["*"]
+  }
 }
-
 {% endschema %}

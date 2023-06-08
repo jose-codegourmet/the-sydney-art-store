@@ -11,13 +11,23 @@
       class="utils-sortby-button"
       aria-hidden="true"
       data-productgrid-modal-sort
+      aria-label="{{ 'product_grid.sort_by.title' | t }}"
     >
-      {{ 'product_grid.sort_by.title' | t }}
+      <span class="utils-filter-icon">
+        {% render 'icon-library', id: 'icon-sort' %}
+      </span>
+      <span class="utils-filter-text">
+        {{ 'product_grid.sort_by.title' | t }}
+      </span>
     </button>
 
-    <div class="utils-sortby-select form-field-select-wrapper no-label">
+    <div class="utils-sortby-select--wrapper form-field-select-wrapper no-label">
       <select
-        class="form-field form-field-select"
+        class="
+          form-field
+          form-field-select
+          utils-sortby-select
+        "
         id="product_grid_sort"
         tabindex="0"
         data-productgrid-trigger-sort>

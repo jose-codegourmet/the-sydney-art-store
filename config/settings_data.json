@@ -2,7 +2,7 @@
   "current": {
     "color_background": "#ffffff",
     "color_headings": "#e32619",
-    "color_text": "#4d4d4d",
+    "color_text": "#1d1d1d",
     "color_text_light": "#949494",
     "color_links": "#e32619",
     "color_button_background": "#e32619",
@@ -11,79 +11,77 @@
     "color_button_secondary_text": "#e32619",
     "color_button_secondary_border": "#dddddd",
     "color_header_background": "#ffffff",
-    "color_header_text": "#303030",
+    "color_header_text": "#1d1d1d",
     "color_input_text": "#4d4d4d",
     "color_input_background": "#ffffff",
     "color_input_border": "#dddddd",
     "color_product_sale_accent": "#e32619",
-    "color_product_review_star": "#f6c347",
-    "color_footer_background": "#ffffff",
-    "color_footer_text": "#686868",
+    "color_product_review_star": "#e32619",
+    "color_products_low_stock": "#e32619",
+    "color_products_no_stock": "#e32619",
+    "color_footer_background": "#f5f3ed",
+    "color_footer_text": "#4d4d4d",
     "color_overlay": "#000000",
     "overlay_opacity": 50,
     "type_size_base": 16,
-    "type_heading": "futura_n5",
+    "type_heading": "montserrat_n5",
     "type_heading_size": "1",
-    "type_heading_capitalize": false,
-    "type_heading_spacing": 0,
-    "type_body": "muli_n3",
-    "type_menu": "muli_n6",
-    "type_menu_capitalize": false,
-    "type_menu_spacing": 0,
-    "type_button": "futura_n4",
+    "type_heading_capitalize": true,
+    "type_heading_spacing": -1,
+    "type_body": "nunito_sans_n4",
+    "type_menu": "montserrat_n5",
+    "type_menu_capitalize": true,
+    "type_menu_spacing": -1,
+    "type_button": "nunito_sans_n7",
     "type_button_capitalize": false,
     "type_button_spacing": 0,
-    "type_section": "muli_n9",
-    "type_section_capitalize": false,
-    "type_section_spacing": 0,
-    "layout_max_width": 1500,
-    "product_show_vendor": true,
-    "product_show_sku": false,
-    "product_option_style": "select",
+    "type_section": "montserrat_n8",
+    "type_section_capitalize": true,
+    "type_section_spacing": 1,
+    "layout_max_width": 1400,
     "product_sales_badge": true,
-    "product_sales_badge_style": "percentile",
-    "product_social_sharing": true,
-    "product_ratings_reviews": false,
-    "product_ratings_star_display": "all",
-    "product_grid_show_second_image": true,
-    "product_grid_emphasize_price": false,
-    "product_grid_image_style": "medium",
-    "product_grid_image_crop": false,
-    "product_grid_show_quickshop": "always",
-    "product_grid_show_atc": "always",
-    "quickshop_show_dcb": true,
-    "quickshop_product_cart_redirect": false,
-    "quickshop_gallery_aspect_ratio": "square",
-    "quickshop_gallery_video_autoplay": true,
-    "quickshop_gallery_video_looping": true,
+    "product_sales_badge_style": "percent",
+    "inventory_status": false,
+    "inventory_display": "low_stock_only",
+    "inventory_transfer_notice": true,
+    "low_stock_threshold": 2,
+    "product_option_style": "select",
     "swatches_enable": true,
+    "swatches_product_card_size": 32,
+    "swatches_product_page_size": 64,
     "swatches_swatch_trigger": "Colour",
     "swatches_shape": "square",
-    "swatches_product_card_size": 27,
-    "swatches_product_page_size": 60,
     "swatches_option_style": "variant_image",
     "swatches_custom_colors": "Blacks: #000000\nBlues: #0096FF\nEarth Tones: #806043\nFluorescent: #AAFF00\nGreens: #008000\nGreys: #808080\nIridescent: #d7e9dc\nMetallics: #d4af37\nPinks: #ffc0cb\nReds: #E32619\nViolets: #cd97f2\nWhites: #f3f6f4\nOranges: #ffa500\nOrange: #ffa500\nYellows & Oranges: #ffa500\nYellows: #FFFF00\nCream: #FFFDD0\nN\/Print Grey: #808080\nNatural White: #EEEBE3\nSoft White: #FFFFFF\nVelvet Antique: #faebd7\nVelvet Buff: #d6bd90",
-    "social_facebook": "",
-    "social_twitter": "",
-    "social_pinterest": "",
-    "social_instagram": "",
+    "product_show_vendor": true,
+    "product_ratings_star_display": false,
+    "product_grid_emphasize_price": false,
+    "product_grid_show_atc": "always",
+    "product_grid_show_second_image": true,
+    "product_grid_image_style": "medium",
+    "product_grid_image_crop": false,
+    "enable_product_compare": true,
+    "social_linkedin": "",
     "social_tumblr": "",
     "social_vimeo": "",
     "social_youtube": "",
-    "social_linkedin": "",
-    "social_email": "mail@artsuppliesonline.com.au",
-    "favicon": "shopify:\/\/shop_images\/ASO_FAVICON.png",
-    "enable_checkout_lock_icon": true,
+    "favicon": "shopify:\/\/shop_images\/TSAS_logo_1.png",
+    "enable_orders_atc": true,
+    "enable_checkout_lock_icon": false,
     "continue_shopping_url": "shopify:\/\/collections\/all",
     "continue_url_cart": true,
     "continue_url_404": true,
-    "checkout_logo_image": "shopify:\/\/shop_images\/ASO_560db82a-cde1-4ced-a87c-4069a566ac1d.png",
-    "checkout_logo_size": "large",
+    "checkout_logo_image": "shopify:\/\/shop_images\/TSAS_logo_1.png",
     "checkout_body_background_color": "#f5f3ed",
-    "checkout_sidebar_background_color": "#fdfdfd",
-    "checkout_accent_color": "#e32619",
-    "checkout_button_color": "#e32619",
-    "checkout_error_color": "#e22120",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_accent_color": "#1d1d1d",
+    "checkout_button_color": "#1d1d1d",
+    "checkout_error_color": "#e32619",
+    "product_show_sku": false,
+    "product_social_sharing": false,
+    "product_grid_show_quickshop": "always",
+    "quickshop_select_first_available_variant": false,
+    "quickshop_show_dcb": true,
     "product_enable_recently_viewed_products": true,
     "product_slideshow_style": "natural",
     "gallery_thumbnail_position": "below",
@@ -105,1331 +103,81 @@
     "product_cart_redirect": false,
     "show_breadcrumbs": true,
     "quickshop_show_vendor": true,
-    "sections": {
-      "static-header": {
-        "type": "static-header",
-        "blocks": {
-          "79c4336b-3607-42f3-86fc-815e98c646e4": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "Studio",
-              "text_1": "",
-              "link_1": "",
-              "position_1": "first",
-              "size_1": "small",
-              "image_2": "shopify:\/\/shop_images\/tubewringer.jpg",
-              "text_2": "",
-              "link_2": "shopify:\/\/products\/tubewringer-401-heavy-duty",
-              "position_2": "first",
-              "size_2": "large"
-            }
-          },
-          "eb69cc89-a5b1-489e-8e33-92a58d2af1f7": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "Brushes",
-              "image_1": "shopify:\/\/shop_images\/Tintoretto_Series_7908_Feltracco_Set_7e2c7486-cfe8-4bd8-99ca-1d40254e05be.jpg",
-              "text_1": "",
-              "link_1": "",
-              "position_1": "first",
-              "size_1": "large",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          },
-          "e96eb90e-0e87-473b-b5f7-681e6be769e7": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "COLOUR",
-              "image_1": "shopify:\/\/shop_images\/Charvin_Extra_Fine_Oil_Set_Pink_Shades.jpg",
-              "text_1": "",
-              "link_1": "",
-              "position_1": "first",
-              "size_1": "large",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          },
-          "cc35d71b-444b-48e6-bba5-662cf6601386": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "MEDIUMS",
-              "image_1": "shopify:\/\/shop_images\/MM25_Black_Gesso_1l.jpg",
-              "text_1": "",
-              "link_1": "",
-              "position_1": "first",
-              "size_1": "large",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          },
-          "0280d05c-5c7a-4843-a4f8-faeb7698c3af": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "DRAWING",
-              "image_1": "shopify:\/\/shop_images\/luminance.jpg",
-              "text_1": "",
-              "link_1": "shopify:\/\/collections\/caran-dashe",
-              "position_1": "first",
-              "size_1": "large",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          },
-          "a73b6529-ec32-491c-a473-a9b637359129": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "PAINT",
-              "image_1": "shopify:\/\/shop_images\/cobalt_turquoise.jpg",
-              "text_1": "",
-              "link_1": "shopify:\/\/collections\/daniel-smith-15ml",
-              "position_1": "first",
-              "size_1": "large",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          },
-          "fd82e440-339b-4097-b635-9d3068d0f3e3": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "BRANDS",
-              "text_1": "",
-              "link_1": "",
-              "position_1": "first",
-              "size_1": "small",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          },
-          "7c2fc00d-3c8a-451b-a5bf-0233cee4bdf8": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "CANVAS",
-              "image_1": "shopify:\/\/shop_images\/aluminium_frame_copy.jpg",
-              "text_1": "",
-              "link_1": "https:\/\/www.buildacanvas.com.au",
-              "position_1": "first",
-              "size_1": "large",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          },
-          "9340c802-8ac3-4345-a271-a4d7982cb04e": {
-            "type": "meganav_images",
-            "settings": {
-              "meganav_trigger": "PAPER",
-              "image_1": "shopify:\/\/shop_images\/ARCHES_PAD.jpg",
-              "text_1": "",
-              "link_1": "shopify:\/\/products\/arches-watercolour-pads",
-              "position_1": "first",
-              "size_1": "large",
-              "text_2": "",
-              "link_2": "",
-              "position_2": "first",
-              "size_2": "small"
-            }
-          }
-        },
-        "block_order": [
-          "79c4336b-3607-42f3-86fc-815e98c646e4",
-          "eb69cc89-a5b1-489e-8e33-92a58d2af1f7",
-          "e96eb90e-0e87-473b-b5f7-681e6be769e7",
-          "cc35d71b-444b-48e6-bba5-662cf6601386",
-          "0280d05c-5c7a-4843-a4f8-faeb7698c3af",
-          "a73b6529-ec32-491c-a473-a9b637359129",
-          "fd82e440-339b-4097-b635-9d3068d0f3e3",
-          "7c2fc00d-3c8a-451b-a5bf-0233cee4bdf8",
-          "9340c802-8ac3-4345-a271-a4d7982cb04e"
-        ],
-        "settings": {
-          "sticky_header": false,
-          "full_width_header": false,
-          "logo": "shopify:\/\/shop_images\/aso_png_2_64f7815b-cb1d-45f9-956f-00e24bbdf484.png",
-          "logo_height": 77,
-          "logo_width": 236,
-          "filter_search_by": "disabled",
-          "enable_live_search": true,
-          "show_mobile_search_bar": true,
-          "enable_live_search_images": true,
-          "enable_live_search_articles_pages": true,
-          "quick_links": "",
-          "menu": "main-menu",
-          "small_promo_heading": "Free Shipping*",
-          "small_promo_text": "<p>On all orders over $99*<br\/>Standard Shipping $9.90*<\/p>",
-          "small_promo_text_mobile": "<p>On all orders over $99 : <strong>Standard Shipping $9.90*<\/strong><\/p>",
-          "small_promo_link": "shopify:\/\/policies\/shipping-policy",
-          "small_promo_icon": "icon-delivery"
-        }
-      },
-      "1520634789686": {
-        "type": "dynamic-featured-product",
-        "disabled": true,
-        "settings": {
-          "product": "stretcher-sets",
-          "show_dcb": true,
-          "product_cart_redirect": false,
-          "gallery_aspect_ratio": "natural",
-          "gallery_image_crop": false,
-          "gallery_thumbnail_position": "below",
-          "gallery_video_autoplay": true,
-          "gallery_video_looping": true,
-          "gallery_hover_zoom": "disabled"
-        }
-      },
-      "static-blog": {
-        "type": "static-blog",
-        "settings": {
-          "show_rss_link": true,
-          "show_date": true,
-          "show_author": true,
-          "show_excerpt": true,
-          "posts_per_page_range": 9
-        }
-      },
-      "static-footer": {
-        "type": "static-footer",
-        "blocks": {
-          "605aca9c-38da-4a23-a924-372c8f2f89b4": {
-            "type": "rich_text",
-            "settings": {
-              "title": "Art Supplies Online",
-              "text": "<p>Australia's fastest growing online only platform for all things art supplies. With over 30,000 products in the range, Art Supplies Online makes it so simple to find whatever art supplies you need.<\/p>"
-            }
-          },
-          "73a1c1d5-8adf-4095-ae1d-c02b23dc58c1": {
-            "type": "menu",
-            "settings": {
-              "menu": "friends"
-            }
-          },
-          "42b8ee4e-1385-4cd5-9e28-7aa7428b6061": {
-            "type": "menu",
-            "settings": {
-              "menu": "footer"
-            }
-          },
-          "949643b4-8efd-46ef-b1e5-f535cd374a0f": {
-            "type": "menu",
-            "settings": {
-              "menu": "popular"
-            }
-          },
-          "static-footer-1": {
-            "type": "newsletter",
-            "settings": {
-              "title": "Subscribe",
-              "text": "<p>Join our mailing list for all the latest sales and promotions.<\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "605aca9c-38da-4a23-a924-372c8f2f89b4",
-          "73a1c1d5-8adf-4095-ae1d-c02b23dc58c1",
-          "42b8ee4e-1385-4cd5-9e28-7aa7428b6061",
-          "949643b4-8efd-46ef-b1e5-f535cd374a0f",
-          "static-footer-1"
-        ],
-        "settings": {
-          "payment_icons": true,
-          "show_locale_selector": true,
-          "show_currency_selector": true,
-          "additional_menu": "footer"
-        }
-      },
-      "static-collection": {
-        "type": "static-collection",
-        "blocks": {
-          "1498186879532": {
-            "type": "menu",
-            "settings": {
-              "menu": ""
-            }
-          },
-          "1498186836236": {
-            "type": "menu",
-            "settings": {
-              "menu": ""
-            }
-          },
-          "1572651808624": {
-            "type": "menu",
-            "settings": {
-              "menu": ""
-            }
-          }
-        },
-        "block_order": [
-          "1498186879532",
-          "1498186836236",
-          "1572651808624"
-        ],
-        "settings": {
-          "show_collection_image": true,
-          "products_per_page_range": 48,
-          "products_per_row": "4",
-          "sort_by": true,
-          "show_by": true,
-          "grid_list": true,
-          "default_view": "grid-view",
-          "show_sidebar": true,
-          "show_prod_count": true,
-          "filter_style": "groups",
-          "filter_limit": "15",
-          "filter_position": "above_menus",
-          "grid_categories": "",
-          "custom_ordered_categories": "Brand, Type, Colour, Series, Shape, Hair",
-          "custom_ordered_tags": "Type",
-          "menu_depth_range": 1
-        }
-      },
-      "1493163784784": {
-        "type": "dynamic-featured-collection",
-        "settings": {
-          "title": "JUST ARRIVED | LIQUITEX BASICS",
-          "layout": "slideshow",
-          "collection": "liquitex-basics",
-          "product_count": 25,
-          "cta_label": "Shop collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "static-product": {
-        "type": "static-product",
-        "settings": {
-          "layout": "layout--two-col",
-          "show_dcb": true,
-          "product_cart_redirect": false,
-          "gallery_aspect_ratio": "square",
-          "gallery_image_crop": false,
-          "gallery_thumbnail_position": "below",
-          "gallery_video_autoplay": false,
-          "gallery_video_looping": false,
-          "gallery_hover_zoom": "disabled",
-          "gallery_click_to_zoom": "disabled"
-        }
-      },
-      "static-announcement": {
-        "type": "static-announcement",
-        "settings": {
-          "show_announcement": true,
-          "homepage_announcement": false,
-          "announcement_text": "Art Supplies Online - Powered by The Sydney Art Store Est. 2007 -  Get 10% Rewards Credit with Every Order.",
-          "announcement_text_mobile": "Art Supplies Online a branch of The Sydney Art Store. Get 10% Rewards Credit on all Purchases.",
-          "announcement_link": "#ba-loyalty-home",
-          "announcement_color": "#989797",
-          "announcement_background": "#ececed"
-        }
-      },
-      "static-product-recommendations": {
-        "type": "static-product-recommendations",
-        "settings": {
-          "show_product_recommendations": true,
-          "product_recommendations_heading": "Inspired by your shopping trends"
-        }
-      },
-      "static-product-reviews": {
-        "type": "static-product-reviews",
-        "settings": {
-        }
-      },
-      "static-recently-viewed": {
-        "type": "static-recently-viewed",
-        "settings": {
-          "enable_recently_viewed_products": true
-        }
-      },
-      "static-list-collections": {
-        "type": "static-list-collections",
-        "settings": {
-        }
-      },
-      "1621347748147d3519": {
-        "type": "dynamic-highlights-banner",
-        "blocks": {
-          "1621347748e348e38c-3": {
-            "type": "highlight",
-            "settings": {
-              "icon": "icon-smile",
-              "title": "Rewards",
-              "text": "<p>Join now and unlock awesome rewards.<\/p>",
-              "link": "#ba-loyalty-home"
-            }
-          },
-          "1621347748e348e38c-0": {
-            "type": "highlight",
-            "settings": {
-              "icon": "icon-delivery",
-              "title": "Free Shipping*",
-              "text": "<p>When you spend $99+<\/p>",
-              "link": "shopify:\/\/policies\/shipping-policy"
-            }
-          },
-          "1621347748e348e38c-1": {
-            "type": "highlight",
-            "settings": {
-              "icon": "icon-gift-card",
-              "title": "Gift Card",
-              "text": "<p>The Perfect Gift.<\/p>",
-              "link": "shopify:\/\/collections\/gift-cards"
-            }
-          },
-          "c936dee4-5fbe-4911-a479-9be7b2c944e5": {
-            "type": "highlight",
-            "disabled": true,
-            "settings": {
-              "icon": "none",
-              "title": "",
-              "text": "<p><\/p>",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "1621347748e348e38c-3",
-          "1621347748e348e38c-0",
-          "1621347748e348e38c-1",
-          "c936dee4-5fbe-4911-a479-9be7b2c944e5"
-        ],
-        "settings": {
-          "section_spacing": true,
-          "section_width": "full-width",
-          "color": "#4d4d4d",
-          "icon_color": "#4d4d4d",
-          "background_color": "#f5f3ed"
-        }
-      },
-      "162134779796a67f89": {
-        "type": "dynamic-slideshow",
-        "blocks": {
-          "162134779796a67f89-1": {
-            "type": "slide",
-            "disabled": true,
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-03_at_10.18.09_am_6760176b-93d7-454b-a874-9df04090c407.png",
-              "title": "Borciani Bonazzi",
-              "text": "Making Artist brushes Since 1951 in Italy.",
-              "color": "#ffffff",
-              "link": "",
-              "text_alignment": "center",
-              "button_one_label": "View Collection",
-              "button_one_link": "shopify:\/\/collections\/borciani-e-bonazzi",
-              "button_one_style": "primary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#949494",
-              "overlay_opacity": 23
-            }
-          },
-          "4a2dc06b-e591-414f-bc59-0f4fe97d105f": {
-            "type": "slide",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/Artist_Multifunctional_Watercolour_Palette_38_Wells_2.jpg",
-              "title": "Watercolour & Acrylic Palettes",
-              "text": "Artist Multifunctional Watercolour Palette is the perfect tool for any artist, featuring 38 wells and an exclusive airtight rubber design for superior performance and durability",
-              "color": "#ffffff",
-              "link": "",
-              "text_alignment": "center",
-              "button_one_label": "Shop",
-              "button_one_link": "",
-              "button_one_style": "primary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#4d4d4d",
-              "overlay_opacity": 21
-            }
-          },
-          "42a8fd68-c1f8-4c36-9efe-f6622fef82fd": {
-            "type": "slide",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/yellow_paint.jpg",
-              "title": "Golden Acrylic Paints",
-              "text": "They contain the largest assortment of unique pure pigments in a 100% acrylic emulsion vehicle available to the professional artist",
-              "color": "#ffffff",
-              "link": "shopify:\/\/collections\/golden-acrylics",
-              "text_alignment": "center",
-              "button_one_label": "Shop",
-              "button_one_link": "shopify:\/\/collections\/golden-acrylics",
-              "button_one_style": "secondary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#000000",
-              "overlay_opacity": 16
-            }
-          },
-          "5ad024ba-861f-4c95-be44-f152e9d829f9": {
-            "type": "slide",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/golden_group.jpg",
-              "title": "",
-              "text": "",
-              "color": "#ffffff",
-              "link": "shopify:\/\/collections\/golden-acrylics",
-              "text_alignment": "center",
-              "button_one_label": "",
-              "button_one_link": "",
-              "button_one_style": "primary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#000000",
-              "overlay_opacity": 1
-            }
-          },
-          "283b4858-6bdf-42df-a38c-5fa08765c8b6": {
-            "type": "slide",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/ds_header.jpg",
-              "title": "Daniel Smith Watercolours",
-              "text": "Tell Your Story In Colour with DANIEL SMITH Extra Fine Watercolours Sizes 5ml, 15ml, Pans & Sets",
-              "color": "#f5f3ed",
-              "link": "shopify:\/\/collections\/daniel-smith",
-              "text_alignment": "left",
-              "button_one_label": "Shop",
-              "button_one_link": "shopify:\/\/collections\/daniel-smith",
-              "button_one_style": "secondary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": false,
-              "overlay_color": "#f5f3ed",
-              "overlay_opacity": 32
-            }
-          },
-          "162134779796a67f89-0": {
-            "type": "slide",
-            "disabled": true,
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/charvin_front_image_d606cff6-3e16-4ae1-99fa-8993426d10e5.jpg",
-              "title": "Art Supplies Online",
-              "text": "Your Online Fine Art Specialists.",
-              "color": "#ffffff",
-              "link": "",
-              "text_alignment": "center",
-              "button_one_label": "",
-              "button_one_link": "",
-              "button_one_style": "primary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#949494",
-              "overlay_opacity": 25
-            }
-          },
-          "0441cef0-4d73-4927-8dc5-b300db3f5d94": {
-            "type": "slide",
-            "disabled": true,
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/charvin_oil_about_copy.jpg",
-              "title": "Art Supplies Online Australia",
-              "text": "Your Australian Art Supplies Specialists",
-              "color": "#ffffff",
-              "link": "",
-              "text_alignment": "center",
-              "button_one_label": "",
-              "button_one_link": "",
-              "button_one_style": "primary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#000000",
-              "overlay_opacity": 25
-            }
-          },
-          "d72f258d-8bd2-4a0c-a448-cb779ab5192d": {
-            "type": "slide",
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/Screen_Shot_2022-06-03_at_10.07.11_am.png",
-              "title": "",
-              "text": "",
-              "color": "#ffffff",
-              "link": "shopify:\/\/collections\/tintoretto",
-              "text_alignment": "center",
-              "button_one_label": "",
-              "button_one_link": "",
-              "button_one_style": "primary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#000000",
-              "overlay_opacity": 1
-            }
-          },
-          "1e6683c1-231c-4c90-9bcf-5058015aaf31": {
-            "type": "slide",
-            "disabled": true,
-            "settings": {
-              "background_image": "shopify:\/\/shop_images\/Liquitex_Fluoro_Inks_on_Top_of_Swatches_Square.jpg",
-              "title": "Liquitex Acrylic Inks",
-              "text": "20 new colours have just arrived",
-              "color": "#ffffff",
-              "link": "",
-              "text_alignment": "center",
-              "button_one_label": "LEARN MORE",
-              "button_one_link": "shopify:\/\/products\/liquitex-acrylic-inks",
-              "button_one_style": "secondary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": false,
-              "overlay_color": "#000000",
-              "overlay_opacity": 14
-            }
-          }
-        },
-        "block_order": [
-          "162134779796a67f89-1",
-          "4a2dc06b-e591-414f-bc59-0f4fe97d105f",
-          "42a8fd68-c1f8-4c36-9efe-f6622fef82fd",
-          "5ad024ba-861f-4c95-be44-f152e9d829f9",
-          "283b4858-6bdf-42df-a38c-5fa08765c8b6",
-          "162134779796a67f89-0",
-          "0441cef0-4d73-4927-8dc5-b300db3f5d94",
-          "d72f258d-8bd2-4a0c-a448-cb779ab5192d",
-          "1e6683c1-231c-4c90-9bcf-5058015aaf31"
-        ],
-        "settings": {
-          "enable_autoplay": true,
-          "autoplay_duration": 8,
-          "slideshow_width": "full",
-          "slideshow_height": "large"
-        }
-      },
-      "1621347979377f8215": {
-        "type": "dynamic-promo-mosaic",
-        "blocks": {
-          "14446aaf-7539-4a9b-84bf-3bb40ef42a72": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Screenshot_2023-04-21_at_2.27.19_pm.png",
-              "title": "",
-              "text": "",
-              "color": "#4d4d4d",
-              "block_link": "shopify:\/\/collections\/charvin-sets",
-              "button_text": "Charvin Paris Extra Fine Oil Sets",
-              "button_style": "secondary",
-              "show_overlay": false,
-              "background": "#f5f3ed",
-              "opacity": 55
-            }
-          },
-          "1621347979ac769819-0": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Screenshot_2023-05-15_at_9.00.21_pm_318e5570-13ef-4240-af39-71e60532dd8f.png",
-              "title": "",
-              "text": "",
-              "color": "#ffffff",
-              "block_link": "shopify:\/\/collections\/winsor-newton-oils",
-              "button_text": "",
-              "button_style": "secondary",
-              "show_overlay": true,
-              "background": "#949494",
-              "opacity": 15
-            }
-          },
-          "1621347979ac769819-1": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/1900-bristlon-75_orig.jpg",
-              "title": "Silver Brush Co.",
-              "text": "Providing artists since 1990 with the perfect tool to express their vision.",
-              "color": "#ffffff",
-              "block_link": "shopify:\/\/collections\/silver-brush",
-              "button_text": "View Collection",
-              "button_style": "secondary",
-              "show_overlay": true,
-              "background": "#949494",
-              "opacity": 30
-            }
-          },
-          "8fbe9dbf-4a80-4828-8f15-88ed06eba95b": {
-            "type": "promotion",
-            "disabled": true,
-            "settings": {
-              "image": "shopify:\/\/shop_images\/aluminium_stretcher_22_copy.jpg",
-              "title": "ARRIVED",
-              "text": "New website for Stretchers & Canvas.",
-              "color": "#ffffff",
-              "block_link": "https:\/\/www.buildacanvas.com.au\/collections\/stretchers\/products\/build-an-aluminium-stretcher",
-              "button_text": "Aluminium Stretchers",
-              "button_style": "secondary",
-              "show_overlay": true,
-              "background": "#4d4d4d",
-              "opacity": 17
-            }
-          },
-          "6d08b1b9-2a30-4b86-ae78-ad5a125a8a09": {
-            "type": "promotion",
-            "disabled": true,
-            "settings": {
-              "title": "Mosaic",
-              "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
-              "color": "#4d4d4d",
-              "block_link": "",
-              "button_text": "",
-              "button_style": "primary",
-              "show_overlay": false,
-              "background": "",
-              "opacity": 50
-            }
-          }
-        },
-        "block_order": [
-          "14446aaf-7539-4a9b-84bf-3bb40ef42a72",
-          "1621347979ac769819-0",
-          "1621347979ac769819-1",
-          "8fbe9dbf-4a80-4828-8f15-88ed06eba95b",
-          "6d08b1b9-2a30-4b86-ae78-ad5a125a8a09"
-        ],
-        "settings": {
-          "title": "",
-          "section_height": "small",
-          "text_alignment": "bottom-center",
-          "maintain_aspect_ratio": true,
-          "compress_blocks": true
-        }
-      },
-      "1654208373135336c3": {
-        "type": "dynamic-collection-list",
-        "disabled": true,
-        "blocks": {
-          "1654208373135336c3-0": {
-            "type": "collection",
-            "settings": {
-              "collection": "acrylic-paint",
-              "image": "shopify:\/\/shop_images\/set-no-4-silvia-molinari-brushes-folder-case-in-canvas-for-serie-beb_c8f4b5e3-e35c-443f-a529-1ba8e74cf08a.jpg"
-            }
-          },
-          "1654208373135336c3-1": {
-            "type": "collection",
-            "settings": {
-              "collection": "oil-paint",
-              "image": "shopify:\/\/shop_images\/image_728d3c28-bb69-4aa0-9687-54b118a3c2ad.png"
-            }
-          },
-          "1654208373135336c3-2": {
-            "type": "collection",
-            "settings": {
-              "collection": "sketchbooks",
-              "image": "shopify:\/\/shop_images\/set-no-4-silvia-molinari-brushes-folder-case-in-canvas-for-serie-beb_8f39fbeb-018e-412a-a033-a479f600e8f0.jpg"
-            }
-          },
-          "1654208373135336c3-3": {
-            "type": "collection",
-            "settings": {
-              "collection": "premade-canvases",
-              "image": "shopify:\/\/shop_images\/image_55eb1326-01c3-497f-b062-2372284f9172.png"
-            }
-          }
-        },
-        "block_order": [
-          "1654208373135336c3-0",
-          "1654208373135336c3-1",
-          "1654208373135336c3-2",
-          "1654208373135336c3-3"
-        ],
-        "settings": {
-          "title": ""
-        }
-      },
-      "1654208392fa2d0241": {
-        "type": "dynamic-featured-collection",
-        "settings": {
-          "title": "",
-          "layout": "grid",
-          "collection": "faber-castell",
-          "product_count": 10,
-          "cta_label": "Shop collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "16542146338f39c588": {
-        "type": "pxs-image-with-text-overlay",
-        "disabled": true,
-        "settings": {
-          "section_height": "original",
-          "image": "shopify:\/\/shop_images\/image_62c1652a-c7d5-4874-ad10-1a766d494e35.jpg",
-          "position": "center center",
-          "title": "",
-          "text": "<p><\/p>",
-          "content_position": "bottom-left",
-          "color": "#ffffff",
-          "overlay_background": "#000000",
-          "overlay_opacity": 8,
-          "link": "shopify:\/\/products\/borciani-e-bonazzi-856-series-unico-infinito-small-quill",
-          "button_text": "Shop"
-        }
-      },
-      "1654229114d262c672": {
-        "type": "dynamic-featured-collection",
-        "settings": {
-          "title": "Our Full Range of Acrylic Paints",
-          "layout": "slideshow",
-          "collection": "acrylic-paints",
-          "product_count": 25,
-          "cta_label": "Shop collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "16550945247865a4ca": {
-        "type": "dynamic-featured-collection",
-        "disabled": true,
-        "settings": {
-          "title": "Featured collection",
-          "layout": "slideshow",
-          "collection": "stretchers",
-          "product_count": 5,
-          "cta_label": "Shop collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "1655094738d97f1198": {
-        "type": "dynamic-promo-grid",
-        "blocks": {
-          "1655094738d97f1198-0": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/PINE_HEADER.jpg",
-              "title": "Hoop Pine",
-              "text": "Finger jointed and laminated.",
-              "color": "#4d4d4d",
-              "block_link": "shopify:\/\/products\/hoop-pine-hd-stretchers",
-              "button_text": "25% OFF Click Here",
-              "button_style": "secondary",
-              "promo_width": "half-width",
-              "show_overlay": true,
-              "background": "#949494",
-              "opacity": 16
-            }
-          },
-          "1655094738d97f1198-1": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/WEDGES_ac6bc933-b319-4219-a583-56b5fb9b6521.jpg",
-              "title": "Resin Wedges",
-              "text": "Guaranteed to keep your canvases taut.",
-              "color": "#4d4d4d",
-              "block_link": "shopify:\/\/products\/wedges-for-stretchers",
-              "button_text": "Shop",
-              "button_style": "secondary",
-              "promo_width": "half-width",
-              "show_overlay": true,
-              "background": "#949494",
-              "opacity": 16
-            }
-          },
-          "1655094738d97f1198-2": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/STRETCHER_PINE.jpg",
-              "title": "Bracing",
-              "text": "Hoop Pine. Profile: 67mm x 20mm",
-              "color": "#4d4d4d",
-              "block_link": "shopify:\/\/products\/bracing-for-hd",
-              "button_text": "25% OFF Click Here",
-              "button_style": "secondary",
-              "promo_width": "half-width",
-              "show_overlay": true,
-              "background": "#949494",
-              "opacity": 16
-            }
-          },
-          "1655094738d97f1198-3": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/VICASH_HEADER.jpg",
-              "title": "VicAsh",
-              "text": "Kiln-dried Victorian Ash",
-              "color": "#4d4d4d",
-              "block_link": "shopify:\/\/products\/victorian-ash-hd-stretchers",
-              "button_text": "25% OFF Click Here",
-              "button_style": "secondary",
-              "promo_width": "half-width",
-              "show_overlay": true,
-              "background": "#949494",
-              "opacity": 16
-            }
-          }
-        },
-        "block_order": [
-          "1655094738d97f1198-0",
-          "1655094738d97f1198-1",
-          "1655094738d97f1198-2",
-          "1655094738d97f1198-3"
-        ],
-        "settings": {
-          "title": "ALL THINGS STRETCHERS",
-          "section_height": "small",
-          "text_alignment": "bottom-left",
-          "maintain_aspect_ratio": false,
-          "compress_blocks": true
-        }
-      },
-      "static-cart": {
-        "type": "static-cart",
-        "settings": {
-          "enable_order_notes": true,
-          "enable_shipping_calc": false,
-          "shipping_calc_default_country": "Australia"
-        }
-      },
-      "1658894960f675b854": {
-        "type": "pxs-image-with-text-overlay",
-        "disabled": true,
-        "settings": {
-          "section_height": "original",
-          "image": "shopify:\/\/shop_images\/image_ff2e1496-007d-4913-bf6e-e740552b1523.jpg",
-          "position": "center center",
-          "title": "",
-          "text": "<p><\/p>",
-          "content_position": "bottom-left",
-          "color": "#ffffff",
-          "overlay_background": "#000000",
-          "overlay_opacity": 8,
-          "link": "shopify:\/\/products\/borciani-e-bonazzi-855-series-unico-infinito-il-mini-quill",
-          "button_text": "Shop"
-        }
-      },
-      "16625954947bdf2dd4": {
-        "type": "dynamic-highlights-banner",
-        "blocks": {
-          "16625954947bdf2dd4-2": {
-            "type": "highlight",
-            "settings": {
-              "icon": "icon-smile",
-              "title": "Rewards",
-              "text": "<p>Join & receive 10% Rewards Credit on all Purchases.<\/p>",
-              "link": "#ba-loyalty-home"
-            }
-          },
-          "16625954947bdf2dd4-1": {
-            "type": "highlight",
-            "settings": {
-              "icon": "icon-store",
-              "title": "Custom Canvas",
-              "text": "<p>No easier way to order you canvas than this.<\/p>",
-              "link": "https:\/\/www.buildacanvas.com.au\/products\/customcanvas"
-            }
-          },
-          "16625954947bdf2dd4-0": {
-            "type": "highlight",
-            "settings": {
-              "icon": "icon-question-mark",
-              "title": "Artist Stretchers",
-              "text": "<p>We have worked out the bracing so you don't have to.<\/p>",
-              "link": "https:\/\/www.buildacanvas.com.au\/collections\/stretchers\/products\/stretchers"
-            }
-          },
-          "16625954947bdf2dd4-3": {
-            "type": "highlight",
-            "settings": {
-              "icon": "icon-gift-card",
-              "title": "Gift Card",
-              "text": "<p>The Perfect Gift.<\/p>",
-              "link": "shopify:\/\/products\/aso-gift-card"
-            }
-          }
-        },
-        "block_order": [
-          "16625954947bdf2dd4-2",
-          "16625954947bdf2dd4-1",
-          "16625954947bdf2dd4-0",
-          "16625954947bdf2dd4-3"
-        ],
-        "settings": {
-          "section_spacing": false,
-          "section_width": "full-width",
-          "color": "#686868",
-          "icon_color": "#686868",
-          "background_color": "#f5f3ed"
-        }
-      },
-      "543b3512-f844-492b-af85-84a7afad2344": {
-        "type": "dynamic-featured-collection",
-        "settings": {
-          "title": "RAW BIRCH & BASSWOOD PANELS",
-          "layout": "slideshow",
-          "collection": "raw-panels",
-          "product_count": 10,
-          "cta_label": "Shop collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "1bb5db8c-c031-4531-adf3-aba67be2cc5c": {
-        "type": "dynamic-featured-product",
-        "disabled": true,
-        "settings": {
-          "product": "daniel-smith-gouache-15ml",
-          "show_dcb": true,
-          "product_cart_redirect": false,
-          "gallery_aspect_ratio": "square",
-          "gallery_image_crop": false,
-          "gallery_thumbnail_position": "below",
-          "gallery_video_autoplay": true,
-          "gallery_video_looping": true,
-          "gallery_hover_zoom": "disabled"
-        }
-      },
-      "a08e63a0-e8e2-475a-9c71-b1a8862d2156": {
-        "type": "dynamic-promo-mosaic",
-        "blocks": {
-          "a08e63a0-e8e2-475a-9c71-b1a8862d2156-1670034683dc598925-1": {
-            "type": "promotion",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/ARA_ACRYLICS_c89b9aa4-95ba-4c93-9a78-8659ae160ba3.jpg",
-              "title": "WHILE STOCK LAST ARA ACRYLICS",
-              "text": "",
-              "color": "#ffffff",
-              "block_link": "shopify:\/\/collections\/ara-acrylics",
-              "button_text": "40% OFF ARA ACRYLICS",
-              "button_style": "secondary",
-              "show_overlay": false,
-              "background": "",
-              "opacity": 1
-            }
-          },
-          "a08e63a0-e8e2-475a-9c71-b1a8862d2156-1670034683dc598925-2": {
-            "type": "promotion",
-            "disabled": true,
-            "settings": {
-              "image": "shopify:\/\/shop_images\/BIRCH_PANELS.jpg",
-              "title": "JUST ARRIVED",
-              "text": "ALL SIZES",
-              "color": "#ffffff",
-              "block_link": "shopify:\/\/products\/artist-birch-panels-22mm-depth",
-              "button_text": "BIRCH PANELS",
-              "button_style": "secondary",
-              "show_overlay": true,
-              "background": "#4d4d4d",
-              "opacity": 9
-            }
-          },
-          "3308418b-a6c8-4e1b-a986-36ef01833789": {
-            "type": "promotion",
-            "disabled": true,
-            "settings": {
-              "image": "shopify:\/\/shop_images\/image_d39c8b7c-3c0b-4700-bd58-5bde1a501d4c.jpg",
-              "title": "",
-              "text": "",
-              "color": "#4d4d4d",
-              "block_link": "shopify:\/\/products\/daniel-smith-gouache-15ml",
-              "button_text": "",
-              "button_style": "primary",
-              "show_overlay": false,
-              "background": "",
-              "opacity": 50
-            }
-          }
-        },
-        "block_order": [
-          "a08e63a0-e8e2-475a-9c71-b1a8862d2156-1670034683dc598925-1",
-          "a08e63a0-e8e2-475a-9c71-b1a8862d2156-1670034683dc598925-2",
-          "3308418b-a6c8-4e1b-a986-36ef01833789"
-        ],
-        "settings": {
-          "title": "",
-          "section_height": "large",
-          "text_alignment": "bottom-center",
-          "maintain_aspect_ratio": false,
-          "compress_blocks": true
-        }
-      },
-      "1c25287d-5ba7-43c0-9f45-6a2d12849069": {
-        "type": "dynamic-slideshow",
-        "blocks": {
-          "1c25287d-5ba7-43c0-9f45-6a2d12849069-16701906417ffbd759-1": {
-            "type": "slide",
-            "disabled": true,
-            "settings": {
-              "title": "Slideshow",
-              "text": "Introduce customers to your shop with lifestyle and product imagery",
-              "color": "#ffffff",
-              "link": "",
-              "text_alignment": "center",
-              "button_one_label": "Button",
-              "button_one_link": "",
-              "button_one_style": "primary",
-              "button_two_label": "",
-              "button_two_link": "",
-              "button_two_style": "primary",
-              "show_overlay": true,
-              "overlay_color": "#000000",
-              "overlay_opacity": 50
-            }
-          }
-        },
-        "block_order": [
-          "1c25287d-5ba7-43c0-9f45-6a2d12849069-16701906417ffbd759-1"
-        ],
-        "settings": {
-          "enable_autoplay": true,
-          "autoplay_duration": 8,
-          "slideshow_width": "full",
-          "slideshow_height": "medium"
-        }
-      },
-      "f1751429-3dc8-462c-a3d2-e58075cc7a48": {
-        "type": "dynamic-featured-collection",
-        "settings": {
-          "title": "ARCHES THE FINEST QUALITY PAPER",
-          "layout": "grid",
-          "collection": "arches",
-          "product_count": 10,
-          "cta_label": "Shop collection",
-          "cta_button_style": "primary"
-        }
-      },
-      "5a6135f6-e7ce-4429-843c-1c3df1ed5b2a": {
-        "type": "dynamic-featured-collection",
-        "disabled": true,
-        "blocks": {
-          "a60b46d1-e73d-4bef-a3fa-da20aaa85e42": {
-            "type": "title_card",
-            "disabled": true,
-            "settings": {
-              "position": "beginning",
-              "pre_heading": "Shop this",
-              "heading": "Collection",
-              "text_color": "#ffffff",
-              "overlay_color": "#000000",
-              "overlay_opacity": 50
-            }
-          }
-        },
-        "block_order": [
-          "a60b46d1-e73d-4bef-a3fa-da20aaa85e42"
-        ],
-        "settings": {
-          "title": "Daniel Smith Watercolours",
-          "layout": "slideshow",
-          "collection": "daniel-smith-watercolours-5ml",
-          "product_count": 25,
-          "cta_label": "Shop Collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "506f1a2b-8b57-4870-803e-9abd56839cd7": {
-        "type": "dynamic-featured-collection",
-        "settings": {
-          "title": "",
-          "layout": "grid",
-          "collection": "oil-paint",
-          "product_count": 10,
-          "cta_label": "Shop collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "e07d1398-c01b-4812-9eb0-b238f14946e7": {
-        "type": "dynamic-video",
-        "disabled": true,
-        "settings": {
-          "title": "",
-          "url": "https:\/\/youtu.be\/GYHyu-raFZQ",
-          "show_caption": false,
-          "caption": "<p>A short description of the video.<\/p>",
-          "autoplay": false,
-          "aspect_ratio": "16-9",
-          "position": "center-center",
-          "show_overlay": false,
-          "background": "#000000",
-          "opacity": 50
-        }
-      },
-      "92a29523-eb81-40b9-8905-9e42ee53747a": {
-        "type": "dynamic-featured-collection",
-        "settings": {
-          "title": "",
-          "layout": "slideshow",
-          "collection": "borciani-e-bonazzi",
-          "product_count": 20,
-          "cta_label": "Shop collection",
-          "cta_button_style": "secondary"
-        }
-      },
-      "6545e3c3-2005-45aa-9376-34c01f717738": {
-        "type": "dynamic-featured-collection",
-        "disabled": true,
-        "settings": {
-          "title": "",
-          "layout": "slideshow",
-          "collection": "daniel-smith-watercolours-1-2-pan",
-          "product_count": 25,
-          "cta_label": "Shop collection",
-          "cta_button_style": "primary"
-        }
-      },
-      "static-special-product": {
-        "type": "static-special-product",
-        "settings": {
-          "layout": "layout--three-col",
-          "show_dcb": true,
-          "product_cart_redirect": false,
-          "gallery_aspect_ratio": "natural",
-          "gallery_image_crop": false,
-          "gallery_thumbnail_position": "below",
-          "gallery_video_autoplay": true,
-          "gallery_video_looping": true,
-          "gallery_hover_zoom": "disabled",
-          "gallery_click_to_zoom": "always"
-        }
-      },
-      "static-search": {
-        "type": "static-search",
-        "settings": {
-          "results_per_page_range": 24,
-          "products_per_row": "4",
-          "enable_search_articles_pages": true
-        }
-      }
-    },
     "content_for_index": [
-      "16625954947bdf2dd4",
-      "1621347979377f8215",
-      "e07d1398-c01b-4812-9eb0-b238f14946e7",
-      "506f1a2b-8b57-4870-803e-9abd56839cd7",
-      "92a29523-eb81-40b9-8905-9e42ee53747a",
-      "6545e3c3-2005-45aa-9376-34c01f717738",
-      "5a6135f6-e7ce-4429-843c-1c3df1ed5b2a",
-      "162134779796a67f89",
-      "f1751429-3dc8-462c-a3d2-e58075cc7a48",
-      "1bb5db8c-c031-4531-adf3-aba67be2cc5c",
-      "1655094738d97f1198",
-      "543b3512-f844-492b-af85-84a7afad2344",
-      "1654208373135336c3",
-      "1654229114d262c672",
-      "a08e63a0-e8e2-475a-9c71-b1a8862d2156",
-      "1493163784784",
-      "16542146338f39c588",
-      "1658894960f675b854",
-      "1654208392fa2d0241",
-      "1520634789686",
-      "16550945247865a4ca",
-      "1621347748147d3519",
-      "1c25287d-5ba7-43c0-9f45-6a2d12849069"
-    ],
-    "blocks": {
-      "12275743031121414305": {
-        "type": "shopify:\/\/apps\/variant-images-gallery-zoom\/blocks\/app-embed\/e22d46a9-b20f-46ef-839e-96f4f8caeb06",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "3838990611052461119": {
-        "type": "shopify:\/\/apps\/customerhub\/blocks\/app-embed\/0fb3ba0b-4c65-4919-a85a-48bc2d368e9c",
-        "disabled": false,
-        "settings": {
-          "account_primary_page": "",
-          "main_element": "",
-          "custom_element": "",
-          "page_element": "",
-          "proxy_element": "",
-          "mount_json_code": ""
-        }
-      }
-    }
+
+    ]
   },
   "presets": {
-    "Graphic": {
+    "Supply": {
       "color_background": "#ffffff",
-      "color_headings": "#484848",
-      "color_text": "#4d4d4d",
+      "color_headings": "#1d1d1d",
+      "color_text": "#1d1d1d",
       "color_text_light": "#949494",
-      "color_links": "#e32619",
-      "color_button_background": "#e32619",
+      "color_links": "#046e82",
+      "color_button_background": "#f04f36",
       "color_button_text": "#ffffff",
       "color_button_secondary_background": "#ffffff",
-      "color_button_secondary_text": "#e32619",
+      "color_button_secondary_text": "#f04f36",
       "color_button_secondary_border": "#dddddd",
       "color_header_background": "#ffffff",
-      "color_header_text": "#484848",
+      "color_header_text": "#1d1d1d",
       "color_input_text": "#4d4d4d",
       "color_input_background": "#ffffff",
       "color_input_border": "#dddddd",
-      "color_product_sale_accent": "#e32619",
-      "color_product_review_star": "#f6c347",
-      "color_footer_background": "#ffffff",
-      "color_footer_text": "#686868",
+      "color_product_sale_accent": "#f04f36",
+      "color_product_review_star": "#ffab41",
+      "color_footer_background": "#f5f3ed",
+      "color_footer_text": "#1d1d1d",
       "color_overlay": "#000000",
       "overlay_opacity": 50,
       "type_size_base": 16,
-      "type_heading": "futura_n7",
+      "type_heading": "montserrat_n8",
       "type_heading_size": "1",
       "type_heading_capitalize": false,
       "type_heading_spacing": 0,
-      "type_body": "lato_n4",
-      "type_menu": "lato_n7",
+      "type_body": "nunito_sans_n4",
+      "type_menu": "nunito_sans_n7",
       "type_menu_capitalize": false,
       "type_menu_spacing": 0,
-      "type_button": "lato_n7",
+      "type_button": "nunito_sans_n7",
       "type_button_capitalize": false,
       "type_button_spacing": 0,
-      "type_section": "futura_n7",
+      "type_section": "montserrat_n8",
       "type_section_capitalize": false,
       "type_section_spacing": 0,
       "layout_max_width": 1400,
       "product_show_vendor": true,
       "product_show_sku": false,
-      "product_enable_recently_viewed_products": true,
       "product_option_style": "select",
       "product_sales_badge": true,
-      "product_sales_badge_style": "money",
-      "product_social_sharing": true,
-      "product_slideshow_style": "natural",
-      "gallery_thumbnail_position": "below",
-      "product_ratings_reviews": true,
-      "product_ratings_star_display": "prod-page",
-      "product_grid_show_second_image": false,
-      "product_grid_emphasize_price": false,
+      "product_sales_badge_style": "percent",
+      "product_social_sharing": false,
+      "product_ratings_star_display": true,
+      "product_grid_show_second_image": true,
+      "product_grid_emphasize_price": true,
       "product_grid_image_style": "natural",
+      "product_grid_show_quickshop": "always",
+      "product_grid_show_atc": "always",
+      "quickshop_select_first_available_variant": false,
+      "quickshop_show_dcb": true,
       "swatches_enable": true,
       "swatches_swatch_trigger": "Color",
       "swatches_shape": "square",
       "swatches_product_card_size": 32,
       "swatches_product_page_size": 64,
-      "swatches_option_style": "variant_image",
+      "swatches_option_style": "color_swatch",
       "swatches_custom_colors": "",
-      "product_grid_show_quickshop": "always",
-      "product_grid_show_atc": "always",
-      "quickshop_show_dcb": true,
-      "quickshop_product_cart_redirect": false,
-      "social_facebook": "",
-      "social_twitter": "",
-      "social_pinterest": "",
-      "social_instagram": "",
       "social_tumblr": "",
       "social_vimeo": "",
       "social_youtube": "",
       "social_linkedin": "",
-      "social_email": "",
-      "favicon": "",
       "enable_checkout_lock_icon": false,
       "continue_shopping_url": "shopify:\/\/collections\/all",
       "continue_url_cart": true,
       "continue_url_404": true,
+      "product_enable_recently_viewed_products": true,
+      "product_slideshow_style": "natural",
+      "gallery_thumbnail_position": "below",
       "enable_image_zoom": false,
       "image_zoom_level": "min",
       "product_grid_quick_shop": true,
@@ -1447,1002 +195,37 @@
       "quickshop_enable_social_sharing": true,
       "product_cart_redirect": false,
       "show_breadcrumbs": true,
-      "quickshop_show_vendor": true,
-      "sections": {
-        "static-header": {
-          "type": "static-header",
-          "blocks": {
-            "1517255946962": {
-              "type": "meganav_images",
-              "settings": {
-              }
-            },
-            "1572476394007": {
-              "type": "multi_column_menu",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "1517255946962",
-            "1572476394007"
-          ],
-          "settings": {
-            "sticky_header": false,
-            "full_width_header": false,
-            "logo_height": 40,
-            "logo_width": 150,
-            "filter_search_by": "disabled",
-            "enable_live_search": true,
-            "show_mobile_search_bar": true,
-            "enable_live_search_images": true,
-            "enable_live_search_articles_pages": true,
-            "quick_links": "shop-by-piece",
-            "menu": "main-menu",
-            "small_promo_heading": "Free Shipping",
-            "small_promo_text": "<p>on all orders over $75<\/p>",
-            "small_promo_text_mobile": "<p>on all orders over $75<\/p>",
-            "small_promo_icon": "icon-delivery",
-            "image": ""
-          }
-        },
-        "1520634789686": {
-          "type": "dynamic-featured-product",
-          "settings": {
-            "show_dcb": false,
-            "product_cart_redirect": false
-          }
-        },
-        "1498182734213": {
-          "type": "dynamic-twitter-feed",
-          "settings": {
-            "retweets": false,
-            "images": false
-          }
-        },
-        "1517239645202": {
-          "type": "dynamic-search",
-          "settings": {
-            "filter_search_by": "disabled",
-            "enable_live_search": true,
-            "enable_live_search_images": true,
-            "enable_live_search_articles_pages": false,
-            "position": "top-center",
-            "show-overlay": true,
-            "color": "#4d4d4d",
-            "background": "#ffffff",
-            "opacity": 75
-          }
-        },
-        "static-blog": {
-          "type": "static-blog",
-          "settings": {
-            "show_rss_link": true,
-            "show_date": true,
-            "show_author": true,
-            "show_excerpt": true,
-            "posts_per_page_range": 9
-          }
-        },
-        "1493143038057": {
-          "type": "dynamic-promo-mosaic",
-          "blocks": {
-            "1493143038057-0": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "secondary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 1
-              }
-            },
-            "1493143038057-1": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1493143038057-2": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1493143583401": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            }
-          },
-          "block_order": [
-            "1493143038057-0",
-            "1493143038057-1",
-            "1493143038057-2",
-            "1493143583401"
-          ],
-          "settings": {
-            "title": "",
-            "section_height": "small",
-            "text_alignment": "top-left",
-            "maintain_aspect_ratio": false,
-            "compress_blocks": false
-          }
-        },
-        "static-footer": {
-          "type": "static-footer",
-          "blocks": {
-            "static-footer-0": {
-              "type": "menu",
-              "settings": {
-                "menu": "main-menu"
-              }
-            },
-            "1498182586280": {
-              "type": "menu",
-              "settings": {
-              }
-            },
-            "1498182572847": {
-              "type": "menu",
-              "settings": {
-              }
-            },
-            "1493171899575": {
-              "type": "social_accounts",
-              "settings": {
-              }
-            },
-            "static-footer-1": {
-              "type": "newsletter",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "static-footer-0",
-            "1498182586280",
-            "1498182572847",
-            "1493171899575",
-            "static-footer-1"
-          ],
-          "settings": {
-            "payment_icons": false,
-            "additional_menu": "footer"
-          }
-        },
-        "1493145778308": {
-          "type": "dynamic-promo-grid",
-          "blocks": {
-            "1493145778308-0": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "full-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            }
-          },
-          "block_order": [
-            "1493145778308-0"
-          ],
-          "settings": {
-            "section_height": "medium",
-            "text_alignment": "center-center",
-            "maintain_aspect_ratio": true,
-            "compress_blocks": false
-          }
-        },
-        "1521054862775": {
-          "type": "dynamic-video",
-          "settings": {
-            "show_caption": false,
-            "autoplay": false,
-            "aspect_ratio": "16-9",
-            "position": "center-center",
-            "show_overlay": false,
-            "background": "#000000",
-            "opacity": 50
-          }
-        },
-        "static-collection": {
-          "type": "static-collection",
-          "blocks": {
-            "1498186879532": {
-              "type": "menu",
-              "settings": {
-                "menu": ""
-              }
-            },
-            "1498186836236": {
-              "type": "menu",
-              "settings": {
-                "menu": ""
-              }
-            },
-            "1572651808624": {
-              "type": "menu",
-              "settings": {
-                "menu": ""
-              }
-            }
-          },
-          "block_order": [
-            "1498186879532",
-            "1498186836236",
-            "1572651808624"
-          ],
-          "settings": {
-            "show_collection_image": true,
-            "products_per_page_range": 24,
-            "products_per_row": "4",
-            "sort_by": true,
-            "show_by": true,
-            "grid_list": true,
-            "default_view": "grid-view",
-            "show_sidebar": true,
-            "show_prod_count": true,
-            "filter_style": "groups",
-            "filter_limit": "5",
-            "filter_position": "above_menus",
-            "grid_categories": "",
-            "custom_ordered_categories": "",
-            "custom_ordered_tags": "",
-            "menu_depth_range": 1
-          }
-        },
-        "1493163784784": {
-          "type": "dynamic-featured-collection",
-          "settings": {
-            "title": "Featured Collection",
-            "layout": "grid",
-            "collection": "muuto",
-            "product_count": 5,
-            "cta_button_style": "primary"
-          }
-        },
-        "1493171740659": {
-          "type": "dynamic-blog-posts",
-          "settings": {
-            "title": "Blog Posts",
-            "blog": "news",
-            "show_date": true,
-            "show_author": true,
-            "show_excerpt": true
-          }
-        },
-        "1493166188493": {
-          "type": "dynamic-menu-list",
-          "blocks": {
-            "1493166188493-0": {
-              "type": "menu",
-              "settings": {
-              }
-            },
-            "1493166188493-1": {
-              "type": "menu",
-              "settings": {
-              }
-            },
-            "1493166188493-2": {
-              "type": "menu",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "1493166188493-0",
-            "1493166188493-1",
-            "1493166188493-2"
-          ],
-          "settings": {
-          }
-        },
-        "static-product": {
-          "type": "static-product",
-          "settings": {
-            "layout": "layout--two-col",
-            "show_dcb": false,
-            "product_cart_redirect": false
-          }
-        },
-        "1540247561673": {
-          "type": "dynamic-promo-grid",
-          "blocks": {
-            "1540247561673-0": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1540247561673-1": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "#ee3224",
-                "opacity": 50
-              }
-            }
-          },
-          "block_order": [
-            "1540247561673-0",
-            "1540247561673-1"
-          ],
-          "settings": {
-            "title": "",
-            "section_height": "small",
-            "text_alignment": "top-left",
-            "maintain_aspect_ratio": false,
-            "compress_blocks": false
-          }
-        },
-        "static-announcement": {
-          "type": "static-announcement",
-          "settings": {
-            "show_announcement": false,
-            "homepage_announcement": false
-          }
-        },
-        "static-product-recommendations": {
-          "type": "static-product-recommendations",
-          "settings": {
-            "show_product_recommendations": true,
-            "product_recommendations_heading": "Inspired by your shopping trends"
-          }
-        },
-        "static-product-reviews": {
-          "type": "static-product-reviews",
-          "settings": {
-          }
-        },
-        "static-recently-viewed": {
-          "type": "static-recently-viewed",
-          "settings": {
-            "enable_recently_viewed_products": true
-          }
-        }
-      },
-      "content_for_index": [
-        "1493143038057",
-        "1493145778308",
-        "1540247561673",
-        "1493163784784",
-        "1520634789686",
-        "1521054862775",
-        "1493166188493",
-        "1493171740659",
-        "1498182734213",
-        "1517239645202"
-      ]
-    },
-    "Supply": {
-      "color_background": "#ffffff",
-      "color_headings": "#222222",
-      "color_text": "#4d4d4d",
-      "color_text_light": "#949494",
-      "color_links": "#1e8570",
-      "color_button_background": "#ffab41",
-      "color_button_text": "#1a390c",
-      "color_button_secondary_background": "#ffffff",
-      "color_button_secondary_text": "#1e8570",
-      "color_button_secondary_border": "#dddddd",
-      "color_header_background": "#30656b",
-      "color_header_text": "#ffffff",
-      "color_input_text": "#4d4d4d",
-      "color_input_background": "#ffffff",
-      "color_input_border": "#dddddd",
-      "color_product_sale_accent": "#de0101",
-      "color_product_review_star": "#ffab41",
-      "color_footer_background": "#f8f8f8",
-      "color_footer_text": "#5c5c5c",
-      "color_overlay": "#000000",
-      "overlay_opacity": 50,
-      "type_size_base": 16,
-      "type_heading": "cabin_n7",
-      "type_heading_size": "1",
-      "type_heading_capitalize": false,
-      "type_heading_spacing": 0,
-      "type_body": "cabin_n4",
-      "type_menu": "cabin_n6",
-      "type_menu_capitalize": false,
-      "type_menu_spacing": 0,
-      "type_button": "cabin_n6",
-      "type_button_capitalize": false,
-      "type_button_spacing": 0,
-      "type_section": "cabin_n7",
-      "type_section_capitalize": false,
-      "type_section_spacing": 1,
-      "layout_max_width": 1400,
-      "product_show_vendor": false,
-      "product_show_sku": false,
-      "product_enable_recently_viewed_products": true,
-      "product_option_style": "select",
-      "product_sales_badge": true,
-      "product_sales_badge_style": "percentile",
-      "product_social_sharing": true,
-      "product_slideshow_style": "natural",
-      "gallery_thumbnail_position": "below",
-      "product_ratings_reviews": true,
-      "product_ratings_star_display": "all",
-      "product_grid_show_second_image": false,
-      "product_grid_emphasize_price": true,
-      "product_grid_image_style": "natural",
-      "swatches_enable": false,
-      "swatches_swatch_trigger": "Color",
-      "swatches_shape": "square",
-      "swatches_product_card_size": 16,
-      "swatches_product_page_size": 16,
-      "swatches_option_style": "color_swatch",
-      "swatches_custom_colors": "",
-      "product_grid_show_quickshop": "always",
-      "product_grid_show_atc": "always",
-      "quickshop_show_dcb": true,
-      "quickshop_product_cart_redirect": false,
-      "social_facebook": "",
-      "social_twitter": "",
-      "social_pinterest": "",
-      "social_instagram": "",
-      "social_tumblr": "",
-      "social_vimeo": "",
-      "social_youtube": "",
-      "social_linkedin": "",
-      "social_email": "",
-      "favicon": "",
-      "enable_checkout_lock_icon": false,
-      "continue_shopping_url": "shopify:\/\/collections\/all",
-      "continue_url_cart": true,
-      "continue_url_404": true,
-      "enable_image_zoom": false,
-      "image_zoom_level": "min",
-      "product_grid_quick_shop": true,
-      "product_grid_quick_buy": true,
-      "social_google": "",
-      "show_dcb": false,
-      "product_grid_quick_look": true,
-      "font_body": "Google_Cabin_400,400i,700,700i",
-      "font_heading": "Google_Cabin_400,400i,700,700i",
-      "product_cart_redirect": false,
-      "sections": {
-        "static-header": {
-          "type": "static-header",
-          "blocks": {
-            "1517257487463": {
-              "type": "meganav_images",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "1517257487463"
-          ],
-          "settings": {
-            "sticky_header": true,
-            "full_width_header": false,
-            "logo_height": 40,
-            "logo_width": 150,
-            "filter_search_by": "product_type",
-            "enable_live_search": true,
-            "show_mobile_search_bar": true,
-            "enable_live_search_images": true,
-            "enable_live_search_articles_pages": true,
-            "quick_links": "quick-links",
-            "menu": "main-menu",
-            "small_promo_icon": "none",
-            "image": ""
-          }
-        },
-        "1497987534817": {
-          "type": "dynamic-twitter-feed",
-          "settings": {
-            "retweets": false,
-            "images": false
-          }
-        },
-        "static-list-collections": {
-          "type": "static-list-collections",
-          "settings": {
-          }
-        },
-        "static-article": {
-          "type": "static-article",
-          "settings": {
-            "show_date": true,
-            "show_author": true,
-            "use_share_buttons": true
-          }
-        },
-        "1497995056454": {
-          "type": "dynamic-featured-collection",
-          "blocks": {
-            "1572650065202": {
-              "type": "title_card",
-              "settings": {
-                "position": "end",
-                "text_color": "#ffffff",
-                "overlay_color": "#1d8570",
-                "overlay_opacity": 0,
-                "image": ""
-              }
-            }
-          },
-          "block_order": [
-            "1572650065202"
-          ],
-          "settings": {
-            "title": "",
-            "layout": "slideshow",
-            "collection": "",
-            "product_count": 10,
-            "cta_label": "",
-            "cta_button_style": "primary"
-          }
-        },
-        "dynamic-slideshow": {
-          "type": "dynamic-slideshow",
-          "blocks": {
-            "dynamic-slideshow-1": {
-              "type": "slide",
-              "settings": {
-                "background_image": "",
-                "color": "#ffffff",
-                "text_alignment": "center",
-                "button_one_style": "primary",
-                "button_two_style": "primary",
-                "show_overlay": true,
-                "overlay_color": "#111111",
-                "overlay_opacity": 35
-              }
-            },
-            "dynamic-slideshow-0": {
-              "type": "slide",
-              "settings": {
-                "color": "#ffffff",
-                "text_alignment": "center",
-                "button_one_style": "primary",
-                "button_two_style": "primary",
-                "show_overlay": true,
-                "overlay_color": "#111111",
-                "overlay_opacity": 5
-              }
-            },
-            "1517242272829": {
-              "type": "slide",
-              "settings": {
-                "color": "#ffffff",
-                "text_alignment": "center",
-                "button_one_style": "primary",
-                "button_two_style": "primary",
-                "show_overlay": true,
-                "overlay_color": "#000000",
-                "overlay_opacity": 45
-              }
-            }
-          },
-          "block_order": [
-            "dynamic-slideshow-1",
-            "dynamic-slideshow-0",
-            "1517242272829"
-          ],
-          "settings": {
-            "enable_autoplay": true,
-            "autoplay_duration": 8,
-            "slideshow_height": "large"
-          }
-        },
-        "static-footer": {
-          "type": "static-footer",
-          "blocks": {
-            "1497987853004": {
-              "type": "social_accounts",
-              "settings": {
-              }
-            },
-            "1497987889867": {
-              "type": "menu",
-              "settings": {
-                "menu": "navigate"
-              }
-            },
-            "1497987887830": {
-              "type": "menu",
-              "settings": {
-                "menu": "community"
-              }
-            },
-            "1497987862126": {
-              "type": "menu",
-              "settings": {
-                "menu": "support"
-              }
-            },
-            "1520633482343": {
-              "type": "rich_text",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "1497987853004",
-            "1497987889867",
-            "1497987887830",
-            "1497987862126",
-            "1520633482343"
-          ],
-          "settings": {
-            "payment_icons": true,
-            "additional_menu": "footer"
-          }
-        },
-        "static-search": {
-          "type": "static-search",
-          "settings": {
-            "results_per_page_range": 24,
-            "products_per_row": "4",
-            "enable_search_articles_pages": true
-          }
-        },
-        "dynamic-highlights-banner": {
-          "type": "dynamic-highlights-banner",
-          "blocks": {
-            "dynamic-highlights-banner-0": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-delivery",
-                "image": "",
-                "title": "Free Shipping",
-                "text": "<p>When you spend $50+<\/p>"
-              }
-            },
-            "dynamic-highlights-banner-1": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-cell-phone",
-                "image": "",
-                "title": "Call Us Anytime",
-                "text": "<p>+1 (250) 555-5555<\/p>"
-              }
-            },
-            "dynamic-highlights-banner-2": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-people-alternate",
-                "image": "",
-                "title": "Chat With Us",
-                "text": "<p>We offer 24-hour chat support<\/p>"
-              }
-            },
-            "dynamic-highlights-banner-3": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-gift-card",
-                "image": "",
-                "title": "Gift Cards",
-                "text": "<p>For your loved one, in any amount<\/p>"
-              }
-            }
-          },
-          "block_order": [
-            "dynamic-highlights-banner-0",
-            "dynamic-highlights-banner-1",
-            "dynamic-highlights-banner-2",
-            "dynamic-highlights-banner-3"
-          ],
-          "settings": {
-            "color": "#4d4d4d",
-            "icon_color": "#4d4d4d",
-            "background_color": "#f8f8f8"
-          }
-        },
-        "1517012346780": {
-          "type": "dynamic-video",
-          "settings": {
-            "title": "Video",
-            "show_caption": false,
-            "caption": "<p>A short description of the video.<\/p>",
-            "autoplay": false,
-            "aspect_ratio": "16-9",
-            "position": "center-center",
-            "show_overlay": true,
-            "background": "#000000",
-            "opacity": 40
-          }
-        },
-        "static-collection": {
-          "type": "static-collection",
-          "blocks": {
-            "1572648609386": {
-              "type": "menu",
-              "settings": {
-                "menu": "collections"
-              }
-            }
-          },
-          "block_order": [
-            "1572648609386"
-          ],
-          "settings": {
-            "show_collection_image": true,
-            "products_per_page_range": 24,
-            "products_per_row": "4",
-            "sort_by": true,
-            "show_by": true,
-            "grid_list": true,
-            "default_view": "grid-view",
-            "show_sidebar": true,
-            "show_prod_count": true,
-            "filter_style": "groups",
-            "filter_limit": "999",
-            "filter_position": "above_menus",
-            "grid_categories": "",
-            "custom_ordered_categories": "",
-            "custom_ordered_tags": "",
-            "menu_depth_range": 1
-          }
-        },
-        "1497987614708": {
-          "type": "dynamic-featured-collection",
-          "blocks": {
-            "1572649899712": {
-              "type": "title_card",
-              "settings": {
-                "position": "end",
-                "text_color": "#ffffff",
-                "overlay_color": "#1d8570",
-                "overlay_opacity": 0
-              }
-            }
-          },
-          "block_order": [
-            "1572649899712"
-          ],
-          "settings": {
-            "title": "Featured Products",
-            "layout": "slideshow",
-            "product_count": 10,
-            "cta_label": "",
-            "cta_button_style": "primary"
-          }
-        },
-        "1497989801200": {
-          "type": "dynamic-promo-grid",
-          "blocks": {
-            "1497989801200-2": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497989902765": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497989801200-0": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497989801200-1": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            }
-          },
-          "block_order": [
-            "1497989801200-2",
-            "1497989902765",
-            "1497989801200-0",
-            "1497989801200-1"
-          ],
-          "settings": {
-            "section_height": "small",
-            "text_alignment": "top-left",
-            "maintain_aspect_ratio": true,
-            "compress_blocks": true
-          }
-        },
-        "1497987529582": {
-          "type": "dynamic-blog-posts",
-          "settings": {
-            "blog": "news",
-            "show_date": true,
-            "show_author": true,
-            "show_excerpt": true
-          }
-        },
-        "1497982042455": {
-          "type": "dynamic-promo-mosaic",
-          "blocks": {
-            "1498248584447": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497982042455-1": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1498248685900": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497982042455-0": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497982042455-2": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            }
-          },
-          "block_order": [
-            "1498248584447",
-            "1497982042455-1",
-            "1498248685900",
-            "1497982042455-0",
-            "1497982042455-2"
-          ],
-          "settings": {
-            "section_height": "medium",
-            "text_alignment": "top-left",
-            "maintain_aspect_ratio": false,
-            "compress_blocks": false
-          }
-        },
-        "static-blog": {
-          "type": "static-blog",
-          "settings": {
-            "show_rss_link": false,
-            "show_date": true,
-            "show_author": false,
-            "show_excerpt": false,
-            "posts_per_page_range": 9
-          }
-        },
-        "static-product": {
-          "type": "static-product",
-          "settings": {
-            "layout": "layout--three-col",
-            "show_dcb": true,
-            "product_cart_redirect": false
-          }
-        },
-        "1520633208717": {
-          "type": "pxs-newsletter",
-          "settings": {
-            "title": "Newsletter",
-            "desktop_alignment": "left",
-            "mobile_alignment": "top"
-          }
-        },
-        "static-announcement": {
-          "type": "static-announcement",
-          "settings": {
-            "show_announcement": false,
-            "homepage_announcement": false
-          }
-        },
-        "static-recently-viewed": {
-          "type": "static-recently-viewed",
-          "settings": {
-            "enable_recently_viewed_products": true
-          }
-        },
-        "static-product-recommendations": {
-          "type": "static-product-recommendations",
-          "settings": {
-            "show_product_recommendations": true,
-            "product_recommendations_heading": "Related Products"
-          }
-        },
-        "static-product-reviews": {
-          "type": "static-product-reviews",
-          "settings": {
-          }
-        }
-      },
-      "content_for_index": [
-        "dynamic-slideshow",
-        "dynamic-highlights-banner",
-        "1497982042455",
-        "1497989801200",
-        "1497987614708",
-        "1497995056454",
-        "1497987529582",
-        "1517012346780",
-        "1497987534817",
-        "1520633208717"
-      ]
+      "quickshop_show_vendor": true
     },
     "Industrial": {
       "color_background": "#ffffff",
-      "color_headings": "#4c4c4c",
-      "color_text": "#4c5154",
+      "color_headings": "#000000",
+      "color_text": "#000000",
       "color_text_light": "#949494",
-      "color_links": "#0076de",
-      "color_button_background": "#0076de",
+      "color_links": "#171f2b",
+      "color_button_background": "#1268f1",
       "color_button_text": "#ffffff",
       "color_button_secondary_background": "#ffffff",
-      "color_button_secondary_text": "#0076de",
+      "color_button_secondary_text": "#1268f1",
       "color_button_secondary_border": "#dddddd",
-      "color_header_background": "#1d2236",
+      "color_header_background": "#003d9f",
       "color_header_text": "#ffffff",
       "color_input_text": "#4d4d4d",
       "color_input_background": "#ffffff",
       "color_input_border": "#dddddd",
-      "color_product_sale_accent": "#de0101",
-      "color_product_review_star": "#4c4c4c",
-      "color_footer_background": "#edeff3",
-      "color_footer_text": "#5c5c5c",
+      "color_product_sale_accent": "#e32619",
+      "color_product_review_star": "#171f2b",
+      "color_footer_background": "#f7f7f7",
+      "color_footer_text": "#000000",
       "color_overlay": "#000000",
       "overlay_opacity": 50,
       "type_size_base": 16,
       "type_heading": "arimo_n7",
       "type_heading_size": "1",
       "type_heading_capitalize": false,
-      "type_heading_spacing": 0,
+      "type_heading_spacing": -1,
       "type_body": "libre_franklin_n4",
-      "type_menu": "libre_franklin_n7",
+      "type_menu": "libre_franklin_n6",
       "type_menu_capitalize": false,
       "type_menu_spacing": 0,
       "type_button": "libre_franklin_n7",
@@ -2450,461 +233,225 @@
       "type_button_spacing": 0,
       "type_section": "arimo_n7",
       "type_section_capitalize": false,
-      "type_section_spacing": 1,
+      "type_section_spacing": -1,
       "layout_max_width": 1400,
       "product_show_vendor": true,
       "product_show_sku": false,
-      "product_enable_recently_viewed_products": false,
-      "product_option_style": "radio",
+      "product_option_style": "select",
       "product_sales_badge": true,
-      "product_sales_badge_style": "text",
+      "product_sales_badge_style": "money",
       "product_social_sharing": true,
-      "product_slideshow_style": "natural",
-      "gallery_thumbnail_position": "below",
-      "product_ratings_reviews": true,
-      "product_ratings_star_display": "all",
-      "product_grid_show_second_image": false,
-      "product_grid_emphasize_price": true,
+      "product_ratings_star_display": true,
+      "product_grid_show_second_image": true,
+      "product_grid_emphasize_price": false,
       "product_grid_image_style": "natural",
+      "product_grid_show_quickshop": "always",
+      "product_grid_show_atc": "always",
+      "quickshop_select_first_available_variant": false,
+      "quickshop_show_dcb": true,
       "swatches_enable": true,
       "swatches_swatch_trigger": "Color",
       "swatches_shape": "circle",
-      "swatches_product_card_size": 16,
-      "swatches_product_page_size": 24,
+      "swatches_product_card_size": 32,
+      "swatches_product_page_size": 64,
       "swatches_option_style": "color_swatch",
-      "swatches_custom_colors": "Orange: #FE6C00\nCyan: #28D6F7\nBlue: #3697CB\nRed: #DA3328\nYellow: #F9D02F\nGreen: #19C17F\nPink: #CF236E",
-      "product_grid_show_quickshop": "always",
-      "product_grid_show_atc": "always",
-      "quickshop_show_dcb": false,
-      "quickshop_product_cart_redirect": false,
-      "social_facebook": "",
-      "social_twitter": "",
-      "social_pinterest": "",
-      "social_instagram": "",
-      "social_tumblr": "",
-      "social_vimeo": "",
-      "social_youtube": "",
-      "social_linkedin": "",
-      "social_email": "",
-      "favicon": "",
       "enable_checkout_lock_icon": false,
       "continue_shopping_url": "shopify:\/\/collections\/all",
       "continue_url_cart": true,
       "continue_url_404": true,
-      "enable_image_zoom": true,
-      "image_zoom_level": "max",
+      "product_enable_recently_viewed_products": true,
+      "product_slideshow_style": "natural",
+      "gallery_thumbnail_position": "below",
+      "enable_image_zoom": false,
+      "image_zoom_level": "min",
       "product_grid_quick_shop": true,
       "product_grid_quick_buy": true,
       "social_google": "",
       "show_dcb": false,
-      "font_body": "Google_Libre+Franklin_400,400i,700,700i",
-      "product_cart_redirect": false,
-      "font_heading": "Google_Arimo_400,400i,700,700i",
       "product_grid_quick_look": true,
-      "sections": {
-        "static-header": {
-          "type": "static-header",
-          "settings": {
-            "sticky_header": false,
-            "full_width_header": false,
-            "logo_height": 56,
-            "logo_width": 150,
-            "filter_search_by": "product_type",
-            "enable_live_search": true,
-            "show_mobile_search_bar": false,
-            "enable_live_search_images": true,
-            "enable_live_search_articles_pages": true,
-            "quick_links": "",
-            "menu": "main-menu",
-            "small_promo_heading": "",
-            "small_promo_text": "",
-            "small_promo_text_mobile": "",
-            "small_promo_link": "",
-            "small_promo_icon": "none",
-            "image": ""
-          }
-        },
-        "1497918122928": {
-          "type": "dynamic-collection-list",
-          "blocks": {
-            "1497918122928-1": {
-              "type": "collection",
-              "settings": {
-              }
-            },
-            "1497918122928-3": {
-              "type": "collection",
-              "settings": {
-              }
-            },
-            "1497918122928-2": {
-              "type": "collection",
-              "settings": {
-              }
-            },
-            "1497918666626": {
-              "type": "collection",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "1497918122928-1",
-            "1497918122928-3",
-            "1497918122928-2",
-            "1497918666626"
-          ],
-          "settings": {
-            "title": "Most Popular Brands"
-          }
-        },
-        "1521049818431": {
-          "type": "dynamic-featured-product",
-          "settings": {
-            "show_dcb": false,
-            "product_cart_redirect": false
-          }
-        },
-        "static-collection": {
-          "type": "static-collection",
-          "blocks": {
-            "1572652324737": {
-              "type": "menu",
-              "settings": {
-                "menu": "shop"
-              }
-            }
-          },
-          "block_order": [
-            "1572652324737"
-          ],
-          "settings": {
-            "show_collection_image": false,
-            "products_per_page_range": 24,
-            "products_per_row": "3",
-            "sort_by": true,
-            "show_by": true,
-            "grid_list": true,
-            "default_view": "list-view",
-            "show_sidebar": true,
-            "show_prod_count": true,
-            "filter_style": "groups",
-            "filter_limit": "999",
-            "filter_position": "above_menus",
-            "grid_categories": "",
-            "custom_ordered_tags": "",
-            "menu_depth_range": 1
-          }
-        },
-        "1497904638504": {
-          "type": "dynamic-promo-grid",
-          "blocks": {
-            "1497904638504-0": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497904638504-1": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "promo_width": "half-width",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            }
-          },
-          "block_order": [
-            "1497904638504-0",
-            "1497904638504-1"
-          ],
-          "settings": {
-            "section_height": "small",
-            "text_alignment": "top-left",
-            "maintain_aspect_ratio": true,
-            "compress_blocks": true
-          }
-        },
-        "1497902596403": {
-          "type": "dynamic-promo-mosaic",
-          "blocks": {
-            "1497902596403-0": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497902596403-2": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497902655509": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497902596403-1": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            },
-            "1497902666994": {
-              "type": "promotion",
-              "settings": {
-                "button_style": "primary",
-                "show_overlay": false,
-                "background": "",
-                "opacity": 50
-              }
-            }
-          },
-          "block_order": [
-            "1497902596403-0",
-            "1497902596403-2",
-            "1497902655509",
-            "1497902596403-1",
-            "1497902666994"
-          ],
-          "settings": {
-            "title": "",
-            "section_height": "medium",
-            "text_alignment": "top-left",
-            "maintain_aspect_ratio": false,
-            "compress_blocks": true
-          }
-        },
-        "static-article": {
-          "type": "static-article",
-          "settings": {
-            "show_date": true,
-            "show_author": false,
-            "use_share_buttons": true
-          }
-        },
-        "1520984517333": {
-          "type": "pxs-newsletter",
-          "settings": {
-            "desktop_alignment": "left",
-            "mobile_alignment": "top"
-          }
-        },
-        "static-footer": {
-          "type": "static-footer",
-          "blocks": {
-            "1497906897044": {
-              "type": "menu",
-              "settings": {
-              }
-            },
-            "1497909194722": {
-              "type": "menu",
-              "settings": {
-              }
-            },
-            "1497906879041": {
-              "type": "menu",
-              "settings": {
-              }
-            },
-            "1497906643880": {
-              "type": "social_accounts",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "1497906897044",
-            "1497909194722",
-            "1497906879041",
-            "1497906643880"
-          ],
-          "settings": {
-            "payment_icons": false,
-            "additional_menu": ""
-          }
-        },
-        "1497904091093": {
-          "type": "dynamic-featured-collection",
-          "settings": {
-            "layout": "grid",
-            "product_count": 5,
-            "cta_button_style": "primary"
-          }
-        },
-        "1497905019048": {
-          "type": "dynamic-blog-posts",
-          "settings": {
-            "blog": "news",
-            "show_date": true,
-            "show_author": true,
-            "show_excerpt": true
-          }
-        },
-        "1520636219191": {
-          "type": "pxs-map",
-          "disabled": true,
-          "settings": {
-            "section_height": "medium",
-            "title": "Our Location",
-            "content": "<p>1221 Broad St, Victoria, BC<\/p>",
-            "text_alignment": "center",
-            "layout": "overlay-bottom-left",
-            "layout_mobile": "above",
-            "address": "1221 Broad St, Victoria, BC",
-            "enable_custom_colors": true,
-            "foreground_color": "#4c5154",
-            "background_color": "#ffffff",
-            "zoom": 4,
-            "image": "",
-            "image_position": "center center",
-            "overlay_color": "#000000",
-            "opacity": 0
-          }
-        },
-        "static-blog": {
-          "type": "static-blog",
-          "settings": {
-            "show_rss_link": true,
-            "show_date": true,
-            "show_author": false,
-            "show_excerpt": true,
-            "featured_post": "",
-            "posts_per_page_range": 9
-          }
-        },
-        "dynamic-highlights-banner": {
-          "type": "dynamic-highlights-banner",
-          "blocks": {
-            "dynamic-highlights-banner-0": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-delivery",
-                "image": "",
-                "title": "Free Shipping",
-                "text": "<p>When you spend $100+<\/p>",
-                "link": ""
-              }
-            },
-            "dynamic-highlights-banner-1": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-cell-phone",
-                "image": "",
-                "title": "Give Us A Call",
-                "text": "<p>+1 (250) 555-5555<\/p>",
-                "link": ""
-              }
-            },
-            "dynamic-highlights-banner-2": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-chat-alternate",
-                "image": "",
-                "title": "Chat With Us",
-                "text": "<p>We offer 24-hour chat support<\/p>",
-                "link": ""
-              }
-            },
-            "1517238432387": {
-              "type": "highlight",
-              "settings": {
-                "icon": "icon-store",
-                "image": "",
-                "title": "Locations",
-                "text": "<p>Find a store near you<\/p>",
-                "link": ""
-              }
-            }
-          },
-          "block_order": [
-            "dynamic-highlights-banner-0",
-            "dynamic-highlights-banner-1",
-            "dynamic-highlights-banner-2",
-            "1517238432387"
-          ],
-          "settings": {
-            "color": "#4d4d4d",
-            "icon_color": "#4d4d4d",
-            "background_color": "#f8f8f8"
-          }
-        },
-        "static-product": {
-          "type": "static-product",
-          "settings": {
-            "layout": "layout--three-col",
-            "show_dcb": true,
-            "product_cart_redirect": false
-          }
-        },
-        "static-announcement": {
-          "type": "static-announcement",
-          "settings": {
-            "show_announcement": true,
-            "homepage_announcement": false,
-            "announcement_link": "",
-            "announcement_color": "#ffffff",
-            "announcement_background": "#6c84b3"
-          }
-        },
-        "static-recently-viewed": {
-          "type": "static-recently-viewed",
-          "settings": {
-            "enable_recently_viewed_products": false
-          }
-        },
-        "static-product-recommendations": {
-          "type": "static-product-recommendations",
-          "settings": {
-            "show_product_recommendations": true
-          }
-        },
-        "static-product-reviews": {
-          "type": "static-product-reviews",
-          "settings": {
-          }
-        },
-        "static-search": {
-          "type": "static-search",
-          "settings": {
-            "results_per_page_range": 24,
-            "products_per_row": "3",
-            "enable_search_articles_pages": true
-          }
-        }
-      },
-      "content_for_index": [
-        "dynamic-highlights-banner",
-        "1497902596403",
-        "1497918122928",
-        "1521049818431",
-        "1497904091093",
-        "1497904638504",
-        "1497905019048",
-        "1520636219191",
-        "1520984517333"
-      ]
+      "font_body": "Google_Lato_400,400i,700,700i",
+      "font_heading": "\"League Spartan\", sans-serif",
+      "quickshop_ratings": true,
+      "quickshop_redirect_to_cart": false,
+      "quickshop_sales_badge": true,
+      "quickshop_sales_badge_style": "percentile_save",
+      "quickshop_ratings_reviews": true,
+      "quickshop_enable_social_sharing": true,
+      "product_cart_redirect": false,
+      "show_breadcrumbs": true,
+      "quickshop_show_vendor": true
+    },
+    "Depot": {
+      "color_background": "#ffffff",
+      "color_headings": "#121212",
+      "color_text": "#121212",
+      "color_text_light": "#949494",
+      "color_links": "#121212",
+      "color_button_background": "#e9ad14",
+      "color_button_text": "#121212",
+      "color_button_secondary_background": "#121212",
+      "color_button_secondary_text": "#ffffff",
+      "color_button_secondary_border": "#121212",
+      "color_header_background": "#121212",
+      "color_header_text": "#ffffff",
+      "color_input_text": "#4d4d4d",
+      "color_input_background": "#ffffff",
+      "color_input_border": "#dddddd",
+      "color_product_sale_accent": "#cc1313",
+      "color_product_review_star": "#121212",
+      "color_products_in_stock": "#268c0b",
+      "color_products_low_stock": "#cc1313",
+      "color_products_no_stock": "#121212",
+      "color_footer_background": "#121212",
+      "color_footer_text": "#ffffff",
+      "color_overlay": "#121212",
+      "overlay_opacity": 50,
+      "type_size_base": 15,
+      "type_heading": "work_sans_n7",
+      "type_heading_size": "1.2",
+      "type_heading_capitalize": true,
+      "type_heading_spacing": 2,
+      "type_body": "helvetica_n4",
+      "type_menu": "helvetica_n7",
+      "type_menu_capitalize": true,
+      "type_menu_spacing": 1,
+      "type_button": "neue_haas_unica_n5",
+      "type_button_capitalize": false,
+      "type_button_spacing": 0,
+      "type_section": "work_sans_n7",
+      "type_section_capitalize": true,
+      "type_section_spacing": 2,
+      "layout_max_width": 1400,
+      "product_sales_badge": true,
+      "product_sales_badge_style": "percent",
+      "product_option_style": "select",
+      "enable_cart_redirection": false,
+      "swatches_enable": false,
+      "swatches_product_card_size": 32,
+      "swatches_product_page_size": 64,
+      "swatches_swatch_trigger": "Color",
+      "swatches_shape": "square",
+      "swatches_option_style": "color_swatch",
+      "product_show_vendor": true,
+      "product_ratings_star_display": true,
+      "product_grid_emphasize_price": false,
+      "product_grid_show_atc": "always",
+      "product_grid_show_second_image": false,
+      "product_grid_image_style": "natural",
+      "enable_product_compare": true,
+      "enable_checkout_lock_icon": false,
+      "continue_url_cart": true,
+      "continue_url_404": true,
+      "product_show_sku": false,
+      "product_social_sharing": false,
+      "product_grid_show_quickshop": "always",
+      "quickshop_select_first_available_variant": false,
+      "quickshop_show_dcb": true,
+      "product_enable_recently_viewed_products": true,
+      "product_slideshow_style": "natural",
+      "gallery_thumbnail_position": "below",
+      "enable_image_zoom": false,
+      "image_zoom_level": "min",
+      "product_grid_quick_shop": true,
+      "product_grid_quick_buy": true,
+      "show_dcb": false,
+      "product_grid_quick_look": true,
+      "font_body": "Google_Lato_400,400i,700,700i",
+      "font_heading": "\"League Spartan\", sans-serif",
+      "quickshop_ratings": true,
+      "quickshop_redirect_to_cart": false,
+      "quickshop_sales_badge": true,
+      "quickshop_sales_badge_style": "percentile_save",
+      "quickshop_ratings_reviews": true,
+      "quickshop_enable_social_sharing": true,
+      "product_cart_redirect": false,
+      "show_breadcrumbs": true,
+      "quickshop_show_vendor": true
+    },
+    "Graphic": {
+      "color_background": "#ffffff",
+      "color_headings": "#000000",
+      "color_text": "#000000",
+      "color_text_light": "#464646",
+      "color_links": "#494d41",
+      "color_button_background": "#000000",
+      "color_button_text": "#ffffff",
+      "color_button_secondary_background": "#ffffff",
+      "color_button_secondary_text": "#000000",
+      "color_button_secondary_border": "#000000",
+      "color_header_background": "#ffffff",
+      "color_header_text": "#000000",
+      "color_input_text": "#4d4d4d",
+      "color_input_background": "#ffffff",
+      "color_input_border": "#000000",
+      "color_product_sale_accent": "#494d41",
+      "color_product_review_star": "#000000",
+      "color_footer_background": "#ffffff",
+      "color_footer_text": "#000000",
+      "color_overlay": "#000000",
+      "overlay_opacity": 50,
+      "type_size_base": 16,
+      "type_heading": "goudy_old_style_n4",
+      "type_heading_size": "1.2",
+      "type_heading_capitalize": false,
+      "type_heading_spacing": 0,
+      "type_body": "source_sans_pro_n4",
+      "type_menu": "source_sans_pro_n6",
+      "type_menu_capitalize": false,
+      "type_menu_spacing": 0,
+      "type_button": "source_sans_pro_n4",
+      "type_button_capitalize": false,
+      "type_button_spacing": 0,
+      "type_section": "goudy_old_style_n4",
+      "type_section_capitalize": false,
+      "type_section_spacing": 0,
+      "layout_max_width": 1400,
+      "product_show_vendor": true,
+      "product_show_sku": false,
+      "product_option_style": "select",
+      "product_sales_badge": true,
+      "product_sales_badge_style": "text",
+      "product_social_sharing": false,
+      "product_ratings_star_display": true,
+      "product_grid_show_second_image": true,
+      "product_grid_emphasize_price": false,
+      "product_grid_image_style": "natural",
+      "product_grid_show_quickshop": "always",
+      "product_grid_show_atc": "always",
+      "quickshop_select_first_available_variant": false,
+      "quickshop_show_dcb": true,
+      "swatches_enable": true,
+      "swatches_swatch_trigger": "Color",
+      "swatches_shape": "square",
+      "swatches_product_card_size": 32,
+      "swatches_product_page_size": 64,
+      "swatches_option_style": "color_swatch",
+      "swatches_custom_colors": "",
+      "enable_checkout_lock_icon": false,
+      "continue_shopping_url": "shopify:\/\/collections\/all",
+      "continue_url_cart": true,
+      "continue_url_404": true,
+      "product_enable_recently_viewed_products": true,
+      "product_slideshow_style": "natural",
+      "gallery_thumbnail_position": "below",
+      "enable_image_zoom": false,
+      "image_zoom_level": "min",
+      "product_grid_quick_shop": true,
+      "product_grid_quick_buy": true,
+      "social_google": "",
+      "show_dcb": false,
+      "product_grid_quick_look": true,
+      "font_body": "Google_Lato_400,400i,700,700i",
+      "font_heading": "\"League Spartan\", sans-serif",
+      "quickshop_ratings": true,
+      "quickshop_redirect_to_cart": false,
+      "quickshop_sales_badge": true,
+      "quickshop_sales_badge_style": "percentile_save",
+      "quickshop_ratings_reviews": true,
+      "quickshop_enable_social_sharing": true,
+      "product_cart_redirect": false,
+      "show_breadcrumbs": true,
+      "quickshop_show_vendor": true
     }
   }
 }

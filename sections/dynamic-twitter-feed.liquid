@@ -60,39 +60,41 @@
 
 {% schema %}
 {
-  "name": "Twitter feed",
+  "name": "t:sections.twitter_feed.name",
   "class": "twitter--section",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "t:sections.twitter_feed.title.label",
       "default": "Twitter feed"
     },
     {
       "type": "text",
       "id": "username",
-      "label": "Username"
+      "label": "t:sections.twitter_feed.username.label"
     },
     {
       "type": "checkbox",
       "id": "retweets",
-      "label": "Show retweets",
+      "label": "t:sections.twitter_feed.retweets.label",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "images",
-      "label": "Show images",
+      "label": "t:sections.twitter_feed.images.label",
       "default": false
     }
   ],
   "presets": [
     {
-      "name": "Twitter feed",
-      "category": "Social media"
+      "name": "t:sections.twitter_feed.presets.twitter_feed.name",
+      "category": "t:sections.twitter_feed.presets.twitter_feed.category"
     }
-  ]
+  ],
+  "disabled_on": {
+    "groups": ["*"]
+  }
 }
-
 {% endschema %}

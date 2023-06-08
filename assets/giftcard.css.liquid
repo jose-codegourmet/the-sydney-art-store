@@ -451,6 +451,7 @@
 {% comment %}Inject color-transparent end{% endcomment %}
 {% endcapture %}
 {% assign color_text_encoded = settings.color_text | color_to_hex | replace: '#', '' %}
+  {% assign color_links_encoded = settings.color_links | color_to_hex | replace: '#', '' %}
 {% assign morph_color = settings.color_text %}
 {% assign morph_adjustment = 5 %}
 {% capture color_text_hover %}{% comment %}Inject morph begin{% endcomment %}
@@ -497,7 +498,8 @@
 {{ new_color }}
 {% comment %}Inject morph end{% endcomment %}
 {% endcapture %}
-{% assign morph_color = settings.color_links %}
+{% assign color_links = settings.color_links %}
+{% assign morph_color = color_links %}
 {% assign morph_adjustment = 3 %}
 {% capture color_link_hover %}{% comment %}Inject morph begin{% endcomment %}
 {%- capture _ -%}
@@ -1033,6 +1035,7 @@
 {% endcapture %}
 
   {% assign color_border = color_background | color_mix: border_mix, 50 %}
+  {% assign color_border_mix_encoded = border_mix | color_to_hex | replace: '#', '' %}
 {% assign overlay_opacity = settings.overlay_opacity | divided_by: 100.00 %}
 {% assign color_background_light = settings.color_text | color_mix: color_background, 5 %}
 {% assign color_error = '#f05d5d' %}
@@ -1177,57 +1180,17 @@ h6 {
   box-shadow: 0 0 0 2px {{ color_background }}, 0 0 0 5px rgba(17, 153, 255, 0.4), 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-.disabled.button-secondary, .disabled.button-primary {
+.button-secondary.disabled, .button-primary.disabled {
   color: {{ settings.color_button_text }};
   cursor: default;
   background-color: {{ settings.color_button_background | color_desaturate: 100 }};
   border: 1px solid {{ settings.color_button_background | color_desaturate: 100 }};
 }
 
-.button-primary {
-  color: {{ settings.color_button_text }};
-  background-color: {{ settings.color_button_background }};
-  border: 1px solid {{ settings.color_button_background }};
-}
-.button-primary:not(.disabled):hover {
-  background: {{ color_background | color_mix: settings.color_button_background, 10 }};
-  border: 1px solid {{ color_background | color_mix: settings.color_button_background, 10 }};
-}
-.button-primary:active {
-  background: {{ color_button_background_focus }};
-  border: 1px solid {{ color_button_background_focus }};
-}
-.mdc-ripple-surface.mdc-ripple-upgraded.button-primary {
-  --mdc-ripple-fg-opacity: 0.16;
-}
-.mdc-ripple-surface.button-primary:before {
-  opacity: 0;
-}
-.mdc-ripple-surface.button-primary:after {
-  background-color: {{ settings.color_button_text }};
-}
-
-.button-secondary {
-  color: {{ settings.color_button_secondary_text }};
-  background-color: {{ settings.color_button_secondary_background }};
-  border: 1px solid {{ settings.color_button_secondary_border }};
-}
-.button-secondary:not(.disabled):hover {
-  background: {{ color_background | color_mix: settings.color_button_secondary_background, 20 }};
-  border: 1px solid {{ color_button_secondary_border_hover }};
-}
-.mdc-ripple-surface.mdc-ripple-upgraded.button-secondary {
-  --mdc-ripple-fg-opacity: 0.12;
-}
-.mdc-ripple-surface.button-secondary:before {
-  opacity: 0;
-}
-.mdc-ripple-surface.button-secondary:after {
-  background-color: {{ settings.color_button_secondary_text }};
-}
-
 .giftcard--container {
-  max-width: {{ max_width | append: 'px' }};
+  --layout-container-max-width: {{ max_width | append: 'px' }};
+  --layout-container-gutter: 10px;
+  max-width: var(--layout-container-max-width);
   padding-right: 10px;
   padding-left: 10px;
   margin-right: auto;
@@ -1235,12 +1198,14 @@ h6 {
 }
 @media screen and (min-width: 720px) {
   .giftcard--container {
+    --layout-container-gutter: 15px;
     padding-right: 15px;
     padding-left: 15px;
   }
 }
 @media screen and (min-width: 1024px) {
   .giftcard--container {
+    --layout-container-gutter: 25px;
     padding-right: 25px;
     padding-left: 25px;
   }
@@ -1263,6 +1228,47 @@ h6 {
 {%- if settings.type_button_capitalize -%}
 {%- else -%}
 {%- endif -%}
+.button-primary {
+  color: {{ settings.color_button_text }};
+  background-color: {{ settings.color_button_background }};
+  border: 1px solid {{ settings.color_button_background }};
+}
+.button-primary:not(.disabled):hover {
+  background: {{ color_background | color_mix: settings.color_button_background, 10 }};
+  border: 1px solid {{ color_background | color_mix: settings.color_button_background, 10 }};
+}
+.button-primary:active {
+  background: {{ color_button_background_focus }};
+  border: 1px solid {{ color_button_background_focus }};
+}
+.button-primary.mdc-ripple-surface.mdc-ripple-upgraded {
+  --mdc-ripple-fg-opacity: 0.16;
+}
+.button-primary.mdc-ripple-surface.mdc-ripple-upgraded--background-focused::before, .button-primary.mdc-ripple-surface:hover::before, .button-primary.mdc-ripple-surface::before {
+  opacity: 0;
+}
+.button-primary.mdc-ripple-surface::after {
+  background-color: {{ settings.color_button_text }};
+}
+
+.button-secondary {
+  color: {{ settings.color_button_secondary_text }};
+  background-color: {{ settings.color_button_secondary_background }};
+  border: 1px solid {{ settings.color_button_secondary_border }};
+}
+.button-secondary:not(.disabled):hover {
+  background: {{ color_background | color_mix: settings.color_button_secondary_background, 20 }};
+  border: 1px solid {{ color_button_secondary_border_hover }};
+}
+.button-secondary.mdc-ripple-surface.mdc-ripple-upgraded {
+  --mdc-ripple-fg-opacity: 0.12;
+}
+.button-secondary.mdc-ripple-surface.mdc-ripple-upgraded--background-focused::before, .button-secondary.mdc-ripple-surface:hover::before, .button-secondary.mdc-ripple-surface::before {
+  opacity: 0;
+}
+.button-secondary.mdc-ripple-surface::after {
+  background-color: {{ settings.color_button_secondary_text }};
+}
 
 #messageus_button {
   z-index: 9999;
@@ -1391,7 +1397,7 @@ em strong {
   position: absolute;
   top: 0;
   left: -9999px;
-  color: {{ settings.color_links }};
+  color: {{ color_links }};
   background: {{ color_background }};
   text-decoration: none;
   padding: 1em;
@@ -1407,15 +1413,23 @@ body .mdc-ripple-surface:hover:before {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.001s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001s !important;
     scroll-behavior: auto !important;
   }
 }
+.grecaptcha-badge {
+  z-index: 9999;
+}
+
 /*================ #Giftcard Template ================*/
+.template-giftcard {
+  margin: 0;
+}
+
 .giftcard__apple-wallet-image {
   display: block;
   margin: 0 auto;
@@ -1430,9 +1444,8 @@ body .mdc-ripple-surface:hover:before {
     orphans: 3;
     widows: 3;
   }
-
   .giftcard__print-link,
-.giftcard__apple-wallet {
+  .giftcard__apple-wallet {
     display: none;
   }
 }
@@ -1445,9 +1458,22 @@ body .mdc-ripple-surface:hover:before {
 }
 
 .giftcard-header-logo {
-  display: inline-block;
+  display: block;
   color: currentColor;
   text-decoration: none;
+  max-width: 300px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 859px) {
+  .giftcard-header-logo {
+    max-width: 200px;
+  }
+}
+.giftcard-header-logo .site-logo-image {
+  display: block;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .giftcard-header-logo-text {
@@ -1461,6 +1487,7 @@ body .mdc-ripple-surface:hover:before {
   max-width: 488px;
   margin-bottom: {{ space_xxx_large | divided_by: 16.0 | append: 'rem' }};
   text-align: center;
+  padding: 0 {{ space_small | divided_by: 16.0 | append: 'rem' }} {{ space_small | divided_by: 16.0 | append: 'rem' }};
 }
 
 .giftcard-title {
@@ -1626,18 +1653,15 @@ body .mdc-ripple-surface:hover:before {
 /*================ Small width ================*/
 @media screen and (max-width: 400px) {
   .giftcard-image::before,
-.giftcard-image::after {
+  .giftcard-image::after {
     display: none;
   }
-
   .giftcard-code {
     font-size: 0.75em;
   }
-
   .giftcard-code--medium {
     font-size: 0.65em;
   }
-
   .giftcard-code--small {
     font-size: 0.55em;
   }
@@ -1647,11 +1671,10 @@ body .mdc-ripple-surface:hover:before {
 ==============================================================================*/
 @media print {
   .giftcard-image::before,
-.giftcard-image::after,
-.giftcard-tooltip {
+  .giftcard-image::after,
+  .giftcard-tooltip {
     display: none;
   }
-
   .giftcard-actions {
     display: none;
   }

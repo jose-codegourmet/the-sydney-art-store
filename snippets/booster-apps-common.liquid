@@ -5,7 +5,7 @@
     permanent_domain: '{{ shop.permanent_domain }}',
     currency: {{ shop.currency | json }},
     money_format: {{ shop.money_format | json }},
-    id: 55263199403
+    id: 75692179743
   };
   {% if customer %}
   window.Rivo.common.customer = {
@@ -73,14 +73,24 @@
   }
 
   function loadAppScripts(){
+     if (window.Rivo.global_config.aat.includes("loy")){
       loadScript(window.Rivo.global_config.asset_urls.loy.init_js, true, function(){});
+     }
 
+     if (window.Rivo.global_config.aat.includes("rev")){
+      loadScript(window.Rivo.global_config.asset_urls.rev.init_js, true, function(){});
+     }
 
+     if (window.Rivo.global_config.aat.includes("pu")){
+      loadScript(window.Rivo.global_config.asset_urls.pu.init_js, true, function(){});
+     }
 
+     if (window.Rivo.global_config.aat.includes("pop") || window.Rivo.global_config.aat.includes("pu")){
+      loadScript(window.Rivo.global_config.asset_urls.widgets.init_js, true, function(){});
+     }
   }
 
   function main(err) {
-    //isolate the scope
     loadScript(window.Rivo.global_config.asset_urls.global.helper_js, false, loadAppScripts);
   }
 </script>

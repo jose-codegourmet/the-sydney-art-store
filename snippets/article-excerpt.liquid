@@ -25,14 +25,6 @@
     {% if article.image %}
       <a
         class="article--excerpt-image" href="{{ article.url }}"
-        {%
-          render 'rimg',
-          img: article.image,
-          size: '700x700',
-          crop: 'center',
-          lazy: true,
-          background: true
-        %}
       >
         {%
           render 'rimg',
