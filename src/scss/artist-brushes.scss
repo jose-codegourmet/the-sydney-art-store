@@ -1,2 +1,48 @@
 .artist-brushes-store {
+  @import "special-product";
+
+  .productitem--price {
+    .price--main {
+      font-weight: normal !important;
+
+      .money {
+        font-weight: normal !important;
+      }
+    }
+  }
+  .productExtra--sku a {
+    color: black !important;
+  }
+
+  .productgrid--item {
+    .productitem--action {
+      > a {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .productgrid--items {
+      .productgrid--item {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem;
+      }
+    }
+
+    .productitem--action {
+      .button-primary {
+        width: 100%;
+      }
+    }
+
+    .productgrid--item {
+      height: auto !important;
+
+      .productitem {
+        height: auto !important;
+      }
+    }
+  }
 }
