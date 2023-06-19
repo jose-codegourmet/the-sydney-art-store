@@ -336,6 +336,7 @@
           data-productgrid-items
         >
           {% for product in collection.products %}
+            {% if product.url contains "sca_clone_freegift" %} {% continue %} {% endif %}
             {%
               render 'product-grid-item',
               product: product
