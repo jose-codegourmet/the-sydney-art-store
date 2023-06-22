@@ -100,13 +100,13 @@
   {% comment %}Inject @pixelunion/shopify-variants-ui/variant-selection begin{% endcomment %}
   {% comment %}
     Display variant options for a product
-  
+
     @param product
     @param selected_variant
     @param variant_selection_id
     @param sold_out_options
     @param style
-  
+
     @param enable_swatches
     @param swatches_shape
     @param swatches_option_trigger
@@ -114,7 +114,7 @@
     @param swatches_product_page_size
     @param swatches_custom_colors
   {% endcomment %}
-  
+
   <variant-selection
     {% if variant_selection_id != blank %}id="{{ variant_selection_id }}"{% endif %}
     class="variant-selection"
@@ -161,17 +161,17 @@
           </option>
         {% endfor %}
       </select>
-  
+
       {% comment %}Inject @pixelunion/shopify-variants-ui/options-selection begin{% endcomment %}
       {% comment %}
         Display variant options for a product
-      
+
         @param product
         @param selected_variant
         @param variant_selection_id
         @param sold_out_options
         @param style
-      
+
         @param enable_swatches
         @param swatches_shape
         @param swatches_option_trigger
@@ -180,7 +180,7 @@
         @param swatches_custom_colors
         @param swatch_file_type
       {% endcomment %}
-      
+
       <options-selection
         {% if variant_selection_id != blank %}variant-selection="{{ variant_selection_id }}"{% endif %}
         style="display: none;"
@@ -192,24 +192,24 @@
           (function() {
             const scriptTag = document.scripts[document.scripts.length - 1];
             const parentTag = scriptTag.parentNode;
-      
+
             parentTag.style.display = '';
           })()
         </script>
-      
+
         {% for option in product.options_with_values %}
           {% assign option_index = forloop.index0 %}
           {% assign show_swatches = false %}
           {% if enable_swatches %}
             {%- assign swatches_option_trigger = swatches_option_trigger | strip | downcase -%}
             {%- assign option_name = option.name | strip | downcase -%}
-      
+
             {% if option_name == swatches_option_trigger %}
               {% assign show_swatches = true %}
               {% assign swatch_option_key = 'option' | append: forloop.index %}
             {% endif %}
           {% endif %}
-      
+
           {% if style == 'select' and show_swatches == false %}
             {%
               render 'options-select',
@@ -237,7 +237,7 @@
         {% endfor %}
       </options-selection>
       {% comment %}Inject @pixelunion/shopify-variants-ui/options-selection end{% endcomment %}
-  
+
     {% endif %}
   </variant-selection>
   {% comment %}Inject @pixelunion/shopify-variants-ui/variant-selection end{% endcomment %}
@@ -250,13 +250,17 @@
         context: 'product',
       %}
 
+      {% assign NOT_AVAILABLE = false %}
+      {% if selected_variant.available == false %}
+        {% assign NOT_AVAILABLE = true %}
+      {% endif %}
+
+      {% if template.suffix == 'special' %}
+        {% assign NOT_AVAILABLE = false %}
+      {% endif %}
+
       <button
-        class="
-          product-form--atc-button
-          {% if selected_variant and selected_variant.available == false %}
-            disabled
-          {% endif %}
-        "
+        class="product-form--atc-button {% if NOT_AVAILABLE %}disabled{% endif %}"
         type="submit"
         {% if selected_variant and selected_variant.available == false %}
           disabled
