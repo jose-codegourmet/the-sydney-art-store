@@ -8,35 +8,35 @@
           "settings": {
             "icon": "icon-delivery",
             "title": "Free Shipping",
-            "text": "<p>When you spend $100+<\/p>",
+            "text": "<p>When you spend $99* Excludes DG & Bulky Goods.<\/p>",
             "link": ""
           }
         },
         "template--18952524235039__2f4a65f4-a409-43b2-ba6e-fab11762c44f-1683784374f58de5c1-1": {
           "type": "highlight",
           "settings": {
-            "icon": "icon-cell-phone",
-            "title": "Give Us A Call",
-            "text": "<p>+1 (201) 555-5555<\/p>",
-            "link": ""
+            "icon": "icon-smile",
+            "title": "Rewards",
+            "text": "<p>Join & receive 5% Rewards Credit on all Purchases.<\/p>",
+            "link": "shopify:\/\/pages\/rewards-program-page"
           }
         },
         "template--18952524235039__2f4a65f4-a409-43b2-ba6e-fab11762c44f-1683784374f58de5c1-2": {
           "type": "highlight",
           "settings": {
-            "icon": "icon-chat-alternate",
-            "title": "Chat With Us",
-            "text": "<p>We offer 24-hour chat support<\/p>",
-            "link": ""
+            "icon": "icon-thumbs-up",
+            "title": "Buy 2 Get 1 Free",
+            "text": "<p>Order your Custom Canvas with us. Its never been easier<\/p>",
+            "link": "https:\/\/www.buildacanvas.com.au\/products\/customcanvas"
           }
         },
         "template--18952524235039__2f4a65f4-a409-43b2-ba6e-fab11762c44f-1683784374f58de5c1-3": {
           "type": "highlight",
           "settings": {
-            "icon": "icon-pin",
-            "title": "Locations",
-            "text": "<p>Find a store near you<\/p>",
-            "link": ""
+            "icon": "icon-gift-card",
+            "title": "Gift Card",
+            "text": "<p>The perfect Gift everytime.<\/p>",
+            "link": "shopify:\/\/products\/rise-ai-giftcard"
           }
         }
       },
@@ -53,158 +53,29 @@
         "color": "#868686",
         "icon_color": "#868686",
         "background_color": "#f5f3ed",
-        "mobile_layout": "grid"
+        "mobile_layout": "slider"
       }
     },
-    "dynamic_slideshow": {
-      "type": "dynamic-slideshow",
-      "blocks": {
-        "slide-1": {
-          "type": "slide",
-          "settings": {
-            "title": "Slide",
-            "text": "Introduce customers to your shop with lifestyle and product imagery",
-            "color": "#ffffff",
-            "link": "",
-            "text_alignment": "center",
-            "button_one_label": "Button",
-            "button_one_link": "",
-            "button_one_style": "primary",
-            "button_two_label": "",
-            "button_two_link": "",
-            "button_two_style": "secondary",
-            "show_overlay": true,
-            "overlay_color": "#000000",
-            "overlay_opacity": 13
-          }
-        },
-        "slide-2": {
-          "type": "slide",
-          "settings": {
-            "title": "Slide",
-            "text": "Introduce customers to your shop with lifestyle and product imagery",
-            "color": "#1d1d1d",
-            "link": "",
-            "text_alignment": "left",
-            "button_one_label": "Button",
-            "button_one_link": "",
-            "button_one_style": "primary",
-            "button_two_label": "",
-            "button_two_link": "",
-            "button_two_style": "primary",
-            "show_overlay": true,
-            "overlay_color": "#000000",
-            "overlay_opacity": 4
-          }
-        },
-        "slide-3": {
-          "type": "slide",
-          "settings": {
-            "title": "Slide",
-            "text": "Introduce customers to your shop with lifestyle and product imagery",
-            "color": "#ffffff",
-            "link": "",
-            "text_alignment": "center",
-            "button_one_label": "Button",
-            "button_one_link": "",
-            "button_one_style": "primary",
-            "button_two_label": "",
-            "button_two_link": "",
-            "button_two_style": "secondary",
-            "show_overlay": true,
-            "overlay_color": "#000000",
-            "overlay_opacity": 20
-          }
-        },
-        "slide-4": {
-          "type": "slide",
-          "settings": {
-            "title": "Slide",
-            "text": "Introduce customers to your shop with lifestyle and product imagery",
-            "color": "#1d1d1d",
-            "link": "",
-            "text_alignment": "left",
-            "button_one_label": "Button",
-            "button_one_link": "",
-            "button_one_style": "primary",
-            "button_two_label": "",
-            "button_two_link": "",
-            "button_two_style": "secondary",
-            "show_overlay": true,
-            "overlay_color": "#000000",
-            "overlay_opacity": 5
-          }
-        }
-      },
-      "block_order": [
-        "slide-1",
-        "slide-2",
-        "slide-3",
-        "slide-4"
-      ],
+    "71cd0582-649b-46a9-be29-cd3afd75abbd": {
+      "type": "dynamic-featured-collection",
       "settings": {
-        "enable_autoplay": true,
-        "autoplay_duration": 9,
-        "slideshow_width": "full",
-        "slideshow_height": "medium",
-        "slideshow_height_mobile": "x-large",
-        "slideshow_text_below_image": false
+        "title": "",
+        "layout": "grid",
+        "collection": "brush-storage",
+        "product_count": 5,
+        "cta_label": "",
+        "cta_button_style": "primary"
       }
     },
-    "dynamic_highlights_banner": {
-      "type": "dynamic-highlights-banner",
-      "blocks": {
-        "highlight-1": {
-          "type": "highlight",
-          "settings": {
-            "icon": "icon-delivery",
-            "title": "Free Shipping",
-            "text": "<p>When you spend $100+<\/p>",
-            "link": ""
-          }
-        },
-        "highlight-2": {
-          "type": "highlight",
-          "settings": {
-            "icon": "icon-cell-phone",
-            "title": "Give Us A Call",
-            "text": "<p>+1 (201) 555-5555<\/p>",
-            "link": ""
-          }
-        },
-        "highlight-3": {
-          "type": "highlight",
-          "settings": {
-            "icon": "icon-chat-alternate",
-            "title": "Chat With Us",
-            "text": "<p>We offer 24-hour chat support<\/p>",
-            "link": ""
-          }
-        },
-        "highlight-4": {
-          "type": "highlight",
-          "settings": {
-            "icon": "icon-pin",
-            "title": "Locations",
-            "text": "<p>Find a store near you<\/p>",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "highlight-1",
-        "highlight-2",
-        "highlight-3",
-        "highlight-4"
-      ],
+    "dynamic_featured_collection": {
+      "type": "dynamic-featured-collection",
       "settings": {
-        "section_spacing": false,
-        "section_width": "content-width",
-        "icon_layout": "center",
-        "color": "#1d1d1d",
-        "icon_color": "#046e82",
-        "background_color": "#ffffff",
-        "mobile_layout": "grid"
+        "title": "",
+        "layout": "grid",
+        "collection": "arches",
+        "product_count": 5,
+        "cta_label": "",
+        "cta_button_style": "secondary"
       }
     },
     "dynamic_promo_mosaic": {
@@ -213,47 +84,51 @@
         "promotion-1": {
           "type": "promotion",
           "settings": {
-            "title": "Mosaic",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-06-27_at_7.22.56_pm.png",
+            "title": "Charvin fine oils",
+            "text": "Since 1830, a single family has been crafting handmade items in Paris.",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
-            "show_overlay": false,
+            "block_link": "shopify:\/\/products\/charvin-fine-oil",
+            "button_text": "View Range",
+            "button_style": "secondary",
+            "show_overlay": true,
             "background": "rgba(0,0,0,0)",
-            "opacity": 50
+            "opacity": 14
           }
         },
         "promotion-2": {
           "type": "promotion",
           "settings": {
-            "title": "Mosaic",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-06-28_at_1.06.36_pm.png",
+            "title": "Daniel Smith Grounds",
+            "text": "Why should watercolour painting be limited to paper?",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
+            "block_link": "shopify:\/\/collections\/watercolour-grounds",
+            "button_text": "View Range",
+            "button_style": "secondary",
             "show_overlay": true,
-            "background": "#000000",
-            "opacity": 5
+            "background": "#1d1d1d",
+            "opacity": 20
           }
         },
         "promotion-3": {
           "type": "promotion",
           "settings": {
-            "title": "Mosaic",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/catalyst_in_use_wedge_1.png",
+            "title": "PRINCETON",
+            "text": "Not quite a brush. Not quite a palette knife. Catalyst by Princeton.",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
+            "block_link": "shopify:\/\/collections\/princeton",
+            "button_text": "View Range",
+            "button_style": "secondary",
             "show_overlay": true,
             "background": "#000000",
-            "opacity": 3
+            "opacity": 20
           }
         },
         "promotion-4": {
           "type": "promotion",
+          "disabled": true,
           "settings": {
             "title": "Mosaic",
             "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
@@ -276,71 +151,109 @@
       "settings": {
         "title": "",
         "section_height": "small",
-        "text_alignment": "top-left",
+        "text_alignment": "bottom-left",
         "maintain_aspect_ratio": true,
-        "compress_blocks": false
+        "compress_blocks": true
       }
     },
-    "dynamic_featured_collection": {
-      "type": "dynamic-featured-collection",
+    "dynamic_shoppable_image": {
+      "type": "dynamic-shoppable-image",
       "blocks": {
-        "view-all-card": {
-          "type": "view_all_card",
+        "hotspot-2": {
+          "type": "hotspot",
           "settings": {
-            "text_alignment": "center-center",
-            "pre_heading": "View all",
-            "heading": "Collection",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 50
+            "product": "tintoretto-1955-giant-flat-brush-long-handle-90cm",
+            "x_axis": 24,
+            "y_axis": 30
+          }
+        },
+        "hotspot-5": {
+          "type": "hotspot",
+          "settings": {
+            "product": "tintoretto-1952-round-long-handle",
+            "x_axis": 42,
+            "y_axis": 87
           }
         }
       },
       "block_order": [
-        "view-all-card"
+        "hotspot-2",
+        "hotspot-5"
+      ],
+      "settings": {
+        "title": "90cm long brush",
+        "image": "shopify:\/\/shop_images\/1952-1_1e87db82-a45f-41dd-a478-e68048669c57.jpg",
+        "image_width": "full",
+        "link_text": "View product",
+        "textbox_title": "",
+        "textbox_subheading": "<p>Tools made with the classic Fine Art brushes’ shapes, but with exceptionally large dimensions that allow the professional to work on any kind of scenography. They are mounted on 90cm handles for painting and for lying on the ground sceneries decoration, allowing to work standing on them.<\/p>",
+        "textbox_button_label": "",
+        "textbox_button_link": "",
+        "textbox_button_style": "primary",
+        "textbox_text_alignment": "center",
+        "textbox_text_position": "left"
+      }
+    },
+    "4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4": {
+      "type": "dynamic-promo-grid",
+      "blocks": {
+        "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-1": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Liquitex_Fluoro_Ink_Swatches_Landscape.jpg",
+            "title": "",
+            "text": "",
+            "color": "#ffffff",
+            "block_link": "shopify:\/\/products\/liquitex-acrylic-inks",
+            "button_text": "Liquitex Acrylic Inks",
+            "button_style": "secondary",
+            "show_overlay": false,
+            "background": "#1d1d1d",
+            "opacity": 20
+          }
+        },
+        "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-0": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WN_Prof_water_colour_Tube_pink_1200x628_f0eb6109-7c4b-4537-9d21-bd2a700ff3a9.jpg",
+            "title": "Grid",
+            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "color": "#4d4d4d",
+            "block_link": "",
+            "button_text": "",
+            "button_style": "primary",
+            "show_overlay": false,
+            "background": "",
+            "opacity": 50
+          }
+        },
+        "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-2": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MH_Oils.jpg",
+            "title": "",
+            "text": "",
+            "color": "#ffffff",
+            "block_link": "shopify:\/\/products\/michael-harding-oils",
+            "button_text": "Michael Harding Oils",
+            "button_style": "secondary",
+            "show_overlay": false,
+            "background": "#1d1d1d",
+            "opacity": 16
+          }
+        }
+      },
+      "block_order": [
+        "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-1",
+        "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-0",
+        "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-2"
       ],
       "settings": {
         "title": "",
-        "layout": "slideshow",
-        "collection": "",
-        "product_count": 9,
-        "cta_label": "",
-        "cta_button_style": "primary"
-      }
-    },
-    "dynamic_featured_product": {
-      "type": "dynamic-featured-product",
-      "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "view-product-link": {
-          "type": "view-product-link",
-          "settings": {
-            "text": "View full details"
-          }
-        }
-      },
-      "block_order": [
-        "title",
-        "price",
-        "view-product-link"
-      ],
-      "settings": {
-        "product": "",
-        "gallery_aspect_ratio": "natural",
-        "gallery_image_crop": false,
-        "gallery_thumbnail_position": "left",
-        "gallery_video_autoplay": false,
-        "gallery_video_looping": true,
-        "gallery_hover_zoom": "replace"
+        "section_height": "natural",
+        "section_columns": 2,
+        "text_alignment": "bottom-center"
       }
     },
     "dynamic_promo_grid": {
@@ -349,12 +262,13 @@
         "promotion-1": {
           "type": "promotion",
           "settings": {
-            "title": "Grid",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/fluid.webp",
+            "title": "",
+            "text": "",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
+            "block_link": "shopify:\/\/products\/golden-high-flow",
+            "button_text": "Golden High Flow",
+            "button_style": "secondary",
             "show_overlay": false,
             "background": "",
             "opacity": 50
@@ -363,12 +277,13 @@
         "promotion-2": {
           "type": "promotion",
           "settings": {
-            "title": "Grid",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/soflat.jpg",
+            "title": "",
+            "text": "",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
+            "block_link": "shopify:\/\/products\/golden-soflat-acrylics",
+            "button_text": "Golden SoFlat",
+            "button_style": "secondary",
             "show_overlay": false,
             "background": "",
             "opacity": 50
@@ -377,12 +292,13 @@
         "promotion-3": {
           "type": "promotion",
           "settings": {
-            "title": "Grid",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/black_velvet.jpg",
+            "title": "",
+            "text": "",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
+            "block_link": "shopify:\/\/collections\/silver-brush",
+            "button_text": "Silver Brushes Co.",
+            "button_style": "secondary",
             "show_overlay": false,
             "background": "",
             "opacity": 50
@@ -391,9 +307,25 @@
         "promotion-4": {
           "type": "promotion",
           "settings": {
+            "image": "shopify:\/\/shop_images\/0385422-LB-FLASHE-KEY-VISUAL-02-1200X1200PX-NA.jpg",
+            "title": "",
+            "text": "",
+            "color": "#ffffff",
+            "block_link": "shopify:\/\/products\/l-b-flashe-vinyl-colours",
+            "button_text": "View Range",
+            "button_style": "secondary",
+            "show_overlay": false,
+            "background": "",
+            "opacity": 50
+          }
+        },
+        "4e4d696c-0bc1-4e60-931b-af631c61d0d1": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
             "title": "Grid",
             "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
-            "color": "#ffffff",
+            "color": "#4d4d4d",
             "block_link": "",
             "button_text": "",
             "button_style": "primary",
@@ -407,169 +339,116 @@
         "promotion-1",
         "promotion-2",
         "promotion-3",
-        "promotion-4"
+        "promotion-4",
+        "4e4d696c-0bc1-4e60-931b-af631c61d0d1"
       ],
       "settings": {
-        "title": "Grid",
+        "title": "",
         "section_height": "medium",
         "section_columns": 4,
-        "text_alignment": "top-left"
+        "text_alignment": "bottom-center"
       }
     },
-    "dynamic_collection_list": {
-      "type": "dynamic-collection-list",
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-5": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-6": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3",
-        "collection-4",
-        "collection-5",
-        "collection-6"
-      ],
-      "settings": {
-        "title": "Collection list",
-        "thumbnail_columns_desktop": 6,
-        "thumbnail_columns_mobile": 3,
-        "image-crop": "original",
-        "cta_label": "View All",
-        "cta_link": "",
-        "cta_button_style": "secondary"
-      }
-    },
-    "dynamic_shoppable_image": {
-      "type": "dynamic-shoppable-image",
-      "blocks": {
-        "hotspot-1": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 24,
-            "y_axis": 79
-          }
-        },
-        "hotspot-2": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 64,
-            "y_axis": 67
-          }
-        },
-        "hotspot-3": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 61,
-            "y_axis": 5
-          }
-        },
-        "hotspot-4": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 15,
-            "y_axis": 19
-          }
-        },
-        "hotspot-5": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 87,
-            "y_axis": 48
-          }
-        }
-      },
-      "block_order": [
-        "hotspot-1",
-        "hotspot-2",
-        "hotspot-3",
-        "hotspot-4",
-        "hotspot-5"
-      ],
-      "settings": {
-        "title": "Shoppable image",
-        "image_width": "two-thirds",
-        "link_text": "View product",
-        "textbox_title": "Shop the look",
-        "textbox_subheading": "<p>Make an image shoppable by adding hotspots that link to various products.<\/p>",
-        "textbox_button_label": "Button",
-        "textbox_button_link": "",
-        "textbox_button_style": "primary",
-        "textbox_text_alignment": "center",
-        "textbox_text_position": "left"
-      }
-    },
-    "dynamic_featured_collection-2": {
+    "ea8656da-927f-4715-938d-129d2dffedeb": {
       "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "",
+        "layout": "grid",
+        "collection": "tintoretto",
+        "product_count": 10,
+        "cta_label": "",
+        "cta_button_style": "primary"
+      }
+    },
+    "bc2326c8-f0b8-4f4b-86ce-b7a21189222d": {
+      "type": "dynamic-countdown-timer",
+      "settings": {
+        "section_height": "small",
+        "countdown_year": "2023",
+        "countdown_month": "07",
+        "countdown_day": "10",
+        "countdown_hour": "12",
+        "countdown_minute": "30",
+        "countdown_timer_background": true,
+        "countdown_timer_complete": false,
+        "countdown_timer_message": "",
+        "product": "tubewringer-401-heavy-duty",
+        "title": "Special Offer",
+        "text": "<p>Don't go through paint again with the Tube Wringer, which is perfect for any size tube, regardless of the type of painting you're doing, be it Acrylics, Oils, or Watercolours.<\/p>",
+        "button_link": "shopify:\/\/products\/tubewringer-401-heavy-duty",
+        "button_label": "View",
+        "button_style": "primary",
+        "text_color": "#585858",
+        "overlay_color": "#000000",
+        "overlay_opacity": 15,
+        "product_card_background_color": "#f5f3ed"
+      }
+    },
+    "6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4": {
+      "type": "dynamic-collection-list",
+      "disabled": true,
       "blocks": {
-        "title-card": {
-          "type": "title_card",
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-0": {
+          "type": "collection",
           "settings": {
-            "horizontal_size": "3",
-            "vertical_size": "2",
-            "text_alignment": "center-center",
-            "pre_heading": "Featured",
-            "heading": "Collection",
-            "text_color": "#ffffff",
-            "cta_label": "See more",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
+            "collection": "watercolour-palette",
+            "title": ""
+          }
+        },
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "holbein-watercolours",
+            "title": ""
+          }
+        },
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "cleaners-soaps",
+            "image": "shopify:\/\/shop_images\/cleaningset_d4ae57a0-3e56-4fc4-9eb4-a7b69917b8d0.jpg",
+            "title": ""
+          }
+        },
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "charvin-sets",
+            "title": ""
+          }
+        },
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "michael-harding-gesso",
+            "title": ""
           }
         }
       },
       "block_order": [
-        "title-card"
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-0",
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-1",
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-3",
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-2",
+        "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-4"
       ],
       "settings": {
-        "title": "Featured collection",
+        "title": "",
+        "thumbnail_columns_desktop": 5,
+        "thumbnail_columns_mobile": 2,
+        "image-crop": "original",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_button_style": "primary"
+      }
+    },
+    "27f1dd90-38ec-493c-95a3-b83e52a05179": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "",
         "layout": "grid",
-        "collection": "",
-        "product_count": 7,
+        "collection": "stretchers",
+        "product_count": 5,
         "cta_label": "",
         "cta_button_style": "primary"
       }
@@ -580,29 +459,31 @@
         "promotion-1": {
           "type": "promotion",
           "settings": {
-            "title": "Grid",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/canvases.jpg",
+            "title": "buy 2 get 1 free",
+            "text": "Your third canvas is on us free of charge. Order 4 and receive 6.",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
+            "block_link": "https:\/\/www.buildacanvas.com.au\/products\/customcanvas",
+            "button_text": "Build a Canvas.",
             "button_style": "secondary",
-            "show_overlay": false,
+            "show_overlay": true,
             "background": "rgba(0,0,0,0)",
-            "opacity": 50
+            "opacity": 22
           }
         },
         "promotion-2": {
           "type": "promotion",
           "settings": {
-            "title": "Grid",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
+            "image": "shopify:\/\/shop_images\/ssf.jpg",
+            "title": "SYDNEY STRETCHERS",
+            "text": "In Sydney, we produce our own stretchers. We are in charge of ensuring the premium quality and quick delivery of stretchers and canvases that we make.",
             "color": "#ffffff",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
-            "show_overlay": false,
+            "block_link": "shopify:\/\/collections\/stretchers",
+            "button_text": "25% Off Stretchers +",
+            "button_style": "secondary",
+            "show_overlay": true,
             "background": "rgba(0,0,0,0)",
-            "opacity": 50
+            "opacity": 25
           }
         }
       },
@@ -612,104 +493,9 @@
       ],
       "settings": {
         "title": "",
-        "section_height": "small",
+        "section_height": "large",
         "section_columns": 2,
-        "text_alignment": "center-left"
-      }
-    },
-    "dynamic_promo_grid-3": {
-      "type": "dynamic-promo-grid",
-      "blocks": {
-        "promotion-1": {
-          "type": "promotion",
-          "settings": {
-            "title": "Grid",
-            "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
-            "color": "#1e1e1e",
-            "block_link": "",
-            "button_text": "",
-            "button_style": "primary",
-            "show_overlay": false,
-            "background": "",
-            "opacity": 50
-          }
-        }
-      },
-      "block_order": [
-        "promotion-1"
-      ],
-      "settings": {
-        "title": "Grid",
-        "section_height": "medium",
-        "section_columns": 1,
-        "text_alignment": "center-left"
-      }
-    },
-    "dynamic_testimonials": {
-      "type": "dynamic-testimonials",
-      "disabled": true,
-      "blocks": {
-        "testimonial-1": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": "4.5",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
-            "author": "<p>Author's name<\/p>"
-          }
-        },
-        "testimonial-2": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": "4.5",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
-            "author": "<p>Author's name<\/p>"
-          }
-        },
-        "testimonial-3": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": "4.5",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
-            "author": "<p>Author's name<\/p>"
-          }
-        },
-        "testimonial-4": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": "4.5",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
-            "author": "<p>Author's name<\/p>"
-          }
-        },
-        "testimonial-5": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": "4.5",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
-            "author": "<p>Author's name<\/p>"
-          }
-        },
-        "testimonial-6": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": "4.5",
-            "text": "<p>Add customer reviews and testimonials to showcase your store's happy customers.<\/p>",
-            "author": "<p>Author's name<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial-1",
-        "testimonial-2",
-        "testimonial-3",
-        "testimonial-4",
-        "testimonial-5",
-        "testimonial-6"
-      ],
-      "settings": {
-        "title": "Testimonials",
-        "image_crop": "circle",
-        "text_size": "large"
+        "text_alignment": "center-center"
       }
     },
     "dynamic_blog_posts": {
@@ -742,18 +528,17 @@
   },
   "order": [
     "2f4a65f4-a409-43b2-ba6e-fab11762c44f",
-    "dynamic_slideshow",
-    "dynamic_highlights_banner",
-    "dynamic_promo_mosaic",
+    "71cd0582-649b-46a9-be29-cd3afd75abbd",
     "dynamic_featured_collection",
-    "dynamic_featured_product",
-    "dynamic_promo_grid",
-    "dynamic_collection_list",
+    "dynamic_promo_mosaic",
     "dynamic_shoppable_image",
-    "dynamic_featured_collection-2",
+    "4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4",
+    "dynamic_promo_grid",
+    "ea8656da-927f-4715-938d-129d2dffedeb",
+    "bc2326c8-f0b8-4f4b-86ce-b7a21189222d",
+    "6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4",
+    "27f1dd90-38ec-493c-95a3-b83e52a05179",
     "dynamic_promo_grid-2",
-    "dynamic_promo_grid-3",
-    "dynamic_testimonials",
     "dynamic_blog_posts",
     "dynamic_search"
   ]

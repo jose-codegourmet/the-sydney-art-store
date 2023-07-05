@@ -103,6 +103,9 @@
     {% comment %}Inject theme-object end{% endcomment %}
 
   {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
+  <script src="{{ 'timesact.js' | asset_url }}" defer="defer"></script>
+
+
 </head>
 
   <body class="template-{{ template.name }}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
@@ -590,6 +593,6 @@
     display: none !important;
 }
     </style>
-  <script async type='text/javascript' src='//satcb.azureedge.net/Scripts/satcb.min.js?shop=c4f4ea.myshopify.com'></script>
+  
 </body>
 </html>

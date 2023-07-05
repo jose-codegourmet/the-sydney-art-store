@@ -5,10 +5,11 @@
     "footer": {
       "type": "static-footer",
       "blocks": {
-        "menu_3": {
-          "type": "menu",
+        "aee772e3-add1-4b4e-86fb-e83ccd12fa72": {
+          "type": "rich_text",
           "settings": {
-            "menu": "main-menu-1"
+            "title": "ABOUT US.",
+            "text": "<p>We striving to bring our customers the highest quality art supplies to assist in creating awe-inspiring artwork. We have sourced the most superior art materials from all over the world, that are now available both in our store in Sydney & across Australia online.<\/p>"
           }
         },
         "menu": {
@@ -23,32 +24,32 @@
             "menu": "popular"
           }
         },
-        "newsletter": {
+        "b29d9418-6e14-4aa2-8a53-846ad70ba91a": {
           "type": "newsletter",
           "settings": {
             "title": "Subscribe",
-            "text": "<p>Invite customers to join your mailing list.<\/p>"
+            "text": "<p>Join our esteemed community of Artist's and gain access to Exclusive Perks!<\/p>"
           }
         },
-        "aee772e3-add1-4b4e-86fb-e83ccd12fa72": {
+        "9069babb-4c9c-4f1d-9b4c-63fa5e6d6690": {
           "type": "rich_text",
           "settings": {
-            "title": "About Us",
-            "text": "<p><strong>The Sydney Art Store<\/strong><br\/>11 Salisbury Street,<br\/>Botany, NSW 2019<br\/><strong>Phone: <\/strong><a href=\"tel:61296992162\"><strong>+61 2 9699 2162<\/strong><\/a><strong><br\/>Mobile: <\/strong><a href=\"https:\/\/www.thesydneyartstore.com.au\/+61%20431%200011%2029\" title=\"Mobile +61 431 0011 29\"><strong>+61 431 0011 29<\/strong><\/a><\/p><p><strong>Opening Hours<\/strong><br\/>Mon - Friday 9am - 5pm<br\/>Saturday    9am - 1pm<\/p>"
+            "title": "LOCATION",
+            "text": "<p><strong>The Sydney Art Store<\/strong><br\/>11 Salisbury Street,<br\/>Botany, NSW 2019<br\/><strong>Phone: <\/strong><a href=\"tel:61296992162\"><strong>+61 2 9699 2162<\/strong><\/a><strong><br\/>Mobile: <\/strong><a href=\"https:\/\/www.thesydneyartstore.com.au\/+61%20431%200011%2029\" title=\"Mobile +61 431 0011 29\"><strong>+61 431 0011 29<\/strong><\/a><\/p><p><strong>Opening Hours<\/strong><br\/>Mon - Friday 9am - 5pm<br\/>Saturday    9am - 1pm<\/p><p><strong>ABN<\/strong> 12 143 327 262<\/p>"
           }
         }
       },
       "block_order": [
-        "menu_3",
+        "aee772e3-add1-4b4e-86fb-e83ccd12fa72",
         "menu",
         "menu_2",
-        "newsletter",
-        "aee772e3-add1-4b4e-86fb-e83ccd12fa72"
+        "b29d9418-6e14-4aa2-8a53-846ad70ba91a",
+        "9069babb-4c9c-4f1d-9b4c-63fa5e6d6690"
       ],
       "settings": {
         "payment_icons": true,
         "show_locale_selector": true,
-        "show_currency_selector": true,
+        "show_currency_selector": false,
         "additional_menu": "footer"
       }
     }

@@ -24,6 +24,13 @@
   }
 </script>
 
+<style>
+  :root {
+    --table-prod-price-color: {{ settings.color_product_sale_accent }};
+  }
+</style>
+{{ 'template-product-special.css' | asset_url | stylesheet_tag }}
+
 {% render 'breadcrumbs' %}
 
 <section class="product-section--container product--container {{ section.settings.layout }}" data-product-wrapper>

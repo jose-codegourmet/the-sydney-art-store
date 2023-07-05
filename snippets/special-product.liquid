@@ -281,7 +281,7 @@
           product_grid += '                   <input type="button" value="-" class="qty--modifier qtyminus" field="quantity">';
           product_grid += '                   <input type="number" placeholder="1" variant-id="' + variant.id + '" class="input-text form-control--prod js--qty" min="1" value="1">';
           product_grid += '                   <input type="button" value="+" class="qty--modifier qtyplus" field="quantity">';
-          product_grid += '                   <button type="button" title="Add to Basket" class="btn cart-button js--gtm-add-to-cart xigen--translate"';
+          product_grid += '                   <button type="button" title="Add to Basket" class="btn custom-cart-button js--gtm-add-to-cart xigen--translate"';
           product_grid += '                   data-translatekey="Add">Add</button>';
           product_grid += '                  </div>'
           product_grid += '                </td>';
@@ -441,13 +441,15 @@
       $(this).parents('.productExtra--cell-6').find('.form-control--prod').val(qty);
   });
 
-  $("body").on('click', '.cart-button', function(e) {
+  $("body").on('click', '.async--grid__extra .custom-cart-button.js--gtm-add-to-cart', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     let that = $(this).parents('.productExtra--row').find('.form-control--prod');
     let quantity = $(that).val();
     let variant_id = $(that).attr('variant-id');
 
     $(".async-product-form input[name='id']").val(variant_id);
-    $(".async-product-form #product-quantity-input").val(quantity);
+    $(".async-product-form .quantity-selector__input").val(quantity);
 
     $(".async-product-form form .product-form--atc-button").trigger('click');
   });

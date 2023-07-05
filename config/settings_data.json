@@ -38,21 +38,22 @@
     "type_section": "montserrat_n8",
     "type_section_capitalize": true,
     "type_section_spacing": 1,
-    "layout_max_width": 1400,
+    "layout_max_width": 1500,
     "product_sales_badge": true,
     "product_sales_badge_style": "percent",
     "inventory_status": false,
     "inventory_display": "low_stock_only",
-    "inventory_transfer_notice": true,
+    "inventory_transfer_notice": false,
     "low_stock_threshold": 2,
-    "product_option_style": "select",
+    "product_option_style": "radio",
+    "enable_cart_redirection": false,
     "swatches_enable": true,
     "swatches_product_card_size": 32,
     "swatches_product_page_size": 64,
     "swatches_swatch_trigger": "Colour",
     "swatches_shape": "square",
     "swatches_option_style": "variant_image",
-    "swatches_custom_colors": "Blacks: #000000\nBlues: #0096FF\nEarth Tones: #806043\nFluorescent: #AAFF00\nGreens: #008000\nGreys: #808080\nIridescent: #d7e9dc\nMetallics: #d4af37\nPinks: #ffc0cb\nReds: #E32619\nViolets: #cd97f2\nWhites: #f3f6f4\nOranges: #ffa500\nOrange: #ffa500\nYellows & Oranges: #ffa500\nYellows: #FFFF00\nCream: #FFFDD0\nN\/Print Grey: #808080\nNatural White: #EEEBE3\nSoft White: #FFFFFF\nVelvet Antique: #faebd7\nVelvet Buff: #d6bd90",
+    "swatches_custom_colors": "Blacks: #000000\nBlues: #0096FF\nEarth Tones: #806043\nFluorescent: #AAFF00\nGreens: #008000\nGreys: #808080\nIridescent: #d7e9dc\nMetallics: #d4af37\nPinks: #ffc0cb\nReds: #E32619\nViolets: #cd97f2\nWhites: #f3f6f4\nOranges: #ffa500\nOrange: #ffa500\nYellows & Oranges: #ffa500\nYellows: #FFFF00\nCream: #F1E8DC\nN\/Print Grey: #808080\nNatural White: #EEEBE3\nSoft White: #FFFFFF\nVelvet Antique: #faebd7\nVelvet Buff: #EBD4B5\nNatural: #fdfcfa\nFawn: #edc49b\nWarm White: #fffefa\nSatin White: #F1F3F2\nTextured Soft White: #EFEEE8\nVelvet White: #F4EDE0\nVelvet Newsprint Grey: #DFDCD8\nSatin Soft White: #EFEEE8\nBookwove White: #FF5733",
     "product_show_vendor": true,
     "product_ratings_star_display": false,
     "product_grid_emphasize_price": false,
@@ -65,13 +66,14 @@
     "social_tumblr": "",
     "social_vimeo": "",
     "social_youtube": "",
-    "favicon": "shopify:\/\/shop_images\/TSAS_logo_1.png",
+    "favicon": "shopify:\/\/shop_images\/TSAS_4c552136-a54f-4196-939d-26384e644a47.png",
     "enable_orders_atc": true,
-    "enable_checkout_lock_icon": false,
+    "enable_checkout_lock_icon": true,
     "continue_shopping_url": "shopify:\/\/collections\/all",
     "continue_url_cart": true,
     "continue_url_404": true,
-    "checkout_logo_image": "shopify:\/\/shop_images\/TSAS_logo_1.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/2121_CHECKOUT.png",
+    "checkout_logo_size": "large",
     "checkout_body_background_color": "#f5f3ed",
     "checkout_sidebar_background_color": "#ffffff",
     "checkout_accent_color": "#1d1d1d",
@@ -107,9 +109,33 @@
 
     ],
     "blocks": {
-      "8605505498557855500": {
-        "type": "shopify:\/\/apps\/bogos-free-gift-buy-x-get-y\/blocks\/app-embed\/0432bba6-720a-4e95-be5a-b868386f7aa6",
+      "14952540001915115444": {
+        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
         "disabled": false,
+        "settings": {
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "5017882195547572635": {
+        "type": "shopify:\/\/apps\/easy-redirects\/blocks\/app\/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14230651041339252739": {
+        "type": "shopify:\/\/apps\/easy-redirects\/blocks\/app_404\/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "9901917232353999808": {
+        "type": "shopify:\/\/apps\/buddha-mega-menu-navigation\/blocks\/megamenu\/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
+        "disabled": true,
         "settings": {
         }
       }

@@ -380,11 +380,63 @@
       </div>
 
       {%- capture product_item_price -%}
+        {%- comment -%}
+          Products with multiple variants that are assigned to templates
+          are automatically prexifed with "from" and uses the metafield
+  
+          "product.grid_product_with_collection_variants_price"
+          for the lowest price variant.
+  
+          @if not supplied - get the lowest price from the related special collection
+        {%- endcomment -%}
+        
+        {% assign isSpecialTemplate = false %}
+        {% assign price_range_format = price_range_format | default: 'range' %}
+        
+        {% if product.template_suffix == 'special' %}
+          {% assign isSpecialTemplate = true %}
+        {% endif %}
+  
+        {% if isSpecialTemplate %}
+          {% assign price_varies = true %}
+  
+          {% if product.metafields.product.grid_product_with_collection_variants_price != blank %}
+            {% assign price = product.metafields.product.grid_product_with_collection_variants_price | times: 100 %}
+          {% else %}
+  
+            {% assign productSpecialMetaCollection = false %}
+  
+            {% if product.metafields.special.related_collection != blank %}
+              {% if product.metafields.special.related_collection.value.products.size > 0 %}
+                {% assign productSpecialMetaCollection = product.metafields.special.related_collection.value %}
+              {% endif %}
+            {% endif %}
+  
+            {% if productSpecialMetaCollection  %}
+              {% comment %}
+                get the lowest price from special collection if it exists. product prices that are 0 will not be considered lowest price
+              {% endcomment %}
+              {% if productSpecialMetaCollection.products.size > 0 %}
+                {% assign lowestPrice = 99999999 %}
+                {% for product in productSpecialMetaCollection.products %}
+                  {% if product.price != 0 and product.price < lowestPrice %}
+                    {% assign lowestPrice = product.price %}
+                  {% endif %}
+                {% endfor %}
+                {% assign price = lowestPrice %}
+                {% assign price_range_format = 'from' %}
+              {% endif %}
+            {% endif %}
+  
+          {% endif %}
+        {% endif %}
+          
         {%
           render 'product-price',
           product: product,
           class_root: 'productitem',
           price: price,
+          price_range_format: price_range_format,
           price_varies: price_varies,
           compare_at_price: compare_at_price,
           compare_at_price_varies: compare_at_price_varies,
@@ -564,6 +616,7 @@
                       disabled
                     {% endif %}
                     type="button"
+                    data-handle="{{ product.handle }}"
                   >
                     {{ quick_shop_text }}
                   </button>

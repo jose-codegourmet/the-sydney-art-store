@@ -23,11 +23,11 @@
       "settings": {
         "show_announcement": true,
         "homepage_announcement": false,
-        "announcement_text": "Family owned and operated since 2007.",
-        "announcement_text_mobile": "Family owned and operated since 2007.",
+        "announcement_text": "Welcome to Our New Website",
+        "announcement_text_mobile": "Welcome to Our New Website",
         "announcement_link": "",
         "announcement_color": "#949494",
-        "announcement_background": "#e8e7e0"
+        "announcement_background": "#f5f3ed"
       }
     },
     "header": {
@@ -37,10 +37,11 @@
           "type": "meganav_images",
           "settings": {
             "meganav_trigger": "Painting",
+            "image_1": "shopify:\/\/shop_images\/MichaelHardingStackLeadWhite_michaelHarding_copy_775f3b6e-9400-439a-962c-c6cd2545cfcc.jpg",
             "text_1": "",
-            "link_1": "",
-            "position_1": "last",
-            "size_1": "large",
+            "link_1": "shopify:\/\/products\/michael-harding-oils",
+            "position_1": "first",
+            "size_1": "medium",
             "text_2": "",
             "link_2": "",
             "position_2": "last",
@@ -53,7 +54,7 @@
             "meganav_trigger": "Brushes",
             "image_1": "shopify:\/\/shop_images\/BorcianieBonazziKIT9BRUSHES_64b7a825-b566-492e-b5c4-f4fc690d4e45.jpg",
             "text_1": "",
-            "link_1": "",
+            "link_1": "shopify:\/\/products\/borciani-e-bonazzi-kit-9-brushes-il-preciso-top-graphic",
             "position_1": "first",
             "size_1": "large",
             "text_2": "",
@@ -66,9 +67,10 @@
           "type": "meganav_images",
           "settings": {
             "meganav_trigger": "Surfaces",
+            "image_1": "shopify:\/\/shop_images\/stone2_bbee1674-8f89-4273-a492-cb70bc6b0d47_1280x1280_copy.jpg",
             "text_1": "",
             "link_1": "",
-            "position_1": "last",
+            "position_1": "first",
             "size_1": "medium",
             "text_2": "",
             "link_2": "",
@@ -80,11 +82,11 @@
           "type": "meganav_images",
           "settings": {
             "meganav_trigger": "Drawing",
-            "image_1": "shopify:\/\/shop_images\/creta-sepia-pencil.jpg",
+            "image_1": "shopify:\/\/shop_images\/artgrafpowder2_0488c317-f51e-4fbc-a3ba-1c464ff28e77.jpg",
             "text_1": "",
-            "link_1": "",
-            "position_1": "last",
-            "size_1": "large",
+            "link_1": "shopify:\/\/products\/art-graf-graphite-powder-water-soluble-250g",
+            "position_1": "first",
+            "size_1": "medium",
             "text_2": "",
             "link_2": "",
             "position_2": "last",
@@ -95,14 +97,15 @@
           "type": "meganav_images",
           "settings": {
             "meganav_trigger": "Studio",
+            "image_1": "shopify:\/\/shop_images\/ArtistMultifunctionalWatercolourPalette38Wells2_1494x1494_adf64e3a-57ab-4b4d-9712-40c13ae6836c.webp",
             "text_1": "",
-            "link_1": "",
-            "position_1": "last",
+            "link_1": "shopify:\/\/collections\/palettes",
+            "position_1": "first",
             "size_1": "medium",
             "text_2": "",
-            "link_2": "",
+            "link_2": "shopify:\/\/collections\/stretchers",
             "position_2": "last",
-            "size_2": "medium"
+            "size_2": "small"
           }
         },
         "ade1428f-16d5-4b25-a855-9fb7f91ae171": {
@@ -122,13 +125,13 @@
       ],
       "settings": {
         "sticky_header": false,
-        "full_width_header": false,
-        "logo": "shopify:\/\/shop_images\/TSAS_logo_1.png",
-        "logo_height": 64,
-        "logo_width": 150,
+        "full_width_header": true,
+        "logo": "shopify:\/\/shop_images\/212121.png",
+        "logo_height": 70,
+        "logo_width": 170,
         "filter_search_by": "disabled",
         "enable_live_search": true,
-        "show_mobile_search_bar": false,
+        "show_mobile_search_bar": true,
         "enable_live_search_images": true,
         "quick_links": "",
         "menu": "main-menu-1",
