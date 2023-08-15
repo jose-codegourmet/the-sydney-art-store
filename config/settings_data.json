@@ -62,6 +62,7 @@
     "product_grid_image_style": "medium",
     "product_grid_image_crop": false,
     "enable_product_compare": true,
+    "product_grid_enable_quickshop": true,
     "social_linkedin": "",
     "social_tumblr": "",
     "social_vimeo": "",
@@ -115,12 +116,6 @@
         "settings": {
         }
       },
-      "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "5017882195547572635": {
         "type": "shopify:\/\/apps\/easy-redirects\/blocks\/app\/be3f8dbd-5d43-46b4-ba43-2d65046054c2",
         "disabled": false,
@@ -136,6 +131,12 @@
       "9901917232353999808": {
         "type": "shopify:\/\/apps\/buddha-mega-menu-navigation\/blocks\/megamenu\/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "6468128024931565999": {
+        "type": "shopify:\/\/apps\/seguno-popups\/blocks\/popup-app-embed\/f53bd66f-9a20-4ce2-ae2e-ccbd0148bd4b",
+        "disabled": false,
         "settings": {
         }
       }

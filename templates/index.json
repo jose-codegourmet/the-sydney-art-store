@@ -56,18 +56,105 @@
         "mobile_layout": "slider"
       }
     },
-    "71cd0582-649b-46a9-be29-cd3afd75abbd": {
+    "dynamic_featured_collection": {
       "type": "dynamic-featured-collection",
       "settings": {
         "title": "",
         "layout": "grid",
-        "collection": "brush-storage",
+        "collection": "clearance-sale",
+        "product_count": 5,
+        "cta_label": "",
+        "cta_button_style": "secondary"
+      }
+    },
+    "1b6875bf-9be8-4e81-a76e-e15e91122663": {
+      "type": "pxs-image-with-text-overlay",
+      "settings": {
+        "section_height": "original",
+        "image": "shopify:\/\/shop_images\/SAUNDERS.jpg",
+        "title": "",
+        "text": "",
+        "content_position": "bottom-left",
+        "color": "#ffffff",
+        "overlay_background": "#949494",
+        "overlay_opacity": 3,
+        "link": "shopify:\/\/products\/saunders-waterford-watercolour-sheets",
+        "button_text": ""
+      }
+    },
+    "b7988f83-78f9-4294-92be-79686a63d4d4": {
+      "type": "dynamic-promo-grid",
+      "blocks": {
+        "template--19632686399775__b7988f83-78f9-4294-92be-79686a63d4d4-promotion-3": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/514AUP_345x_2x_d3528034-94d9-45ce-afc3-9b04376eedc5.jpg",
+            "title": "CARAVAGGIO LINEN : ITALY",
+            "text": "Caravaggio Canvas, named for the renowned Italian artist from the late 1500s, is recognized as some of the best canvas available globally.",
+            "color": "#ffffff",
+            "block_link": "shopify:\/\/collections\/linen-rolls",
+            "button_text": "Linen Rolls",
+            "button_style": "secondary",
+            "show_overlay": true,
+            "background": "#949494",
+            "opacity": 27
+          }
+        },
+        "template--19632686399775__b7988f83-78f9-4294-92be-79686a63d4d4-promotion-4": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rf-pigment-stick.jpg",
+            "title": "R&F OIL STICKS",
+            "text": "R&F Pigment Sticks® are oil paint manufactured with enough wax for the paint to be molded into stick form. They allow the painter to draw or paint directly onto a surface without brushes, palettes, paint tubes, or solvents.",
+            "color": "#ffffff",
+            "block_link": "shopify:\/\/products\/r-f-oil-sticks",
+            "button_text": "R&F Paint Sticks",
+            "button_style": "secondary",
+            "show_overlay": true,
+            "background": "#1d1d1d",
+            "opacity": 8
+          }
+        },
+        "3cf738e9-23ce-4865-b92f-9612ce3002f6": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/12_Hero_Fiori___Ecoqua_Original_-_Logo___Claim.jpg",
+            "title": "",
+            "text": "",
+            "color": "#4d4d4d",
+            "block_link": "shopify:\/\/collections\/notebooks",
+            "button_text": "",
+            "button_style": "primary",
+            "show_overlay": false,
+            "background": "",
+            "opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "template--19632686399775__b7988f83-78f9-4294-92be-79686a63d4d4-promotion-3",
+        "template--19632686399775__b7988f83-78f9-4294-92be-79686a63d4d4-promotion-4",
+        "3cf738e9-23ce-4865-b92f-9612ce3002f6"
+      ],
+      "settings": {
+        "title": "",
+        "section_height": "natural",
+        "section_columns": 3,
+        "text_alignment": "center-center"
+      }
+    },
+    "c7150259-0164-465c-8561-0fe33cbbdcbb": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "",
+        "layout": "grid",
+        "collection": "holbein-watercolours",
         "product_count": 5,
         "cta_label": "",
         "cta_button_style": "primary"
       }
     },
-    "dynamic_featured_collection": {
+    "71cd0582-649b-46a9-be29-cd3afd75abbd": {
       "type": "dynamic-featured-collection",
       "settings": {
         "title": "",
@@ -75,7 +162,7 @@
         "collection": "arches",
         "product_count": 5,
         "cta_label": "",
-        "cta_button_style": "secondary"
+        "cta_button_style": "primary"
       }
     },
     "dynamic_promo_mosaic": {
@@ -98,6 +185,7 @@
         },
         "promotion-2": {
           "type": "promotion",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Screenshot_2023-06-28_at_1.06.36_pm.png",
             "title": "Daniel Smith Grounds",
@@ -114,16 +202,16 @@
         "promotion-3": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/catalyst_in_use_wedge_1.png",
-            "title": "PRINCETON",
-            "text": "Not quite a brush. Not quite a palette knife. Catalyst by Princeton.",
+            "image": "shopify:\/\/shop_images\/aluminium_easel.webp",
+            "title": "Aluminium Easel",
+            "text": "Aluminium Artist Studio Easel is perfect for any artist who wants a high-quality, affordable easel that is easy to transport and set up.",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/princeton",
-            "button_text": "View Range",
+            "block_link": "shopify:\/\/products\/aluminium-artist-studio-easel",
+            "button_text": "Aluminium Easel 55% Off",
             "button_style": "secondary",
             "show_overlay": true,
             "background": "#000000",
-            "opacity": 20
+            "opacity": 21
           }
         },
         "promotion-4": {
@@ -200,12 +288,12 @@
         "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-1": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Liquitex_Fluoro_Ink_Swatches_Landscape.jpg",
+            "image": "shopify:\/\/shop_images\/Loading.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/liquitex-acrylic-inks",
-            "button_text": "Liquitex Acrylic Inks",
+            "block_link": "shopify:\/\/products\/panpastels",
+            "button_text": "PanPastels by Golden Colors.",
             "button_style": "secondary",
             "show_overlay": false,
             "background": "#1d1d1d",
@@ -236,7 +324,7 @@
             "text": "",
             "color": "#ffffff",
             "block_link": "shopify:\/\/products\/michael-harding-oils",
-            "button_text": "Michael Harding Oils",
+            "button_text": "15% Off : Michael Harding Oils",
             "button_style": "secondary",
             "show_overlay": false,
             "background": "#1d1d1d",
@@ -267,7 +355,7 @@
             "text": "",
             "color": "#ffffff",
             "block_link": "shopify:\/\/products\/golden-high-flow",
-            "button_text": "Golden High Flow",
+            "button_text": "20% Off : Golden High Flow",
             "button_style": "secondary",
             "show_overlay": false,
             "background": "",
@@ -282,7 +370,7 @@
             "text": "",
             "color": "#ffffff",
             "block_link": "shopify:\/\/products\/golden-soflat-acrylics",
-            "button_text": "Golden SoFlat",
+            "button_text": "20% Off : Golden SoFlat",
             "button_style": "secondary",
             "show_overlay": false,
             "background": "",
@@ -297,7 +385,7 @@
             "text": "",
             "color": "#ffffff",
             "block_link": "shopify:\/\/collections\/silver-brush",
-            "button_text": "Silver Brushes Co.",
+            "button_text": "20% Off : Silver Brushes Co.",
             "button_style": "secondary",
             "show_overlay": false,
             "background": "",
@@ -307,12 +395,12 @@
         "promotion-4": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0385422-LB-FLASHE-KEY-VISUAL-02-1200X1200PX-NA.jpg",
+            "image": "shopify:\/\/shop_images\/langridge_pigment_1024x_6868f273-52af-4e2e-ab72-ca15112dff06.webp",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/l-b-flashe-vinyl-colours",
-            "button_text": "View Range",
+            "block_link": "shopify:\/\/collections\/langridge-pigment",
+            "button_text": "20% Off : Langridge Pigments",
             "button_style": "secondary",
             "show_overlay": false,
             "background": "",
@@ -354,7 +442,7 @@
       "settings": {
         "title": "",
         "layout": "grid",
-        "collection": "tintoretto",
+        "collection": "borciani-e-bonazzi",
         "product_count": 10,
         "cta_label": "",
         "cta_button_style": "primary"
@@ -365,28 +453,27 @@
       "settings": {
         "section_height": "small",
         "countdown_year": "2023",
-        "countdown_month": "07",
-        "countdown_day": "10",
+        "countdown_month": "08",
+        "countdown_day": "12",
         "countdown_hour": "12",
         "countdown_minute": "30",
         "countdown_timer_background": true,
-        "countdown_timer_complete": false,
+        "countdown_timer_complete": true,
         "countdown_timer_message": "",
-        "product": "tubewringer-401-heavy-duty",
+        "product": "artist-t86-studio-display-easel",
         "title": "Special Offer",
-        "text": "<p>Don't go through paint again with the Tube Wringer, which is perfect for any size tube, regardless of the type of painting you're doing, be it Acrylics, Oils, or Watercolours.<\/p>",
-        "button_link": "shopify:\/\/products\/tubewringer-401-heavy-duty",
-        "button_label": "View",
+        "text": "<p>Easel is a solid three-legged studio easel constructed of oiled stain- resistant beech wood. The Artist T86 Display Easel has an inclinable angle adjustment allowing the canvas to slant forward up to 15°.<\/p><p><\/p>",
+        "button_link": "shopify:\/\/products\/aluminium-artist-studio-easel",
+        "button_label": "Aluminium Easel : 43% Off",
         "button_style": "primary",
-        "text_color": "#585858",
-        "overlay_color": "#000000",
-        "overlay_opacity": 15,
-        "product_card_background_color": "#f5f3ed"
+        "text_color": "#1d1d1d",
+        "overlay_color": "#edeceb",
+        "overlay_opacity": 100,
+        "product_card_background_color": "#fec249"
       }
     },
     "6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4": {
       "type": "dynamic-collection-list",
-      "disabled": true,
       "blocks": {
         "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-0": {
           "type": "collection",
@@ -406,7 +493,6 @@
           "type": "collection",
           "settings": {
             "collection": "cleaners-soaps",
-            "image": "shopify:\/\/shop_images\/cleaningset_d4ae57a0-3e56-4fc4-9eb4-a7b69917b8d0.jpg",
             "title": ""
           }
         },
@@ -432,6 +518,7 @@
         "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-2",
         "template--19632686399775__6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4-1688133027700f276d-4"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "thumbnail_columns_desktop": 5,
@@ -528,8 +615,11 @@
   },
   "order": [
     "2f4a65f4-a409-43b2-ba6e-fab11762c44f",
-    "71cd0582-649b-46a9-be29-cd3afd75abbd",
     "dynamic_featured_collection",
+    "1b6875bf-9be8-4e81-a76e-e15e91122663",
+    "b7988f83-78f9-4294-92be-79686a63d4d4",
+    "c7150259-0164-465c-8561-0fe33cbbdcbb",
+    "71cd0582-649b-46a9-be29-cd3afd75abbd",
     "dynamic_promo_mosaic",
     "dynamic_shoppable_image",
     "4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4",
