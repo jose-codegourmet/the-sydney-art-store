@@ -24,7 +24,7 @@
         "template--18952524235039__2f4a65f4-a409-43b2-ba6e-fab11762c44f-1683784374f58de5c1-2": {
           "type": "highlight",
           "settings": {
-            "icon": "icon-thumbs-up",
+            "icon": "icon-discount",
             "title": "Buy 2 Get 1 Free",
             "text": "<p>Order your Custom Canvas with us. Its never been easier<\/p>",
             "link": "https:\/\/www.buildacanvas.com.au\/products\/customcanvas"
@@ -56,15 +56,15 @@
         "mobile_layout": "slider"
       }
     },
-    "dynamic_featured_collection": {
+    "27f1dd90-38ec-493c-95a3-b83e52a05179": {
       "type": "dynamic-featured-collection",
       "settings": {
         "title": "",
         "layout": "grid",
-        "collection": "clearance-sale",
+        "collection": "stretchers",
         "product_count": 5,
         "cta_label": "",
-        "cta_button_style": "secondary"
+        "cta_button_style": "primary"
       }
     },
     "1b6875bf-9be8-4e81-a76e-e15e91122663": {
@@ -80,6 +80,28 @@
         "overlay_opacity": 3,
         "link": "shopify:\/\/products\/saunders-waterford-watercolour-sheets",
         "button_text": ""
+      }
+    },
+    "dynamic_featured_collection": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "",
+        "layout": "grid",
+        "collection": "clearance-sale",
+        "product_count": 5,
+        "cta_label": "",
+        "cta_button_style": "secondary"
+      }
+    },
+    "c7150259-0164-465c-8561-0fe33cbbdcbb": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "",
+        "layout": "slideshow",
+        "collection": "canvas-rolls",
+        "product_count": 25,
+        "cta_label": "",
+        "cta_button_style": "primary"
       }
     },
     "b7988f83-78f9-4294-92be-79686a63d4d4": {
@@ -141,17 +163,6 @@
         "section_height": "natural",
         "section_columns": 3,
         "text_alignment": "center-center"
-      }
-    },
-    "c7150259-0164-465c-8561-0fe33cbbdcbb": {
-      "type": "dynamic-featured-collection",
-      "settings": {
-        "title": "",
-        "layout": "grid",
-        "collection": "holbein-watercolours",
-        "product_count": 5,
-        "cta_label": "",
-        "cta_button_style": "primary"
       }
     },
     "71cd0582-649b-46a9-be29-cd3afd75abbd": {
@@ -529,17 +540,6 @@
         "cta_button_style": "primary"
       }
     },
-    "27f1dd90-38ec-493c-95a3-b83e52a05179": {
-      "type": "dynamic-featured-collection",
-      "settings": {
-        "title": "",
-        "layout": "grid",
-        "collection": "stretchers",
-        "product_count": 5,
-        "cta_label": "",
-        "cta_button_style": "primary"
-      }
-    },
     "dynamic_promo_grid-2": {
       "type": "dynamic-promo-grid",
       "blocks": {
@@ -615,10 +615,11 @@
   },
   "order": [
     "2f4a65f4-a409-43b2-ba6e-fab11762c44f",
-    "dynamic_featured_collection",
+    "27f1dd90-38ec-493c-95a3-b83e52a05179",
     "1b6875bf-9be8-4e81-a76e-e15e91122663",
-    "b7988f83-78f9-4294-92be-79686a63d4d4",
+    "dynamic_featured_collection",
     "c7150259-0164-465c-8561-0fe33cbbdcbb",
+    "b7988f83-78f9-4294-92be-79686a63d4d4",
     "71cd0582-649b-46a9-be29-cd3afd75abbd",
     "dynamic_promo_mosaic",
     "dynamic_shoppable_image",
@@ -627,7 +628,6 @@
     "ea8656da-927f-4715-938d-129d2dffedeb",
     "bc2326c8-f0b8-4f4b-86ce-b7a21189222d",
     "6c5a7aae-4ca0-47a1-8ce4-69f5ff500bf4",
-    "27f1dd90-38ec-493c-95a3-b83e52a05179",
     "dynamic_promo_grid-2",
     "dynamic_blog_posts",
     "dynamic_search"

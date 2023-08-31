@@ -23,8 +23,8 @@
       "settings": {
         "show_announcement": true,
         "homepage_announcement": false,
-        "announcement_text": "Welcome to Our New Website",
-        "announcement_text_mobile": "Welcome to Our New Website",
+        "announcement_text": "Family owned since 2007.",
+        "announcement_text_mobile": "Family owned since 2007.",
         "announcement_link": "",
         "announcement_color": "#949494",
         "announcement_background": "#f5f3ed"

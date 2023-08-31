@@ -35,7 +35,7 @@
           "type": "rich_text",
           "settings": {
             "title": "LOCATION",
-            "text": "<p><strong>The Sydney Art Store<\/strong><br\/>11 Salisbury Street,<br\/>Botany, NSW 2019<br\/><strong>Phone: <\/strong><a href=\"tel:61296992162\"><strong>+61 2 9699 2162<\/strong><\/a><strong><br\/>Mobile: <\/strong><a href=\"https:\/\/www.thesydneyartstore.com.au\/+61%20431%200011%2029\" title=\"Mobile +61 431 0011 29\"><strong>+61 431 0011 29<\/strong><\/a><\/p><p><strong>Opening Hours<\/strong><br\/>Mon - Friday 9am - 5pm<br\/>Saturday    9am - 1pm<\/p><p><strong>ABN<\/strong> 12 143 327 262<\/p>"
+            "text": "<p><strong>The Sydney Art Store<\/strong><br\/>11 Salisbury Street,<br\/>Botany, NSW 2019<br\/><strong>Phone: <\/strong><a href=\"tel:61296992162\"><strong>+61 2 9699 2162<\/strong><\/a><strong><br\/>Mobile: <\/strong><a href=\"tel:+61 431 0011 29\" title=\"tel:+61 431 0011 29\"><strong>+61 431 0011 29<\/strong><\/a><\/p><p><strong>Opening Hours<\/strong><br\/>Mon - Friday 9am - 5pm<br\/>Saturday    9am - 1pm<\/p><p><strong>ABN<\/strong> 12 143 327 262<\/p>"
           }
         }
       },
