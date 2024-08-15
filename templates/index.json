@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "2f4a65f4-a409-43b2-ba6e-fab11762c44f": {
@@ -395,7 +404,7 @@
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/silver-brush",
+            "block_link": "shopify:\/\/collections\/silver-brush-co",
             "button_text": "20% Off : Silver Brushes Co.",
             "button_style": "secondary",
             "show_overlay": false,
@@ -453,7 +462,7 @@
       "settings": {
         "title": "",
         "layout": "grid",
-        "collection": "borciani-e-bonazzi",
+        "collection": "borciani-e-bonazzi-made-in-italy",
         "product_count": 10,
         "cta_label": "",
         "cta_button_style": "primary"
