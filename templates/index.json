@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "2f4a65f4-a409-43b2-ba6e-fab11762c44f": {
@@ -17,7 +17,7 @@
           "settings": {
             "icon": "icon-delivery",
             "title": "Free Shipping",
-            "text": "<p>When you spend $99* Excludes DG & Bulky Goods.<\/p>",
+            "text": "<p>When you spend $99* Excludes DG & Bulky Goods.</p>",
             "link": ""
           }
         },
@@ -26,8 +26,8 @@
           "settings": {
             "icon": "icon-smile",
             "title": "Rewards",
-            "text": "<p>Join & receive 5% Rewards Credit on all Purchases.<\/p>",
-            "link": "shopify:\/\/pages\/rewards-program-page"
+            "text": "<p>Join & receive 5% Rewards Credit on all Purchases.</p>",
+            "link": "shopify://pages/rewards-program-page"
           }
         },
         "template--18952524235039__2f4a65f4-a409-43b2-ba6e-fab11762c44f-1683784374f58de5c1-2": {
@@ -35,8 +35,8 @@
           "settings": {
             "icon": "icon-discount",
             "title": "Buy 2 Get 1 Free",
-            "text": "<p>Order your Custom Canvas with us. Its never been easier<\/p>",
-            "link": "https:\/\/www.buildacanvas.com.au\/products\/customcanvas"
+            "text": "<p>Order your Custom Canvas with us. Its never been easier</p>",
+            "link": "https://www.buildacanvas.com.au/products/customcanvas"
           }
         },
         "template--18952524235039__2f4a65f4-a409-43b2-ba6e-fab11762c44f-1683784374f58de5c1-3": {
@@ -44,8 +44,8 @@
           "settings": {
             "icon": "icon-gift-card",
             "title": "Gift Card",
-            "text": "<p>The perfect Gift everytime.<\/p>",
-            "link": "shopify:\/\/products\/digital-gift-card"
+            "text": "<p>The perfect Gift everytime.</p>",
+            "link": "shopify://products/digital-gift-card"
           }
         }
       },
@@ -80,14 +80,14 @@
       "type": "pxs-image-with-text-overlay",
       "settings": {
         "section_height": "original",
-        "image": "shopify:\/\/shop_images\/SAUNDERS.jpg",
+        "image": "shopify://shop_images/SAUNDERS.jpg",
         "title": "",
         "text": "",
         "content_position": "bottom-left",
         "color": "#ffffff",
         "overlay_background": "#949494",
         "overlay_opacity": 3,
-        "link": "shopify:\/\/products\/saunders-waterford-watercolour-sheets-56x76cm-pkt-10",
+        "link": "shopify://products/saunders-waterford-watercolour-sheets-56x76cm-pkt-10",
         "button_text": ""
       }
     },
@@ -119,11 +119,11 @@
         "template--19632686399775__b7988f83-78f9-4294-92be-79686a63d4d4-promotion-3": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/514AUP_345x_2x_d3528034-94d9-45ce-afc3-9b04376eedc5.jpg",
+            "image": "shopify://shop_images/514AUP_345x_2x_d3528034-94d9-45ce-afc3-9b04376eedc5.jpg",
             "title": "CARAVAGGIO LINEN : ITALY",
             "text": "Caravaggio Canvas, named for the renowned Italian artist from the late 1500s, is recognized as some of the best canvas available globally.",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/linen-rolls",
+            "block_link": "shopify://collections/linen-rolls",
             "button_text": "Linen Rolls",
             "button_style": "secondary",
             "show_overlay": true,
@@ -134,11 +134,11 @@
         "template--19632686399775__b7988f83-78f9-4294-92be-79686a63d4d4-promotion-4": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rf-pigment-stick.jpg",
+            "image": "shopify://shop_images/rf-pigment-stick.jpg",
             "title": "R&F OIL STICKS",
             "text": "R&F Pigment Sticks® are oil paint manufactured with enough wax for the paint to be molded into stick form. They allow the painter to draw or paint directly onto a surface without brushes, palettes, paint tubes, or solvents.",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/r-f-oil-sticks",
+            "block_link": "shopify://products/r-f-oil-sticks",
             "button_text": "R&F Paint Sticks",
             "button_style": "secondary",
             "show_overlay": true,
@@ -149,11 +149,11 @@
         "3cf738e9-23ce-4865-b92f-9612ce3002f6": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/12_Hero_Fiori___Ecoqua_Original_-_Logo___Claim.jpg",
+            "image": "shopify://shop_images/12_Hero_Fiori___Ecoqua_Original_-_Logo___Claim.jpg",
             "title": "",
             "text": "",
             "color": "#4d4d4d",
-            "block_link": "shopify:\/\/collections\/notebooks",
+            "block_link": "shopify://collections/notebooks",
             "button_text": "",
             "button_style": "primary",
             "show_overlay": false,
@@ -191,11 +191,11 @@
         "promotion-1": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-06-27_at_7.22.56_pm.png",
+            "image": "shopify://shop_images/Screenshot_2023-06-27_at_7.22.56_pm.png",
             "title": "Charvin fine oils",
             "text": "Since 1830, a single family has been crafting handmade items in Paris.",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/charvin-fine-oils",
+            "block_link": "shopify://products/charvin-fine-oils-150ml",
             "button_text": "View Range",
             "button_style": "secondary",
             "show_overlay": true,
@@ -207,11 +207,11 @@
           "type": "promotion",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2023-06-28_at_1.06.36_pm.png",
+            "image": "shopify://shop_images/Screenshot_2023-06-28_at_1.06.36_pm.png",
             "title": "Daniel Smith Grounds",
             "text": "Why should watercolour painting be limited to paper?",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/watercolour-grounds",
+            "block_link": "shopify://collections/watercolour-grounds",
             "button_text": "View Range",
             "button_style": "secondary",
             "show_overlay": true,
@@ -222,11 +222,11 @@
         "promotion-3": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/aluminium_easel.webp",
+            "image": "shopify://shop_images/aluminium_easel.webp",
             "title": "Aluminium Easel",
             "text": "Aluminium Artist Studio Easel is perfect for any artist who wants a high-quality, affordable easel that is easy to transport and set up.",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/alesandro-aluminium-artist-studio-easel",
+            "block_link": "shopify://products/alesandro-aluminium-artist-studio-easel",
             "button_text": "Aluminium Easel 55% Off",
             "button_style": "secondary",
             "show_overlay": true,
@@ -290,11 +290,11 @@
       ],
       "settings": {
         "title": "90cm long brush",
-        "image": "shopify:\/\/shop_images\/1952-1_1e87db82-a45f-41dd-a478-e68048669c57.jpg",
+        "image": "shopify://shop_images/1952-1_1e87db82-a45f-41dd-a478-e68048669c57.jpg",
         "image_width": "full",
         "link_text": "View product",
         "textbox_title": "",
-        "textbox_subheading": "<p>Tools made with the classic Fine Art brushes’ shapes, but with exceptionally large dimensions that allow the professional to work on any kind of scenography. They are mounted on 90cm handles for painting and for lying on the ground sceneries decoration, allowing to work standing on them.<\/p>",
+        "textbox_subheading": "<p>Tools made with the classic Fine Art brushes’ shapes, but with exceptionally large dimensions that allow the professional to work on any kind of scenography. They are mounted on 90cm handles for painting and for lying on the ground sceneries decoration, allowing to work standing on them.</p>",
         "textbox_button_label": "",
         "textbox_button_link": "",
         "textbox_button_style": "primary",
@@ -308,11 +308,11 @@
         "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-1": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Loading.jpg",
+            "image": "shopify://shop_images/Loading.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/panpastels",
+            "block_link": "shopify://products/panpastels",
             "button_text": "PanPastels by Golden Colors.",
             "button_style": "secondary",
             "show_overlay": false,
@@ -324,7 +324,7 @@
           "type": "promotion",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/WN_Prof_water_colour_Tube_pink_1200x628_f0eb6109-7c4b-4537-9d21-bd2a700ff3a9.jpg",
+            "image": "shopify://shop_images/WN_Prof_water_colour_Tube_pink_1200x628_f0eb6109-7c4b-4537-9d21-bd2a700ff3a9.jpg",
             "title": "Grid",
             "text": "Use this section to welcome customers to your store, say a bit about your brand, or share news.",
             "color": "#4d4d4d",
@@ -339,11 +339,11 @@
         "template--19188733640991__4d7fd760-f8e0-44e5-bc68-ca3f1f14bae4-16879444308a0891be-2": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MH_Oils.jpg",
+            "image": "shopify://shop_images/MH_Oils.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/michael-harding-oils",
+            "block_link": "shopify://products/michael-harding-oils",
             "button_text": "15% Off : Michael Harding Oils",
             "button_style": "secondary",
             "show_overlay": false,
@@ -370,11 +370,11 @@
         "promotion-1": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fluid.webp",
+            "image": "shopify://shop_images/fluid.webp",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/golden-high-flow-acrylics",
+            "block_link": "shopify://products/golden-high-flow-acrylics",
             "button_text": "20% Off : Golden High Flow",
             "button_style": "secondary",
             "show_overlay": false,
@@ -385,11 +385,11 @@
         "promotion-2": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/soflat.jpg",
+            "image": "shopify://shop_images/soflat.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/products\/golden-soflat-acrylics",
+            "block_link": "shopify://products/golden-soflat-acrylics",
             "button_text": "20% Off : Golden SoFlat",
             "button_style": "secondary",
             "show_overlay": false,
@@ -400,11 +400,11 @@
         "promotion-3": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/black_velvet.jpg",
+            "image": "shopify://shop_images/black_velvet.jpg",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/silver-brush-co",
+            "block_link": "shopify://collections/silver-brush-co",
             "button_text": "20% Off : Silver Brushes Co.",
             "button_style": "secondary",
             "show_overlay": false,
@@ -415,11 +415,11 @@
         "promotion-4": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/langridge_pigment_1024x_6868f273-52af-4e2e-ab72-ca15112dff06.webp",
+            "image": "shopify://shop_images/langridge_pigment_1024x_6868f273-52af-4e2e-ab72-ca15112dff06.webp",
             "title": "",
             "text": "",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/langridge-pigment",
+            "block_link": "shopify://collections/langridge-pigment",
             "button_text": "20% Off : Langridge Pigments",
             "button_style": "secondary",
             "show_overlay": false,
@@ -482,8 +482,8 @@
         "countdown_timer_message": "",
         "product": "artist-t86-studio-display-easel",
         "title": "Special Offer",
-        "text": "<p>Easel is a solid three-legged studio easel constructed of oiled stain- resistant beech wood. The Artist T86 Display Easel has an inclinable angle adjustment allowing the canvas to slant forward up to 15°.<\/p><p><\/p>",
-        "button_link": "shopify:\/\/products\/alesandro-aluminium-artist-studio-easel",
+        "text": "<p>Easel is a solid three-legged studio easel constructed of oiled stain- resistant beech wood. The Artist T86 Display Easel has an inclinable angle adjustment allowing the canvas to slant forward up to 15°.</p><p></p>",
+        "button_link": "shopify://products/alesandro-aluminium-artist-studio-easel",
         "button_label": "Aluminium Easel : 43% Off",
         "button_style": "primary",
         "text_color": "#1d1d1d",
@@ -555,11 +555,11 @@
         "promotion-1": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/canvases.jpg",
+            "image": "shopify://shop_images/canvases.jpg",
             "title": "buy 2 get 1 free",
             "text": "Your third canvas is on us free of charge. Order 4 and receive 6.",
             "color": "#ffffff",
-            "block_link": "https:\/\/www.buildacanvas.com.au\/products\/customcanvas",
+            "block_link": "https://www.buildacanvas.com.au/products/customcanvas",
             "button_text": "Build a Canvas.",
             "button_style": "secondary",
             "show_overlay": true,
@@ -570,11 +570,11 @@
         "promotion-2": {
           "type": "promotion",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ssf.jpg",
+            "image": "shopify://shop_images/ssf.jpg",
             "title": "SYDNEY STRETCHERS",
             "text": "In Sydney, we produce our own stretchers. We are in charge of ensuring the premium quality and quick delivery of stretchers and canvases that we make.",
             "color": "#ffffff",
-            "block_link": "shopify:\/\/collections\/stretchers",
+            "block_link": "shopify://collections/stretchers",
             "button_text": "25% Off Stretchers +",
             "button_style": "secondary",
             "show_overlay": true,
